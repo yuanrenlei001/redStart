@@ -1,0 +1,30 @@
+.top {width: 750rpx;position: relative;height:524rpx;overflow: hidden;}
+.top .topBg {width: 750rpx;height:524rpx;position: absolute;top:0;left:0;z-index: 0;}
+.phb {padding: 0 24rpx;position: relative;z-index: 1;}
+.phb>view {width: 33.33%;float:left;;height:524rpx;text-align: center;}
+.one {position: relative;padding-top: 80rpx;}
+.oneImg {position: relative;}
+.oneBg {width:176rpx;height:186rpx;}
+.oneHeader {width:145rpx;height:145rpx;position: absolute;top:40rpx;left:56rpx;border-radius: 50%;}
+.oneText01 {width:152rpx;height:39rpx;text-align: center;line-height: 39rpx;text-align: center;
+  line-height: 39rpx;color: #fff;background: #875279;border-radius: 20rpx;font-size: 30rpx;
+  position: relative;margin:70rpx auto 0;
+}
+.oneText02 {color: #fff;font-size: 24rpx;text-align: center;margin-top: 10rpx;}
+.two {position: relative;padding-top: 145rpx;}
+.twoImg {position: relative;}
+.twoBg {width:141rpx;height:149rpx;}
+.twoHeader {width:115rpx;height:115rpx;position: absolute;top:35rpx;left:68rpx;border-radius: 50%;}
+.three {position: relative;padding-top: 195rpx;}
+.threeBg {width:128rpx;height:135rpx;}
+.threeHeader {width:105rpx;height:105rpx;position: absolute;top:31rpx;left:75rpx;border-radius: 50%;}
+.main {padding: 0 24rpx;}
+.list {border-bottom: 1px solid #999;height:108rpx;position: relative;overflow: hidden;}
+.list>view {display: inline-block;}
+.listImg image {width:68rpx;height:68rpx;border-radius: 50%;vertical-align: middle;}
+.listNum {font-size: 30rpx;color: #333;line-height: 105rpx;}
+.listImg {width: 130rpx;text-align: center;}
+.listText {position: relative;top:20rpx;}
+.listText view:first-child {font-size: 30rpx;color: #333;}
+.listText view:last-child {font-size: 24rpx;color: #666;}
+.listIntegral {position: absolute;top:0;right:0;height:100%;line-height: 105rpx;font-size: 30rpx;color: #9abdee;}

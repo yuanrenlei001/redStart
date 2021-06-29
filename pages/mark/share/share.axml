@@ -1,0 +1,41 @@
+<view class="main">
+  <image mode="scaleToFill" src="/images/market/add.png" class="add"/>
+  <view class="list">
+    <view class="listHeader"><image mode="scaleToFill" src="/images/market/qcg.png"/><block>张三</block></view>
+    <view class="listText">
+      今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。
+    </view>
+    <view class="listImg">
+      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
+      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
+    </view>
+    <view class="listBottom">
+      <view class="listTime">2015-25-25</view>
+      <view class="listpl">
+        <image mode="scaleToFill" src="/images/market/pl.png"/>
+        <block>评论(3)</block>
+        <image mode="scaleToFill" src="/images/market/zan.png"/>
+        <block>点赞(3)</block>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="listHeader"><image mode="scaleToFill" src="/images/market/qcg.png"/><block>张三</block></view>
+    <view class="listText">
+      今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。今天要采购10公斤的猕猴桃，100公斤的葡萄，能提供的人员请联系我。
+    </view>
+    <view class="listImg">
+      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
+      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
+    </view>
+    <view class="listBottom">
+      <view class="listTime">2015-25-25</view>
+      <view class="listpl">
+        <image mode="scaleToFill" src="/images/market/pl.png"/>
+        <block>评论(3)</block>
+        <image mode="scaleToFill" src="/images/market/zan.png"/>
+        <block>点赞(3)</block>
+      </view>
+    </view>
+  </view>
+</view>

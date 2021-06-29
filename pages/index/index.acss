@@ -56,6 +56,6 @@ line-height: 32rpx;
     -webkit-box-orient: vertical;
     word-break: break-all;
 }
-.listRight02 {position: absolute;bottom:0;left:0;}
-.listRight03 {position: absolute;bottom:0;right:0;}
+.listRight02 {position: absolute;bottom:5rpx;left:0;}
+.listRight03 {position: absolute;bottom:5rpx;right:0;}
 .listRight03 image {width: 28rpx;height:19rpx;}

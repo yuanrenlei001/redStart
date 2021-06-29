@@ -1,0 +1,2 @@
+.goNext {display: block;text-align: center;margin: 30rpx 0;}
+.goNext image {width: 352rpx;height:352rpx;}

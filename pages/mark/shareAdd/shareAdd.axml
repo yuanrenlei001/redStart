@@ -1,0 +1,9 @@
+<view class="main">
+  <view class="textarea">
+    <textarea placeholder="请输入内容"></textarea>
+  </view>
+  <view class="imgUp">
+    +
+  </view>
+  <view class="btn">发布</view>
+</view>

@@ -1,0 +1,66 @@
+<view>
+  <view class="top">
+    <image mode="scaleToFill" src="/images/market/marketBg.png" class="topBg"/>
+    <view class="phb">
+      <view class="two">
+        <view class="oneImg">
+          <image mode="scaleToFill" src="/images/market/two.png" class="twoBg"/>
+          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="twoHeader"/>
+        </view>
+        <view class="oneText">
+          <view class="oneText01">张三</view>
+          <view class="oneText02">电商、牛人、达人</view>
+        </view>
+      </view>
+      <view class="one">
+        <view class="oneImg">
+          <image mode="scaleToFill" src="/images/market/one.png" class="oneBg"/>
+          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="oneHeader"/>
+        </view>
+        <view class="oneText">
+          <view class="oneText01">张三</view>
+          <view class="oneText02">电商、牛人、达人</view>
+        </view>
+      </view>
+      <view class="three">
+        <view class="oneImg">
+          <image mode="scaleToFill" src="/images/market/three.png" class="threeBg"/>
+          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="threeHeader"/>
+        </view>
+        <view class="oneText">
+          <view class="oneText01">张三</view>
+          <view class="oneText02">电商、牛人、达人</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="list">
+      <view class="listNum">4</view>
+      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+      <view class="listText">
+        <view>张三</view>
+        <view>电商、牛人、达人</view>
+      </view>
+      <view class="listIntegral">5323</view>
+    </view>
+    <view class="list">
+      <view class="listNum">4</view>
+      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+      <view class="listText">
+        <view>张三</view>
+        <view>电商、牛人、达人</view>
+      </view>
+      <view class="listIntegral">5323</view>
+    </view>
+    <view class="list">
+      <view class="listNum">4</view>
+      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+      <view class="listText">
+        <view>张三</view>
+        <view>电商、牛人、达人</view>
+      </view>
+      <view class="listIntegral">5323</view>
+    </view>
+  </view>
+</view>

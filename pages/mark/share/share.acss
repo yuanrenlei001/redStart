@@ -1,0 +1,12 @@
+page {background: #fff;}
+.main {position: relative;}
+.list {position: relative;border-bottom:1px solid #dbdbdb;padding: 0 24rpx;}
+.listHeader {height:140rpx;line-height: 140rpx;font-size: 30rpx;color: #4c4c4c;}
+.listHeader image {width:80rpx;height:80rpx;vertical-align: middle;margin-right: 15rpx;}
+.listText {font-size: 28rpx;color: #666;line-height: 42rpx;margin-bottom: 14rpx;}
+.listImg image {width:340rpx;height:220rpx;margin: 0 5rpx 0 5rpx;}
+.listBottom {height:80rpx;position: relative;line-height: 80rpx;}
+.listTime {float:left;font-size: 28rpx;color: #808080;}
+.listpl {position: absolute;top:0;right:0;line-height: 80rpx;color: #ee3a39;}
+.listpl image {width:32rpx;height:32rpx;vertical-align: middle;margin-left: 20rpx;margin-right: 5rpx;}
+.add {width:106rpx;height:106rpx;position: fixed;bottom:80rpx;right:55rpx;z-index: 9999;}

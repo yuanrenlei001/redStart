@@ -1,3 +1,4 @@
-<view>
-  集市
+<view style="padding-top:60rpx;">
+  <navigator class="goNext" url="/pages/mark/leaderboard/leaderboard"><image mode="scaleToFill" src="/images/market/qdz.png"/></navigator>
+  <navigator class="goNext" url="/pages/mark/share/share"><image mode="scaleToFill" src="/images/market/qcg.png"/></navigator>
 </view>
