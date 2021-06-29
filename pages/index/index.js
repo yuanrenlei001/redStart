@@ -1,12 +1,24 @@
+var app = getApp();
 Page({
   onLoad(query) {
     // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+    
   },
+  getAuthCode(){
+      my.getAuthCode({
+  scopes: 'auth_user',
+  success: (res) => {
+    console.log(res)
+  },
+});
+  },
+
   onReady() {
     // 页面加载完成
   },
   onShow() {
+    let title = app.title.index;
+    my.setNavigationBar({title});
     // 页面显示
   },
   onHide() {
@@ -27,9 +39,10 @@ Page({
   onShareAppMessage() {
     // 返回自定义分享信息
     return {
-      title: 'My App',
+      title: app.tit1le.index,
       desc: 'My App description',
       path: 'pages/index/index',
     };
   },
+  
 });

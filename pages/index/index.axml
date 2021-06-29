@@ -1,13 +1,105 @@
-
-<view>
-  this is a blank page 333333333333
+<view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+<view class="main01">
+  <view class="sort">
+    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort01.png"/><view>红心之家</view></navigator>
+    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort02.png"/><view>活动预约</view></navigator>
+    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort03.png"/><view>在线学习</view></navigator>
+    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort04.png"/><view>先锋引领</view></navigator>
+  </view>
+  <view class="news">
+    <view class="newsLeft"><image mode="scaleToFill" src="/images/index/new.png"/></view>
+    <view class="newsRight">
+      <navigator url="" open-type="navigate" class="newsList">发改委召开视频会议全面部署重要民生商品发改委召开视频会议全面部署重要民生商品</navigator>
+      <navigator url="" open-type="navigate" class="newsList">发改委召开视频会议全面部署重要民生商品发改委召开视频会议全面部署重要民生商品</navigator>
+    </view>
+  </view>
 </view>
-<view>
-  this is a blank page 333333333333
+<view class="main02">
+  <view class="title"><view></view>农事服务</view>
+  <view class="serviceList">
+    <view class="serviceListUl">
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLeft"><image mode="scaleToFill" src="/images/index/sprk.png"/></view>
+        <view class="serviceListSortRight">
+          <view  class="serviceListSortRight01">申报入口</view>
+          <view  class="serviceListSortRight02">农园申请</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLeft"><image mode="scaleToFill" src="/images/index/jcgg.png"/></view>
+        <view class="serviceListSortRight">
+          <view  class="serviceListSortRight01">检测公告</view>
+          <view  class="serviceListSortRight02">农产品</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLeft"><image mode="scaleToFill" src="/images/index/pzfw.png"/></view>
+        <view class="serviceListSortRight">
+          <view  class="serviceListSortRight01">票证服务</view>
+          <view  class="serviceListSortRight02">农园申请</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLeft"><image mode="scaleToFill" src="/images/index/jbdx.png"/></view>
+        <view class="serviceListSortRight">
+          <view  class="serviceListSortRight01">奖补兑现</view>
+          <view  class="serviceListSortRight02">补贴申请</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
 </view>
-<view>
-  this is a blank page 2222222
+<view class="main02">
+  <view class="title"><view></view>惠民服务</view>
+  <view class="serviceList">
+    <view class="serviceListUl" id="hmfw">
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLefts"><image mode="scaleToFill" src="/images/index/bxt.png"/></view>
+        <view class="serviceListSortRights">
+          <view  class="serviceListSortRight01">申报入口</view>
+          <view  class="serviceListSortRight02">农园申请</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLefts"><image mode="scaleToFill" src="/images/index/znd.png"/></view>
+        <view class="serviceListSortRights">
+          <view  class="serviceListSortRight01">助农贷</view>
+          <view  class="serviceListSortRight02">帮助农民</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLefts"><image mode="scaleToFill" src="/images/index/zcxx.png"/></view>
+        <view class="serviceListSortRights">
+          <view  class="serviceListSortRight01">政策信息</view>
+          <view  class="serviceListSortRight02">最新政策</view>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" class="serviceListSort">
+        <view class="serviceListSortLefts"><image mode="scaleToFill" src="/images/index/zgfb.png"/></view>
+        <view class="serviceListSortRights">
+          <view  class="serviceListSortRight01">招工发布</view>
+          <view  class="serviceListSortRight02">企业招聘</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
 </view>
-<view>
-  this is a blank page 444444
+<view  class="main02">
+  <view class="title"><view></view>农技讲堂</view>
+  <navigator url="" class="list">
+    <view class="listLeft"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+    <view class="listRight">
+      <view class="listRight01">猕猴桃种植技术-一步步教您如何种植猕猴桃（一）</view>
+      <view class="listRight02">主讲人：张三</view>
+      <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 1</view>
+    </view>
+  </navigator>
+  <navigator url="" class="list">
+    <view class="listLeft"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+    <view class="listRight">
+      <view class="listRight01">猕猴桃种植技术-一步步教您如何种植猕猴桃（一）</view>
+      <view class="listRight02">主讲人：张三</view>
+      <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 1</view>
+    </view>
+  </navigator>
 </view>

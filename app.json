@@ -1,8 +1,41 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/mark/mark",
+    "pages/user/user",
+    "pages/question/question"
   ],
   "window": {
-    "defaultTitle": "My App"
+    "defaultTitle": "红心共富"
+  },
+  "tabBar": {
+    "textColor": "#9b9b9b",
+    "selectedColor": "#ee3a39",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon":"images/index/tabbar01.png",
+        "activeIcon":"images/index/tabbar01-active.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/mark/mark",
+        "icon":"images/index/tabbar02.png",
+        "activeIcon":"images/index/tabbar02-active.png",
+        "name": "集市"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "icon":"images/index/tabbar03.png",
+        "activeIcon":"images/index/tabbar03-active.png",
+        "name": "咨询"
+      },{
+        "pagePath": "pages/user/user",
+        "icon":"images/index/tabbar04.png",
+        "activeIcon":"images/index/tabbar04-active.png",
+        "name": "我的"
+      }
+    ]
   }
 }
