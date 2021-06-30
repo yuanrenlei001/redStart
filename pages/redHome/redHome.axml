@@ -1,0 +1,21 @@
+  <map id="map" longitude="120.131441" latitude="30.279383" scale="{{scale}}" controls="{{controls}}"
+  onControlTap="controltap" markers="{{markers}}"
+  onMarkerTap="markertap"
+  polyline="{{polyline}}" 
+  circles="{{circles}}"
+  panels="{{panels}}"
+  onRegionChange="regionchange"
+  onTap="tap"
+  onPanelTap="onPanelTap"
+  show-location style="width: 100%; height: 100vh;"
+  include-points="{{includePoints}}"></map>
+<view class="fixed" a:if="{{showFixed}}">
+  <view class="main">
+    <view   class="close" onTap="defaultTap"><icon type="clear" size="25"/></view>
+    <view class="fixedTitle">和谐果业合作社</view>
+    <view class="fixedText">主营：水蜜桃、水蜜桃水蜜桃、水蜜桃水蜜桃、水蜜桃水蜜桃、水蜜桃水蜜桃、水蜜桃水蜜桃、水蜜桃</view>
+    <view class="fixedText">联系人：水蜜桃</view>
+    <view class="fixedText">地址：绍兴市上虞区章镇镇新叶村503县道绍兴市上虞区章镇镇新叶村503县道绍兴市上虞区章镇镇新叶村503县道</view>
+    <view class="fixedBtn" onTap="goUrl">查看详情</view>
+  </view>
+</view>

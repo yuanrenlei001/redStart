@@ -1,14 +1,20 @@
 {
   "pages": [
+    "pages/activity/activity",
+    "pages/index/index",
+    "pages/redHome/redDetail/redDetail",
+    "pages/redHome/redHome",
+    "pages/user/user",
     "pages/question/questionAdd/questionAdd",
     "pages/question/question",
-    "pages/index/index",
     "pages/mark/shareAdd/shareAdd",
     "pages/mark/share/share",
     "pages/mark/mark",
     "pages/mark/leaderboard/leaderboard",
-    "pages/user/user",
-    "pages/mark/shareDetail/shareDetail"
+    "pages/mark/shareDetail/shareDetail",
+    "pages/redHome/redImg/redImg",
+    "pages/activity/activityBm/activityBm",
+    "pages/activity/activityYy/activityYy"
   ],
   "window": {
     "defaultTitle": "红心共富"

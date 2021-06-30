@@ -1,8 +1,8 @@
 <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
 <view class="main01">
   <view class="sort">
-    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort01.png"/><view>红心之家</view></navigator>
-    <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort02.png"/><view>活动预约</view></navigator>
+    <navigator url="/pages/redHome/redHome" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort01.png"/><view>红心之家</view></navigator>
+    <navigator url="/pages/activity/activity" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort02.png"/><view>活动预约</view></navigator>
     <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort03.png"/><view>在线学习</view></navigator>
     <navigator url="" open-type="navigate" class="sortNav"><image mode="scaleToFill" src="/images/index/sort04.png"/><view>先锋引领</view></navigator>
   </view>

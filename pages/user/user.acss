@@ -1,0 +1,14 @@
+.top {position: relative;width:750rpx;height:280rpx;line-height: 280rpx;font-size: 36rpx;}
+.bg {position: absolute;top:0;left:0;width:750rpx;height:280rpx;z-index: 0;}
+.user {width:126rpx;height:126rpx;border: 2px solid #fff;border-radius: 50%;vertical-align: middle;position: relative;z-index: 1;
+  margin: 0 45rpx;
+}
+.top text {position: relative;z-index: 1;color: #fff;}
+.body {width:702rpx;background: #fff;border-top-left-radius: 20rpx;border-top-right-radius: 20rpx;
+  position: relative;top:-40rpx;margin: auto;
+}
+.list {padding: 0 34rpx;border-bottom: 1px solid #e6e6e6;height:98rpx;line-height: 98rpx;
+  font-size: 28rpx;color: #333;position: relative;
+}
+.icon {width:32rpx;height:32rpx;vertical-align: middle;margin: 0 12rpx;}
+.back {width:16rpx;height:32rpx;position: absolute;top:50%;margin-top: -16rpx;right:34rpx;}
