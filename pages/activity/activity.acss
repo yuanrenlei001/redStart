@@ -21,5 +21,8 @@ page {background: #fff;}
 .list2 {position: relative;margin-top: 48rpx;font-size: 32rpx;color: #666;}
 .listDetail {margin-bottom: 30rpx;}
 .listDetail>view {display: inline-block;vertical-align: top;}
-.listDetailLeft {width:185rpx;}
+.listDetailLeft {width:200rpx;}
 .listDetailRight {text-align: justify;width:500rpx;}
+.btn {width:702rpx;height:80rpx;position: relative;margin: 45rpx auto;
+  background: #ee3a39;font-size: 36rpx;color: #fff;text-align: center;line-height: 80rpx;border-radius: 20rpx;
+}

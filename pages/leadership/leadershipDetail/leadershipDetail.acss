@@ -1,0 +1,31 @@
+page {background: #fff;}
+.main {padding: 35rpx 24rpx;position: relative;}
+.top {border-radius: 20rpx;border: 1px solid #e5e5e5;padding: 24rpx 15rpx;}
+.user {width:150rpx;height:180rpx;float:left;border-radius: 20rpx;}
+.topText {height:180rpx;position: relative;margin-left: 190rpx;}
+.topText01 {font-size: 32rpx;color: #4c4c4c;}
+.topText01 text {margin-left: 30rpx;}
+.topText>view {line-height: 42rpx;}
+.topText02 {font-size: 28rpx;color: #4c4c4c;}
+.topText03 {font-size: 28rpx;color: #808080;}
+.topText04 {font-size: 28rpx;color: #808080;}
+.topText03 image {width:22rpx;height:26rpx;margin-right: 12rpx;}
+.topText04 image {width:24rpx;height:25rpx;margin-right: 12rpx;}
+.title {font-size: 30rpx;color: #1a1a1a;line-height: 80rpx;position: relative;padding-left: 25rpx;}
+.title>view {
+  width: 6rpx;height:30rpx;
+  background: #ee3a39;
+  position:absolute;
+  top:50%;
+  margin-top: -15rpx;
+  left:0;
+}
+.main01 {position: relative;border-radius: 20rpx;border: 1px solid #e5e5e5;padding:20rpx;margin-top: 20rpx;}
+.content {font-size: 28rpx;color: #666;line-height: 42rpx;text-align: justify;}
+.bottom {line-height: 84rpx;position: relative;}
+.bottom01 {font-size: 28rpx;color: #ee3a39;}
+.bottom02 {font-size: 28rpx;color: #808080;position: absolute;top:0;right:0;}
+.bottom02 image {width:28rpx;height:19rpx;vertical-align: middle;margin-right: 12rpx;}
+.btn {width:702rpx;height:80rpx;position: relative;margin: 45rpx auto;
+  background: #ee3a39;font-size: 36rpx;color: #fff;text-align: center;line-height: 80rpx;border-radius: 20rpx;
+}

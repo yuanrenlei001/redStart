@@ -1,0 +1,16 @@
+.main {padding: 24rpx;position: relative;}
+.detail {border-radius: 20rpx;background: #fff;margin-bottom: 24rpx;overflow: hidden;}
+.detailImg {width:100%;height:270rpx;}
+.detailText {position: relative;height:130rpx;padding: 0 24rpx;}
+.detailText01 {font-size: 32rpx;line-height: 42rpx;
+white-space:nowrap; 
+text-overflow:ellipsis; 
+-o-text-overflow:ellipsis; 
+overflow: hidden;
+color: #333;
+}
+.detailText02 {position: absolute;bottom:24rpx;left:24rpx;font-size: 26rpx;color: #666;}
+.detailText02 image {width:28rpx;height:19rpx;vertical-align: middle; margin-right: 12rpx;}
+.detailText03 {width:120rpx;height:42rpx;border-radius: 40rpx;text-align: center;line-height: 42rpx;
+  font-size: 24rpx;color: #ee3a39;position: absolute;bottom:24rpx;right:24rpx;border:1px solid #ee3a39;
+}

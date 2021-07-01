@@ -6,7 +6,7 @@
       <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">阵地预约</view>
     </view>
     <view class="list" a:if="{{type==1}}">
-      <navigator url="">
+      <navigator url="/pages/activity/activityBm/activityBm">
         <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
         <view class="listRight">
           <view class="listRight01">建立章镇镇“身边的好人”推选褒奖</view>
@@ -14,26 +14,51 @@
           <view class="listRight03">正在进行中</view>
         </view>
       </navigator>
+      <navigator url="/pages/activity/activityBm/activityBm">
+        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <view class="listRight">
+          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖</view>
+          <view class="listRight02">2021-01-01</view>
+          <view class="listRight03" style="color:#02a90a;">已完成</view>
+        </view>
+      </navigator>
     </view>
-    <view class="list2">
+    <view class="list2" a:if="{{type==2}}">
       <view class="listDetail">
         <view class="listDetailLeft">场所名称：</view>
+        <view class="listDetailRight">“红心”章镇党群服务中心</view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所负责人：</view>
+        <view class="listDetailRight">
+           葛怡敏
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所地址：</view>
+        <view class="listDetailRight">
+          章镇镇章家埠村（配导航地址）
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">使用方向</view>
+        <view class="listDetailRight">
+          合作社党建模式宣传展示参观
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所容量：</view>
+        <view class="listDetailRight">
+          50
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所简介：</view>
         <view class="listDetailRight">
           近年来，章镇镇持续探索将红色党建与特色农业相结合，不断深化发展“党建+合作社”新型管理模式，着力打造产业兴农“升级版”
         </view>
       </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所名称：</view>
-        <view class="listDetailRight">
-           
-        </view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所名称：</view>
-        <view class="listDetailRight">
-          近年来，章镇镇持续探索将红色党建与特色农业相结合，不断深化发展“党建+合作社”新型管理模式，着力打造产业兴农“升级版”
-        </view>
-      </view>
     </view>
+    <view class="btn" a:if="{{type==2}}" onTap="goUrl">我要报名</view>
   </view>
 </view>

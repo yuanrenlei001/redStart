@@ -1,0 +1,19 @@
+<view class="main">
+  <view class="body">
+    <view class="sort">
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">活动招募</view>
+      <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">阵地预约</view>
+    </view>
+    <view class="list">
+      <navigator url="/pages/leadership/leadershipDetail/leadershipDetail">
+        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <view class="listRight">
+          <view class="listRight01">黎国良 <text>泰山村</text></view>
+          <view class="listRight04">伢村的“当家人”乡村振兴的领路人</view>
+          <view class="listRight03">点赞(22)</view>
+          <view class="listRight02">2021-01-01</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

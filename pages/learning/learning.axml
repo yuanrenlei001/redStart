@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="list">
+    <navigator url="" class="detail">
+      <image class="detailImg" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+      <view class="detailText">
+        <view class="detailText01">最新指示，学习好党史，党章党规对党员的作用</view>
+        <view class="detailText02"><image mode="scaleToFill" src="/images/index/see.png"/><block>193人阅读过</block></view>
+        <view class="detailText03">前往学习</view>
+      </view>
+    </navigator>
+  </view>
+</view>

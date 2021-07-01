@@ -1,3 +1,43 @@
-<view>
-  New Page
+<view class="main">
+  <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+  <view class="title">和谐果业专业合作社</view>
+  <view class="body">
+    <view class="list2">
+      <view class="listDetail">
+        <view class="listDetailLeft">开始时间：</view>
+        <view class="listDetailRight">2020-02-02</view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">活动人数：</view>
+        <view class="listDetailRight">
+           50人
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">活动地点：</view>
+        <view class="listDetailRight">
+          章镇镇人民政府前广场
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">联系人</view>
+        <view class="listDetailRight">
+          张三
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">联系方式：</view>
+        <view class="listDetailRight">
+          123456789
+        </view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="contentText">活动详情：</view>
+      <view class="contentDetail">
+        1.四姑娘雪山之巅高山协作队运营9年后，于2014年注册成立“四川省雪山之巅户外运动有限责任公司“，岂今己雪山之巅运营十二年，我们一直为热爱登山的山友提供一站式四姑娘山登山服务；
+      </view>
+      <view class="btn">我要报名</view>
+    </view>
+  </view>
 </view>

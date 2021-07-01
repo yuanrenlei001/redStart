@@ -1,0 +1,15 @@
+.top {width:750rpx;height:400rpx;}
+.top image {width:750rpx;height:400rpx;}
+.btn {width:702rpx;height:80rpx;position: relative;margin: 45rpx auto;
+  background: #ee3a39;font-size: 36rpx;color: #fff;text-align: center;line-height: 80rpx;border-radius: 20rpx;
+}
+.page-section {border-bottom: 1px solid #e5e5e5;height:88rpx;line-height: 88rpx;padding: 0 24rpx;
+  font-size: 32rpx;color: #1f1f1f;
+}
+.input {width: 500rpx;float:right;height:70rpx;padding: 9rpx 0;background: transparent;text-align: right;
+  line-height: 70rpx;
+}
+.radio-group {
+  float:right;font-size: 32rpx;color: #1f1f1f;
+}
+.radio-group label {margin: 10rpx;}

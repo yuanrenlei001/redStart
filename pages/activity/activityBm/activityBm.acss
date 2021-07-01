@@ -1,0 +1,30 @@
+.top {width:750rpx;height:400rpx;}
+.top image {width:750rpx;height:400rpx;}
+.body {padding: 0 24rpx;position: relative;background: #fff;margin-top: 20rpx;}
+.sort {height:80rpx;position: relative;}
+.sort view {float:left;width:49%;border: 1px solid #ededed;text-align: center;line-height: 80rpx;font-size: 32rpx;color: #4c4c4c;}
+.sort view.active {border-top:1px solid #ee3a39;color: #ee3a39;}
+.list navigator {display: block;height:120rpx;position: relative;border-bottom: 1px solid #e5e5e5;padding: 24rpx 0;}
+.listLeft {width:160rpx;height:120rpx;float:left;}
+.listRight {margin-left: 184rpx;height:120rpx;position: relative;}
+.listRight01 {
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #4c4c4c;
+}
+.listRight02 {font-size: 28rpx;color: #808080;position: absolute;bottom:0;left:0;}
+.listRight03 {color: #db0000;font-size: 26rpx;bottom:0;right:0;position: absolute;}
+.list2 {position: relative;font-size: 32rpx;color: #666;}
+.listDetail {line-height: 80rpx;}
+.listDetail>view {display: inline-block;vertical-align: top;}
+.listDetailLeft {width:200rpx;}
+.listDetailRight {text-align: justify;width:500rpx;}
+.btn {width:702rpx;height:80rpx;position: relative;margin: 45rpx auto;
+  background: #ee3a39;font-size: 36rpx;color: #fff;text-align: center;line-height: 80rpx;border-radius: 20rpx;
+}
+.title {padding: 0 24rpx;color: #333;height:110rpx;line-height: 110rpx;background: #fff;}
+.contentText {line-height: 88rpx;color: #1f1f1f;}
+.contentDetail {font-size: 28rpx;color: #666;line-height: 42rpx;text-align: justify;}
