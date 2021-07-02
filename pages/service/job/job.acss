@@ -1,0 +1,31 @@
+page {background: #fff;}
+.top {width:750rpx;height:400rpx;}
+.top image {width:750rpx;height:400rpx;}
+.body {padding: 45rpx 24rpx;position: relative;}
+.sort {height:80rpx;position: relative;}
+.sort view {float:left;width:49%;border: 1px solid #ededed;text-align: center;line-height: 80rpx;font-size: 32rpx;color: #4c4c4c;}
+.sort view.active {border-top:1px solid #ee3a39;color: #ee3a39;}
+.list navigator {display: block;height:120rpx;position: relative;border-bottom: 1px solid #e5e5e5;padding: 24rpx 0;}
+.listLeft {width:160rpx;height:120rpx;float:left;}
+.listRight {height:120rpx;position: relative;}
+.listRight01 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  font-size: 28rpx;
+  color: #4c4c4c;
+}
+.listRight02 {font-size: 28rpx;color: #808080;position: absolute;bottom:0;left:0;}
+.listRight03 {color: #808080;font-size: 28rpx;bottom:0;right:0;position: absolute;}
+.listRight03 image {width:28rpx;height:19rpx;margin-right: 12rpx;}
+.list2 {position: relative;margin-top: 48rpx;font-size: 32rpx;color: #666;}
+.listDetail {margin-bottom: 30rpx;}
+.listDetail>view {display: inline-block;vertical-align: top;}
+.listDetailLeft {width:200rpx;}
+.listDetailRight {text-align: justify;width:500rpx;}
+.btn {width:702rpx;height:80rpx;position: relative;margin: 45rpx auto;
+  background: #ee3a39;font-size: 36rpx;color: #fff;text-align: center;line-height: 80rpx;border-radius: 20rpx;
+}

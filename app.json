@@ -1,6 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/service/job/job",
+    "pages/detail/detail",
+    "pages/service/loan/loan",
+    "pages/service/service",
+    "pages/agriculture/ticket/ticket",
+    "pages/agriculture/agricultureList/agricultureList",
+    "pages/agriculture/agriculture",
     "pages/leadership/leadershipDetail/leadershipDetail",
     "pages/leadership/leadership",
     "pages/learning/learning",
@@ -17,7 +24,9 @@
     "pages/mark/mark",
     "pages/mark/leaderboard/leaderboard",
     "pages/mark/shareDetail/shareDetail",
-    "pages/redHome/redImg/redImg"
+    "pages/redHome/redImg/redImg",
+    "pages/agriculture/ticketDetail/ticketDetail",
+    "pages/service/information/information"
   ],
   "window": {
     "defaultTitle": "红心共富"

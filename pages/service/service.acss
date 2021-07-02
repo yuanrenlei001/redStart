@@ -1,0 +1,2 @@
+.main {padding: 35rpx 24rpx;}
+.main image {width:702rpx;height:300rpx;margin-bottom: 50rpx;}

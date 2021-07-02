@@ -1,0 +1,21 @@
+page {background: #fff;}
+.main {position: relative;margin-top: 5rpx;position: relative;}
+.mainLeft {width:210rpx;height:100vh;background: #f2f2f2;float:left;}
+.mainLeft>view {width:210rpx;height:80rpx;text-align: center;font-size: 28rpx;color: #343434;line-height: 80rpx;}
+.mainLeft>view.active {background: #fff;position: relative;}
+.mainLeft>view.active::before {
+  content: '';
+  width:8rpx;height:80rpx;background: #fa5b55;position: absolute;
+  top:0;left:0;
+}
+.mainRight {margin-left: 240rpx;position: relative;}
+.mainRight navigator {display: block;padding: 25rpx 0;border-bottom: 1px solid #e5e5e5;position: relative;height:80rpx;}
+.title {font-size: 28rpx;color: #4c4c4c;
+white-space:nowrap; 
+text-overflow:ellipsis; 
+-o-text-overflow:ellipsis; 
+overflow: hidden;
+}
+.time {position: absolute;bottom: 24rpx;left:0;font-size: 28rpx;color: #808080;}
+.see {position: absolute;bottom:24rpx;right:24rpx;font-size: 28rpx;color: #808080;}
+.see image {width:28rpx;height:19rpx;vertical-align: middle;margin-right: 12rpx;}

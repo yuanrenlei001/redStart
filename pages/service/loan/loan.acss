@@ -1,0 +1,13 @@
+.title {font-size: 30rpx;color: #1a1a1a;line-height: 80rpx;position: relative;padding-left: 50rpx;}
+.title>view {
+  width: 6rpx;height:30rpx;
+  background: #ee3a39;
+  position:absolute;
+  top:50%;
+  margin-top: -15rpx;
+  left:24rpx;
+}
+page {background: #fff;}
+.sort {width:702rpx;height:242rpx;position: relative;border-radius: 20rpx;border: 1px solid #eee;margin: 12rpx auto;}
+.url>view {width:50%;float:left;line-height: 120rpx;text-align: center;font-size: 30rpx;color: #333;}
+.url image {width:120rpx;height:120rpx;vertical-align: middle;margin-right: 12rpx;}
