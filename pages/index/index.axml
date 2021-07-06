@@ -36,7 +36,7 @@
         <view class="serviceListSortLeft"><image mode="aspectFit" src="/images/index/pzfw.png"/></view>
         <view class="serviceListSortRight">
           <view  class="serviceListSortRight01">票证服务</view>
-          <view  class="serviceListSortRight02">农园申请</view>
+          <view  class="serviceListSortRight02">发票信息</view>
         </view>
       </navigator>
       <navigator url="/pages/redHome/redImg/redImg" open-type="navigate" class="serviceListSort">
