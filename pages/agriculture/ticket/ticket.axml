@@ -5,4 +5,14 @@
     <view class="topText03">绍兴市上虞区章镇镇新叶村503县道</view>
     <view class="topText04"><text>联系人：叶志军</text><text>电话：15968559977</text></view>
   </view>
+  <view class="topText" onTap="goUrl">
+    <view class="topText01">和谐果业专业合作社 <image mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" class="video" src="/images/redHome/video.png"/></view>
+    <view class="topText03">绍兴市上虞区章镇镇新叶村503县道</view>
+    <view class="topText04"><text>联系人：叶志军</text><text>电话：15968559977</text></view>
+  </view>
+  <view class="topText" onTap="goUrl">
+    <view class="topText01">和谐果业专业合作社 <image mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" class="video" src="/images/redHome/video.png"/></view>
+    <view class="topText03">绍兴市上虞区章镇镇新叶村503县道</view>
+    <view class="topText04"><text>联系人：叶志军</text><text>电话：15968559977</text></view>
+  </view>
 </view>

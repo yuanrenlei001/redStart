@@ -85,7 +85,7 @@
   </view>
 </view>
 <view  class="main02">
-  <view class="title"><view></view>农技讲堂</view>
+  <view class="title"><view></view>农技讲堂 <text class="more">更多></text></view>
   <navigator url="/pages/detail/detail" class="list">
     <view class="listLeft"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
     <view class="listRight">

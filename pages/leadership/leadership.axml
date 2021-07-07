@@ -1,8 +1,8 @@
 <view class="main">
   <view class="body">
     <view class="sort">
-      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">活动招募</view>
-      <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">阵地预约</view>
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">共富带头人</view>
+      <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">结队帮扶</view>
     </view>
     <view class="list">
       <navigator url="/pages/leadership/leadershipDetail/leadershipDetail">

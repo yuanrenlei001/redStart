@@ -59,3 +59,4 @@ line-height: 32rpx;
 .listRight02 {position: absolute;bottom:5rpx;left:0;}
 .listRight03 {position: absolute;bottom:5rpx;right:0;}
 .listRight03 image {width: 28rpx;height:19rpx;}
+.more {float:right;}
