@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/indexMore/indexMore",
     "pages/service/job/job",
     "pages/detail/detail",
     "pages/service/loan/loan",

@@ -1,0 +1,36 @@
+<view class="main">
+  <view class="body">
+    <view class="sort">
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">达人课堂</view>
+      <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">农业图书馆</view>
+      <view class="{{type==3?'active':''}}"  onTap="active" data-type="3">专家在线</view>
+    </view>
+    <view class="list" >
+      <navigator url="/pages/detail/detail">
+        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <view class="listRight">
+          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖</view>
+          <view class="listRight02">主讲人：任华军</view>
+          <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/detail/detail">
+        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <view class="listRight">
+          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖</view>
+          <view class="listRight02">主讲人：任华军</view>
+          <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/detail/detail">
+        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <view class="listRight">
+          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖</view>
+          <view class="listRight02">主讲人：任华军</view>
+          <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view>
+        </view>
+      </navigator>
+    </view>
+    
+  </view>
+</view>
