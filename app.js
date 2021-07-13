@@ -3,6 +3,7 @@ App({
     index:'首页',
     user:'我的'
   },
+  ajax:'http://42.194.242.144/redStar',
   onLaunch(options) {
     
   },

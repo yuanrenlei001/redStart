@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     showFixed:false,
@@ -67,12 +68,15 @@ Page({
          height: 84
        },
     }],
+    pageNum:1,
+    pageSize:10
   },
   
   onReady(e) {
     // 使用 my.createMapContext 获取 map 上下文
     this.mapCtx = my.createMapContext('map')
     this.showsCompass();
+    this.homeList();
   },
   getCenterLocation() {
     this.mapCtx.getCenterLocation(function (res) {
@@ -95,7 +99,27 @@ Page({
       });
     }
   },
+  homeList(){
+    console.log(this.data.pageNum)
+    my.request({
+  url: app.ajax+'/vueApi/redHomes?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+  method: 'get',
+  data: {
+    
+  },
+  headers:{
+    'content-type':'application/json'  //默认值
+  },
+  dataType: 'json',
+  success: function(res) {
+    my.alert({content: 'success'});
+  },
+  fail: function(res) {
+    my.alert({content: 'fail'});
+  },
   
+});
+  },
   markertap(e) {
     console.log('marker tap', e);
     this.setData({
@@ -151,7 +175,6 @@ Page({
   },
   //地图是否显示指南针, isShowsCompass 为1表示显示，为0表示不显示
   showsCompass() {
-    console.log(12321)
     this.mapCtx.showsCompass(console.log(12312),{isShowsCompass:0});
   },
   changeMarkers() {

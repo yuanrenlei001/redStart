@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/redHome/redHome",
     "pages/index/index",
     "pages/index/indexMore/indexMore",
     "pages/service/job/job",
@@ -16,7 +17,6 @@
     "pages/activity/activity",
     "pages/activity/activityBm/activityBm",
     "pages/redHome/redDetail/redDetail",
-    "pages/redHome/redHome",
     "pages/user/user",
     "pages/question/questionAdd/questionAdd",
     "pages/question/question",
