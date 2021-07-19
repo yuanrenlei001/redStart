@@ -1,11 +1,11 @@
 <view class="main">
   <view class="top">
     <image mode="scaleToFill" src="/images/user/userBg.png" class="bg"/>
-    <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="user"/>
-    <text>张三</text>
+    <image mode="scaleToFill" src="{{user.avatar}}" class="user"/>
+    <text>{{user.nickName}}</text>
   </view>
   <view class="body">
-    <navigator url="" class="list">
+    <navigator url="/pages/user/information/information?data={{textUser}}" class="list">
       <image mode="scaleToFill" src="/images/user/icon01.png" class="icon"/>
       <text>个人信息</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
@@ -36,9 +36,9 @@
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
   </view>
-  <button open-type="getAuthorize" 
+  <!-- <button open-type="getAuthorize" 
 onGetAuthorize="onGetAuthorize" onError="onAuthError" 
 scope='userInfo'>
     会员基础信息授权
-</button>
+</button> -->
 </view>

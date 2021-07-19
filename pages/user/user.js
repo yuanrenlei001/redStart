@@ -1,8 +1,12 @@
 const app = getApp();
 Page({
-  data: {},
+  data: {
+    user:'',
+    textUser:''
+  },
   onLoad() {
     this.login();
+    this.onGetAuthorize();
   },
   login(){
     my.getAuthCode({
@@ -25,6 +29,10 @@ Page({
     success: (res) => {
       let userInfo = JSON.parse(res.response).response // 以下方的报文格式解析两层 response
       console.log(userInfo);
+      this.setData({
+        user:userInfo,
+        textUser:res.response
+      })
 //       my.alert({
 // content: userInfo});
         },

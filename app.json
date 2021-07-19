@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/information/information",
     "pages/agriculture/agricultureList/agricultureList",
     "pages/activity/activity",
     "pages/redHome/redHome",

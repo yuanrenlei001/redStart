@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="top">
+    <image mode="scaleToFill" src="/images/user/userBg.png" class="bg"/>
+    <image mode="scaleToFill" src="{{user.avatar}}" class="user"/>
+    <text>{{user.nickName}}</text>
+  </view>
+  <view class="body">
+    <view class="list"><text>昵称</text><view class="right">{{user.nickName}}</view>  <image mode="scaleToFill" src="/images/user/back.png" class="back"/></view>
+    <view class="list"><text>性别</text><view class="right">{{user.gender=='m'?'男':'女'}}</view>  <image mode="scaleToFill" src="/images/user/back.png" class="back"/></view>
+    <view class="list"><text>地址</text><view class="right">{{user.province}} {{user.city}}</view>  <image mode="scaleToFill" src="/images/user/back.png" class="back"/></view>
+  </view>
+</view>
