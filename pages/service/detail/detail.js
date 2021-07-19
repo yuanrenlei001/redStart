@@ -1,25 +1,31 @@
 const app = getApp();
 Page({
   data: {
-    list:''
+    id:'',
+    detail:''
   },
-  onLoad() {
+  onLoad(query) {
+    this.setData({
+      id:query.id
+    })
     this.notices();
   },
-  notices(){
+    notices(){
     var that = this;
         my.request({
-      url: app.ajax+'/vueApi/farmingLoans/?pageNum=1&pageSize=10',
+      url: app.ajax+'/vueApi/policyInfo/'+this.data.id,
       method: 'get',
-      data: {},
+      data: {
+        
+      },
       headers:{
         'content-type':'application/json'  //默认值
       },
       dataType: 'json',
       success: function(res) {
-        let data = res.data.data.result;
+        let data = res.data.data;
         that.setData({
-          list:data
+          detail:data
         })
       },
       fail: function(res) {
@@ -27,11 +33,4 @@ Page({
       },
     });
   },
-  goUrl(e){
-    let url = e.target.targetDataset.url.insuranceUrl;
-    console.log()
-    my.navigateTo({
-      url: '/pages/web/web?url='+url
-    });
-  }
 });

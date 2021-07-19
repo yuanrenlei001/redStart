@@ -1,7 +1,10 @@
+const app = getApp();
 Page({
   data: {
        status: "inited",
     time: "0",
+    id:'',
+    details:'',
     video: {
 	src: "http://36.26.84.183:8094/video/blny.mp4",
 	showAllControls: false,
@@ -16,7 +19,32 @@ Page({
 	directionWhenFullScreen: 90,
 	mobilenetHintType: 2,
  },},
-
+onLoad(e) {
+    this.detail(e.id);
+  },
+  detail(id){
+        my.request({
+        url: app.ajax+'/vueApi/redHome/'+id,
+        method: 'get',
+        data: {
+          
+        },
+        headers:{
+          'content-type':'application/json'  //默认值
+        },
+        dataType: 'json',
+        success: function(res) {
+          // let data = res.data.data.result;
+          that.setData({
+              details:res.data.data
+          })
+        },
+        fail: function(res) {
+          my.alert({content: 'fail'});
+        },
+        
+      });
+  },
     onPlay(e) {
 	console.log('onPlay');
 },

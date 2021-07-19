@@ -8,8 +8,8 @@
           <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="twoHeader"/>
         </view>
         <view class="oneText">
-          <view class="oneText01">张三</view>
-          <view class="oneText02">电商、牛人、达人</view>
+          <view class="oneText01">{{noticesList[1].name}}</view>
+          <view class="oneText02">{{noticesList[1].tags}}</view>
         </view>
       </view>
       <view class="one">
@@ -18,8 +18,8 @@
           <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="oneHeader"/>
         </view>
         <view class="oneText">
-          <view class="oneText01">张三</view>
-          <view class="oneText02">电商、牛人、达人</view>
+           <view class="oneText01">{{noticesList[0].name}}</view>
+          <view class="oneText02">{{noticesList[0].tags}}</view>
         </view>
       </view>
       <view class="three">
@@ -28,39 +28,21 @@
           <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="threeHeader"/>
         </view>
         <view class="oneText">
-          <view class="oneText01">张三</view>
-          <view class="oneText02">电商、牛人、达人</view>
+          <view class="oneText01">{{noticesList[2].name}}</view>
+          <view class="oneText02">{{noticesList[2].tags}}</view>
         </view>
       </view>
     </view>
   </view>
   <view class="main">
-    <view class="list">
-      <view class="listNum">4</view>
+    <view class="list" a:for="{{noticesList}}" a:if="{{index>2}}">
+      <view class="listNum">{{index}}</view>
       <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
       <view class="listText">
-        <view>张三</view>
-        <view>电商、牛人、达人</view>
+        <view>{{item.name}}</view>
+        <view>{{item.tags}}</view>
       </view>
-      <view class="listIntegral">5323</view>
-    </view>
-    <view class="list">
-      <view class="listNum">4</view>
-      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
-      <view class="listText">
-        <view>张三</view>
-        <view>电商、牛人、达人</view>
-      </view>
-      <view class="listIntegral">5323</view>
-    </view>
-    <view class="list">
-      <view class="listNum">4</view>
-      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
-      <view class="listText">
-        <view>张三</view>
-        <view>电商、牛人、达人</view>
-      </view>
-      <view class="listIntegral">5323</view>
+      <!-- <view class="listIntegral">{{item.sort}}</view> -->
     </view>
   </view>
 </view>

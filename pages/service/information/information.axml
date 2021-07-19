@@ -1,28 +1,14 @@
 <view class="main">
   <view class="body">
     <view class="sort">
-      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">低收入帮扶政策</view>
-      <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">其他政策</view>
+      <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">低收入帮扶政策</view>
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">其他政策</view>
     </view>
-    <view class="list" a:if="{{type==1}}">
-      <navigator url="/pages/detail/detail">
+    <view class="list">
+      <navigator url="/pages/service/detail/detail?id={{item.id}}" a:for="{{list}}">
         <view class="listRight">
-          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖</view>
-          <view class="listRight02">2021-01-01</view>
-        </view>
-      </navigator>
-    </view>
-    <view class="list" a:if="{{type==2}}">
-     <navigator url="/pages/detail/detail">
-        <view class="listRight">
-          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖</view>
-          <view class="listRight02">2021-01-01</view>
-        </view>
-      </navigator>
-      <navigator url="/pages/detail/detail">
-        <view class="listRight">
-          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖</view>
-          <view class="listRight02">2021-01-01</view>
+          <view class="listRight01">{{item.title}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
         </view>
       </navigator>
     </view>

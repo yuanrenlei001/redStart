@@ -1,9 +1,9 @@
 <view class="main">
   <view class="top">
-    <view class="top01">{{detail.noticeTitle}}</view>
+    <view class="top01">{{detail.title}}</view>
     <view class="top02"><text>浏览次数：{{detail.views}}次</text><text>{{detail.createTime}}</text></view>
   </view>
   <view class="content">
-    <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.noticeContent}]}]}}"></rich-text>
+    <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.content}]}]}}"></rich-text>
   </view>
 </view>

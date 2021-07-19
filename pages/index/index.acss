@@ -16,7 +16,7 @@ white-space:nowrap;
 text-overflow:ellipsis; 
 -o-text-overflow:ellipsis; 
 overflow: hidden;
-line-height: 32rpx;
+line-height: 42rpx;
 }
 .main02 {background: #fff;padding: 0 .24rem;margin-bottom: 20rpx;}
 .title {font-size: 30rpx;color: #1a1a1a;line-height: 80rpx;position: relative;padding-left: 25rpx;}

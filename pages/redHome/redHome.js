@@ -2,55 +2,26 @@ var app = getApp();
 Page({
   data: {
     showFixed:false,
-    scale: 14,
+    scale: 12,
+    detail:'',
     longitude: 120.131441,
     latitude: 30.279383,
-    markers: [
-      {
+     markers: [{
       iconPath: "/images/redHome/iconRed.png",
       id: 10,
       latitude: 30.279383,
       longitude: 120.131441,
       width: 50,
       height: 50
-    },
-    {
-      iconPath: "/images/redHome/iconBlue.png",
-      id: 10,
-      latitude: 30.289383,
-      longitude: 120.131441,
-      width: 50,
-      height: 50
-    },
-    {
-      iconPath: "/images/redHome/iconGreen.png",
-      id: 10,
-      latitude: 30.299383,
-      longitude: 120.131441,
-      width: 50,
-      height: 50
-    },
-    {
-      iconPath: "/images/redHome/iconBlue.png",
+    },{
+      iconPath: "/images/redHome/iconRed.png",
       id: 11,
-      latitude: 30.279583,
+      latitude: 30.279383,
       longitude: 120.131441,
       width: 50,
       height: 50,
-      customCallout: {
-        type: 1,
-        time: '1',
-      },
-      fixedPoint:{
-        originX: 400,
-        originY: 400,
-      },
-      iconAppendStr: '黄龙时代广场黄龙时代广场黄龙时代广场黄龙时代广场test'
-    }],
-    includePoints: [{
-      latitude: 30.279383,
-      longitude: 120.131441,
-    }],
+      
+      }],
     panels:[{
     	 id:6,
        // 布局参考 map 高级定制渲染
@@ -69,14 +40,15 @@ Page({
        },
     }],
     pageNum:1,
-    pageSize:10
+    pageSize:100
   },
   
   onReady(e) {
     // 使用 my.createMapContext 获取 map 上下文
-    this.mapCtx = my.createMapContext('map')
-    this.showsCompass();
+    // this.showsCompass();
     this.homeList();
+    this.mapCtx = my.createMapContext('map')
+    
   },
   getCenterLocation() {
     this.mapCtx.getCenterLocation(function (res) {
@@ -100,6 +72,7 @@ Page({
     }
   },
   homeList(){
+    var that = this;
     console.log(this.data.pageNum)
     my.request({
   url: app.ajax+'/vueApi/redHomes?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
@@ -112,7 +85,35 @@ Page({
   },
   dataType: 'json',
   success: function(res) {
-    my.alert({content: 'success'});
+    let data = res.data.data.result;
+    let arr = [];
+    for(let i=0;i<data.length;i++){
+      let obj = {};
+      if(data[i].homeType === 0){obj['iconPath'] = '/images/redHome/iconRed.png'}
+      else if (data[i].homeType === 1){obj['iconPath'] = '/images/redHome/iconBlue.png'}
+      else{obj['iconPath'] = '/images/redHome/iconGreen.png'}
+      obj['id'] = data[i].id;
+      obj['latitude'] = data[i].lat;
+      obj['longitude'] = data[i].lon;
+      obj['width'] = 50;
+      obj['height'] = 50;
+      arr.push(obj)
+    }
+    console.log(arr)
+    that.setData({
+        markers:arr,
+        longitude: arr[0].longitude,
+        latitude: arr[0].latitude,
+        
+    })
+    // {
+    //   iconPath: "/images/redHome/iconRed.png",
+    //   id: 10,
+    //   latitude: 30.279383,
+    //   longitude: 120.131441,
+    //   width: 50,
+    //   height: 50
+    // },
   },
   fail: function(res) {
     my.alert({content: 'fail'});
@@ -121,10 +122,35 @@ Page({
 });
   },
   markertap(e) {
-    console.log('marker tap', e);
-    this.setData({
-      showFixed: true,
-    });
+    var that = this;
+    let id = e.markerId;
+    // {id}
+    console.log(id)
+        my.request({
+  url: app.ajax+'/vueApi/redHome/'+id,
+  method: 'get',
+  data: {
+    
+  },
+  headers:{
+    'content-type':'application/json'  //默认值
+  },
+  dataType: 'json',
+  success: function(res) {
+    // let data = res.data.data.result;
+    that.setData({
+        detail:res.data.data,
+         showFixed: true
+    })
+  },
+  fail: function(res) {
+    my.alert({content: 'fail'});
+  },
+  
+});
+    // this.setData({
+    //  
+    // });
   },
   
   controltap(e) {
@@ -132,7 +158,7 @@ Page({
   },
   goUrl(){
     my.navigateTo({
-      url: '/pages/redHome/redDetail/redDetail'
+      url: '/pages/redHome/redDetail/redDetail?id='+this.data.detail.id
     });
   },
   defaultTap(){

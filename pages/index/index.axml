@@ -9,8 +9,7 @@
   <view class="news">
     <view class="newsLeft"><image mode="aspectFit" src="/images/index/new.png"/></view>
     <view class="newsRight">
-      <navigator url="/pages/detail/detail" open-type="navigate" class="newsList">发改委召开视频会议全面部署重要民生商品发改委召开视频会议全面部署重要民生商品</navigator>
-      <navigator url="/pages/detail/detail" open-type="navigate" class="newsList">发改委召开视频会议全面部署重要民生商品发改委召开视频会议全面部署重要民生商品</navigator>
+      <navigator a:for="{{noticesList}}" url="/pages/detail/detail?id={{item.noticeId}}" open-type="navigate" class="newsList">{{item.noticeTitle}}</navigator>
     </view>
   </view>
 </view>
@@ -86,19 +85,11 @@
 </view>
 <view  class="main02">
   <view class="title"><view></view>农技讲堂 <navigator url="/pages/index/indexMore/indexMore" open-type="navigate" class="more">更多></navigator></view>
-  <navigator url="/pages/detail/detail" class="list">
+  <navigator a:for="{{farmingStudysList}}" url="/pages/detail/detail?id={{item.id}}" class="list">
     <view class="listLeft"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
     <view class="listRight">
-      <view class="listRight01">猕猴桃种植技术-一步步教您如何种植猕猴桃（一）</view>
-      <view class="listRight02">主讲人：张三</view>
-      <view class="listRight03"><image mode="aspectFit" src="/images/index/see.png"/> 1</view>
-    </view>
-  </navigator>
-  <navigator url="/pages/detail/detail" class="list">
-    <view class="listLeft"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
-    <view class="listRight">
-      <view class="listRight01">猕猴桃种植技术-一步步教您如何种植猕猴桃（一）</view>
-      <view class="listRight02">主讲人：张三</view>
+      <view class="listRight01">{{item.title}}</view>
+      <view class="listRight02">主讲人：{{item.lecturer}}</view>
       <view class="listRight03"><image mode="aspectFit" src="/images/index/see.png"/> 1</view>
     </view>
   </navigator>

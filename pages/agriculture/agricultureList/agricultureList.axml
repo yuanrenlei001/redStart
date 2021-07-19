@@ -1,13 +1,11 @@
 <view class="main">
   <view class="mainLeft">
-    <view>葡萄</view>
-    <view class="active">猕猴桃</view>
-    <view>茶叶</view>
+    <view a:for="{{listLeft}}" data-id="{{item.dictValue}}" onTap="sortActive" class="{{item.dictValue == typeId?'active':''}}">{{item.dictLabel}}</view>
   </view>
   <view class="mainRight">
-    <navigator url="/pages/redHome/redImg/redImg">
-      <view class="title">2021年1月份关于葡萄的检测报告</view>
-      <view class="time">2021-09-06</view>
+    <navigator url="/pages/redHome/redImg/redImg" a:for="{{listRight}}">
+      <view class="title">{{item.name}}</view>
+      <view class="time">{{item.createTime}}</view>
       <view class="see"><image mode="scaleToFill" src="/images/index/see.png"/> 10</view>
     </navigator>
   </view>
