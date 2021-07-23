@@ -1,23 +1,20 @@
 <view class="main">
   <view class="top">
-    <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="user"/>
+    <image mode="scaleToFill" src="{{img+detail.imgPathInfo[0].filePath}}" class="user"/>
     <view class="topText">
-      <view class="topText01">黎国良 <text>泰山村党总支书记</text></view>
-      <view class="topText02">章镇</view>
-      <view class="topText03"><image mode="scaleToFill" src="/images/index/user.png"/> 党员</view>
-      <view class="topText04"><image mode="scaleToFill" src="/images/index/phone.png"/> 13789456123</view>
+      <view class="topText01">{{detail.name}} <text>{{detail.post}}</text></view>
+      <view class="topText02">{{detail.town}}</view>
+      <view class="topText03"><image mode="scaleToFill" src="/images/index/user.png"/> {{detail.politicalOutlook}}</view>
+      <view class="topText04"><image mode="scaleToFill" src="/images/index/phone.png"/> {{detail.contactPhone}}</view>
     </view>
   </view>
   <view class="main01">
     <view class="title"><view></view>工作承诺</view>
-    <view class="content">细微显真情，平凡塑仁心，不忘初心，陪伴所有创业者一路前行</view>
+    <view class="content">{{detail.workCommitment}}</view>
   </view>
    <view class="main01">
     <view class="title"><view></view>个人介绍</view>
-    <view class="content">
-      黎国良,男，1965年2月生，中共党员，现任绍兴市上虞区章镇镇泰山村党总支书记。 
-黎国良担任党总支书记后鼓励引导农户发展山区特色经济，发展壮大茶叶优势产业，走出了一条集体经济增收资源开发型特色发展之路。全村大力改造和发展无性系良种茶园面积，免费向村民提供“银霜”、“龙井43”、“乌牛早”等茶叶良种，黎国良带头创办了东园茶业有限公司和合作社等，全村名茶生产的产业链开始建立和完善，近年来年均村级集体收入在35万元以上。该村党组织先后获得绍兴市“五好基层党组织”等荣誉称号，国家级生态村，绍兴市全面小康建设示范村。
-    </view>
+    <view class="content">{{detail.introduction}}</view>
   </view>
   <view class="bottom">
     <view class="bottom01">点赞 (22)</view>

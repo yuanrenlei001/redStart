@@ -2,7 +2,8 @@ var app = getApp();
 Page({
   data:{
     noticesList:'',
-    farmingStudysList:''
+    farmingStudysList:'',
+    img:app.ajaxImg,
   },
   onLoad(query) {
     // 页面加载

@@ -127,7 +127,7 @@ Page({
     // {id}
     console.log(id)
         my.request({
-  url: app.ajax+'/vueApi/redHome/'+id,
+  url: app.ajax+'/vueApi/redHome/'+30,
   method: 'get',
   data: {
     

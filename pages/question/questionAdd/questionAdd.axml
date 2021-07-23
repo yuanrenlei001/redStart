@@ -10,10 +10,8 @@
     
   </view>
   <view class="textarea">
-    <textarea placeholder="请输入内容"></textarea>
+    <textarea onBlur="bindTextAreaBlur" placeholder="请输入内容"></textarea>
   </view>
-  <view class="imgUp">
-    +
-  </view>
-  <view class="btn">发布</view>
+  <view class="imgUp" onTap="uploadFile">+</view>
+  <view class="btn" onTap="success">发布</view>
 </view>

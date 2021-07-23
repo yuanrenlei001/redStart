@@ -36,9 +36,5 @@
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
   </view>
-  <!-- <button open-type="getAuthorize" 
-onGetAuthorize="onGetAuthorize" onError="onAuthError" 
-scope='userInfo'>
-    会员基础信息授权
-</button> -->
+<view onTap="logins">1231231231231231231</view>
 </view>

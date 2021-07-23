@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+  <view class="top"><image mode="scaleToFill" src="{{img+detail.fileList[0].filePath}}"/></view>
   <view class="topText">
     <view class="topText01">和谐果业专业合作社 <image mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" class="video" src="/images/redHome/video.png"/></view>
     <view class="topText02">区级疗休养基地</view>

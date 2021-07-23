@@ -5,8 +5,8 @@
       <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">结队帮扶</view>
     </view>
     <view class="list">
-      <navigator url="/pages/leadership/leadershipDetail/leadershipDetail" a:for="{{list}}">
-        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+      <navigator url="/pages/leadership/leadershipDetail/leadershipDetail?id={{item.id}}&url={{type==1?'commonProsperityLeader':'helpPairs'}}" a:for="{{list}}">
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.imgPathInfo[0].filePath}}"/>
         <view class="listRight">
           <view class="listRight01">{{item.name}} <text>{{item.village}}</text></view>
           <view class="listRight04">{{item.workCommitment}}</view>

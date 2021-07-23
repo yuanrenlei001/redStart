@@ -1,3 +1,6 @@
-<view style="padding:50rpx 24rpx;">
-  <image style="width:100%;" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+<view class="main" style="padding-top:15rpx;">
+  <navigator class="topText" url="/pages/agriculture/agricultureList/detail/detail?id={{item.id}}&url=exchange"  a:for="{{list}}">
+    <view class="topText01">{{item.noticeName}}</view>
+    <view class="topText04"><text>{{item.fileName}}</text><text>{{item.fileNo}}</text></view>
+  </navigator>
 </view>

@@ -1,0 +1,3 @@
+<view>
+  <image mode="scaleToFill" a:for="{{detail.imgPathInfo}}" src="{{img+item.filePath}}"/>
+</view>

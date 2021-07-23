@@ -2,7 +2,7 @@
   <view class="list">
     <navigator url="/pages/learning/detail/detail?id={{item.id}}" class="detail" a:for="{{list}}">
       <text class="texts">{{item.studyType=='0'?'图文':'视频'}}</text>
-      <image class="detailImg" mode="scaleToFill" src="{{item.coverImg}}"/>
+      <image class="detailImg" mode="scaleToFill" src="{{img+item.coverImgInfo[0].filePath}}"/>
       <view class="detailText">
         <view class="detailText01">{{item.title}}</view>
         <view class="detailText02"><image mode="scaleToFill" src="/images/index/see.png"/><block>{{item.views}}人阅读过</block></view>

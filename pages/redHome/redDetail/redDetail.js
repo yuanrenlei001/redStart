@@ -5,6 +5,7 @@ Page({
     time: "0",
     id:'',
     details:'',
+    img:app.ajaxImg,
     video: {
 	src: "http://36.26.84.183:8094/video/blny.mp4",
 	showAllControls: false,
@@ -23,6 +24,7 @@ onLoad(e) {
     this.detail(e.id);
   },
   detail(id){
+    var that =this;
         my.request({
         url: app.ajax+'/vueApi/redHome/'+id,
         method: 'get',

@@ -1,17 +1,13 @@
 <view class="main">
-<image mode="scaleToFill" src="/images/market/add.png" class="add"/>
+<image mode="scaleToFill" src="/images/market/add.png" class="add"  onTap="goUrl"/>
   <view class="tab">
-    <view class="active">未收到回复</view>
-    <view>已收到回复</view>
+    <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">未收到回复</view>
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">已收到回复</view>
   </view>
   <view class="list">
-    <navigator url="" class="listSort">
-      <view class="text">有事大家提，这里是本人提交的建议记录，按照未回复和已回复分类，按照未回复和已回复分类有事大家提，这里是本人提交的建议记录，按照未回复和已回复分类，按照未回复和已回复分类</view>
-      <view class="time">2021-05-16</view>
-    </navigator>
-    <navigator url="" class="listSort">
-      <view class="text">本人提交的建议记录，按照未回复回复分类</view>
-      <view class="time">2021-05-16</view>
+    <navigator url="" class="listSort" a:for="{{list}}">
+      <view class="text">{{item.questionDetails}}</view>
+      <view class="time">{{item.createTime}}</view>
     </navigator>
   </view>
 </view>

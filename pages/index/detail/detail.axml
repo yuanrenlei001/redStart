@@ -1,0 +1,50 @@
+<view class="main">
+  <view class="top">
+    <view class="top01">章镇镇猕猴植保课程</view>
+  </view>
+  <view class="video">
+    <video id="myVideo" 
+    src="{{video.src}}" 
+    controls="{{video.showAllControls}}"
+    loop="{{video.isLooping}}"
+    muted="{{video.muteWhenPlaying}}"
+    show-fullscreen-btn="{{video.showFullScreenButton}}"
+    show-play-btn="{{video.showPlayButton}}"
+    show-center-play-btn="{{video.showCenterButton}}"
+    object-fit="{{video.objectFit}}"
+    autoplay="{{video.autoPlay}}"
+    direction="{{video.directionWhenFullScreen}}"
+    initial-time="{{video.initTime}}"
+    mobilenet-hint-type="{{video.mobilenetHintType}}"
+    onPlay="onPlay" 
+    onPause="onPause" 
+    onEnded="onEnded"
+    onError="onPlayError"
+    onTimeUpdate="onTimeUpdate"
+   />
+  </view>
+  <view class="content">
+    猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种
+  </view>
+  <view class="textBottom">
+    <text><image mode="scaleToFill" src="/images/index/see.png"/> 10</text>
+    <text><image mode="scaleToFill" src="/images/index/zan.png"/> 10</text>
+  </view>
+</view>
+<view class="pl">
+  <view class="plTitle">评论（2）</view>
+  <view class="plList">
+    <view class="plListImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+    <view class="plTop">
+      <view class="plTopName">张三</view>
+      <view class="plTopTime">2019-07-28  14:30:24</view>
+    </view>
+    <view class="plBottom">
+      为严格规范发展程序，落实党员发展对于培训的要求，进一步加强对入党积极分子和党员发展对象的理论武装
+    </view>
+  </view>
+</view>
+<view class="fixed">
+  <view class="inputs">说说你想说的内容</view>
+  <image mode="scaleToFill" src="/images/redHome/collect.png"/>
+</view>

@@ -6,7 +6,7 @@
       <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">阵地预约</view>
     </view>
     <view class="list" a:if="{{type==1}}" a:for="{{list}}">
-      <navigator url="/pages/activity/activityBm/activityBm">
+      <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
         <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
         <view class="listRight">
           <view class="listRight01">{{item.eventTitle}}</view>
@@ -19,18 +19,18 @@
     <view class="list2" a:if="{{type==2}}">
       <view class="listDetail">
         <view class="listDetailLeft">场所名称：</view>
-        <view class="listDetailRight">“红心”章镇党群服务中心</view>
+        <view class="listDetailRight">{{list[0].applicantUnit}}</view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所负责人：</view>
         <view class="listDetailRight">
-           葛怡敏
+           {{list[0].applicantUser}}
         </view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所地址：</view>
         <view class="listDetailRight">
-          章镇镇章家埠村（配导航地址）
+          {{list[0].address}}
         </view>
       </view>
       <view class="listDetail">
@@ -42,13 +42,13 @@
       <view class="listDetail">
         <view class="listDetailLeft">场所容量：</view>
         <view class="listDetailRight">
-          50
+         {{list[0].participateNum}}
         </view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所简介：</view>
         <view class="listDetailRight">
-          近年来，章镇镇持续探索将红色党建与特色农业相结合，不断深化发展“党建+合作社”新型管理模式，着力打造产业兴农“升级版”
+          {{list[0].remark}}
         </view>
       </view>
     </view>

@@ -5,6 +5,7 @@ Page({
     pageNum:1,
     pageSize:10,
     list:[],
+    img:app.ajaxImg,
     flag:true,
     url:'commonProsperityLeaders'
   },

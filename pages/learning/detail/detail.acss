@@ -1,3 +1,4 @@
+@import "/wxParse/wxParse.acss";
 .top {width:750rpx;height:400rpx;}
 .top image {width:750rpx;height:400rpx;}
 .collect {width:37rpx;height:37rpx;margin-left: 26rpx;}

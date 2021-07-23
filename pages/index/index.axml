@@ -85,12 +85,12 @@
 </view>
 <view  class="main02">
   <view class="title"><view></view>农技讲堂 <navigator url="/pages/index/indexMore/indexMore" open-type="navigate" class="more">更多></navigator></view>
-  <navigator a:for="{{farmingStudysList}}" url="/pages/detail/detail?id={{item.id}}" class="list">
-    <view class="listLeft"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
+  <navigator a:for="{{farmingStudysList}}" url="/pages/index/detail/detail?id={{item.id}}" class="list">
+    <view class="listLeft"><image mode="aspectFit" src="{{img+item.imgPathInfo[0].filePath}}"/></view>
     <view class="listRight">
       <view class="listRight01">{{item.title}}</view>
       <view class="listRight02">主讲人：{{item.lecturer}}</view>
-      <view class="listRight03"><image mode="aspectFit" src="/images/index/see.png"/> 1</view>
+      <view class="listRight03"><image mode="aspectFit" src="/images/index/see.png"/> {{item.views}}</view>
     </view>
   </navigator>
 </view>

@@ -1,23 +1,23 @@
 <view class="main">
   <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
-  <view class="page-section"><block>申请人</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="page-section"><block>联系方式</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="page-section"><block>申请单位</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="page-section"><block>活动室预约</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="page-section" onTap="datePicker"><block>预约时间</block><input class="input" id="controlled" disabled="disabled"  placeholder="请选择" /></view>
+  <view class="page-section"><block>申请人</block><input class="input" id="controlled" onInput="applicantUser" placeholder="请填写" /></view>
+  <view class="page-section"><block>联系方式</block><input class="input" id="controlled" onInput="contactPhone" placeholder="请填写" /></view>
+  <view class="page-section"><block>申请单位</block><input class="input" id="controlled" onInput="applicantUnit" placeholder="请填写" /></view>
+  <view class="page-section"><block>活动室预约</block><input class="input" id="controlled" onInput="address" placeholder="请填写" /></view>
+  <view class="page-section" onTap="datePicker"><block>预约时间</block><input value="{{appointmentTime}}" class="input" id="controlled" disabled="disabled"  placeholder="请选择" /></view>
   <view class="page-section"><block>借用多媒体</block>
     <radio-group class="radio-group" onChange="radioChange" name="lib">
             <label class="radio"  key="label-1">
-              <radio value="123" />
+              <radio value="Y" />
               <text class="radio-text">是</text>
             </label>
             <label class="radio"  key="label-2">
-              <radio value="22" />
+              <radio value="N" />
               <text class="radio-text">否</text>
             </label>
           </radio-group>
   </view>
-  <view class="page-section"><block>参与人数</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="page-section"><block>备注</block><input class="input" id="controlled" onInput="bindKeyInput" placeholder="请填写" /></view>
-  <view class="btn">提交</view>
+  <view class="page-section"><block>参与人数</block><input class="input" id="controlled" onInput="participateNum" placeholder="请填写" /></view>
+  <view class="page-section"><block>备注</block><input class="input" id="controlled" onInput="remark" placeholder="请填写" /></view>
+  <view class="btn" onTap="add">提交</view>
 </view>
