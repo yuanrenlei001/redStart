@@ -1,4 +1,13 @@
-<view class="top"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
+<view class="top">
+  <swiper
+                class="demo-swiper"
+                autoplay="true"
+            >
+                <swiper-item key="swiper-item-{{index}}" a:for="{{banner}}">
+                    <image mode="scaleToFill" src="{{img+item.imgInfoList[0].filePath}}"/>
+                </swiper-item>
+            </swiper>
+</view>
 <view class="main01">
   <view class="sort">
     <navigator url="/pages/redHome/redHome" open-type="navigate" class="sortNav"><image mode="aspectFit" src="/images/index/sort01.png"/><view>红心之家</view></navigator>
@@ -7,9 +16,9 @@
     <navigator url="/pages/leadership/leadership" open-type="navigate" class="sortNav"><image mode="aspectFit" src="/images/index/sort04.png"/><view>先锋引领</view></navigator>
   </view>
   <view class="news">
-    <view class="newsLeft"><image mode="aspectFit" src="/images/index/new.png"/></view>
+    <view class="newsLeft" onTap="goUrlNews"><image mode="aspectFit" src="/images/index/new.png"/></view>
     <view class="newsRight">
-      <navigator a:for="{{noticesList}}" url="/pages/detail/detail?id={{item.noticeId}}" open-type="navigate" class="newsList">{{item.noticeTitle}}</navigator>
+      <navigator a:for="{{noticesList}}" url="/pages/notice/detail/detail?id={{item.noticeId}}" open-type="navigate" class="newsList">{{item.noticeTitle}}</navigator>
     </view>
   </view>
 </view>

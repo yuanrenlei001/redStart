@@ -17,8 +17,9 @@
     <view class="content">{{detail.introduction}}</view>
   </view>
   <view class="bottom">
-    <view class="bottom01">点赞 (22)</view>
-    <view class="bottom02"><image mode="scaleToFill" src="/images/index/see.png"/> 233</view>
+    <view class="bottom01">点赞 ({{detail.likesNum==null?'0':detail.likesNum}})</view>
+    <view class="bottom02"><image mode="scaleToFill" src="/images/index/see.png"/> {{detail.views}}</view>
   </view>
-  <view class="btn">点赞</view>
+  <view class="btn" onTap="addZan" data-type='0' a:if="{{detail.likesStatus == null || detail.likesStatus == false}}">点赞</view>
+  <view class="btn" onTap="unZan" data-type='1' a:if="{{detail.likesStatus == true}}">取消点赞</view>
 </view>

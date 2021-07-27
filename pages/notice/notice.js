@@ -1,39 +1,39 @@
 const app = getApp();
 Page({
   data: {
-     pageNum:1,
+    type:1,
+    pageNum:1,
     pageSize:10,
     list:[],
     flag:true,
-     img:app.ajaxImg,
-
+    url:'eventRecruitments'
   },
   onLoad() {
-    this.onlineStudys();
+    this.commonProsperityLeadersList();
   },
-  previewImage(e){
-    console.log(e)
-    var that =this;
-    let url = [];
-    let imgList = e.target.dataset.img;
-    for(let i=0;i<imgList.length;i++){
-      url.push(that.data.img+imgList[i].filePath)
+  active(e){
+    console.log(e.target.targetDataset.type)
+    if(e.target.targetDataset.type == 1){
+      this.setData({
+        type:e.target.targetDataset.type,
+        url:'eventRecruitments',
+        pageNum:1,
+        list:[]
+      })
+    }else{
+      this.setData({
+        type:e.target.targetDataset.type,
+        url:'positionBookings',
+        pageNum:1,
+        list:[]
+      })
     }
-    console.log(url)
-    my.previewImage({
-      current: e.target.dataset.index,
-      urls: url,
-    });
+    this.commonProsperityLeadersList();
   },
-  goUrl(){
-    my.navigateTo({
-      url: '/pages/mark/shareAdd/shareAdd'
-    });
-  },
-      onlineStudys(){
-    var that =this;
+  commonProsperityLeadersList(){
+  var that =this;
     my.request({
-      url: app.ajax+'/vueApi/purchases?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+      url: app.ajax+'/vueApi/notices?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
       method: 'get',
       data: {
         
@@ -65,10 +65,17 @@ Page({
       },
     });
   },
-      onReachBottom() {
+  // commonProsperityLeaders  共富带头人
+  // helpPairs 结队帮扶
+  goUrl(){
+    my.navigateTo({
+      url:'/pages/activity/activityYy/activityYy'
+    });
+  },
+        onReachBottom() {
     // 页面被拉到底部
     if(this.data.flag){
-this.onlineStudys()
+this.commonProsperityLeadersList()
     }
   },
 });

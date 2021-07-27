@@ -4,11 +4,41 @@ Page({
     noticesList:'',
     farmingStudysList:'',
     img:app.ajaxImg,
+    banner:[]
   },
   onLoad(query) {
     // 页面加载
     this.notices();
     this.farmingStudys();
+    this.banners();
+  },
+  banners(){
+    var that = this;
+        my.request({
+      url: app.ajax+'/vueApi/banners?pageNum=1&pageSize=10',
+      method: 'get',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        let data = res.data.data;
+        that.setData({
+          banner:data
+        })
+      },
+      fail: function(res) {
+        my.alert({content: 'fail'});
+      },
+    });
+  },
+  goUrlNews(){
+    my.navigateTo({
+      url: '/pages/notice/notice'
+    });
   },
   notices(){
     var that = this;

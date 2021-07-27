@@ -4,8 +4,7 @@
     <view class="listHeader"><image mode="scaleToFill" src="/images/market/qcg.png"/><block>{{item.name}}</block></view>
     <view class="listText">{{item.introduction}}</view>
     <view class="listImg">
-      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
-      <block><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></block>
+      <text a:for="{{item.imgInfo}}" a:for-item="imgs" onTap="previewImage" data-img ="{{item.imgInfo}}" data-index={{index}}><image mode="scaleToFill" src="{{img+imgs.filePath}}"/></text>
     </view>
     <view class="listBottom">
       <view class="listTime">{{item.releaseDate}}</view>

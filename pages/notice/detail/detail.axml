@@ -1,0 +1,9 @@
+<view class="main">
+  <view class="top">
+    <view class="top01">{{detail.noticeTitle}}</view>
+    <view class="top02"><text>{{detail.createTime}}</text></view>
+  </view>
+  <view class="content">
+    <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.noticeContent}]}]}}"></rich-text>
+  </view>
+</view>

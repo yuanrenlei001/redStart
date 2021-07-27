@@ -6,6 +6,18 @@
   <view class="main01">
     <view class="title"><view></view>介绍</view>
     <view class="content">
+    <view a:if="{{detail.studyVideoInfo.length>0}}">
+  <video id="myVideo" 
+    src="{{img+detail.studyVideoInfo[0].filePath}}" 
+    loop="false"
+    autoplay="{{video.autoPlay}}"
+    onPlay="onPlay" 
+    onPause="onPause" 
+    onEnded="onEnded"
+    onError="onPlayError"
+    onTimeUpdate="onTimeUpdate"
+   />
+</view>
       <!-- content -->
        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     </view>

@@ -50,20 +50,20 @@ Page({
     my.chooseImage({
       chooseImage: 1,
       success: res => {
-        // const path = res.apFilePaths[0];
+        const path = res.apFilePaths[0];
         console.log(res);
-        // my.uploadFile({
-        //   url: 'http://httpbin.org/post',
-        //   fileType: 'image',
-        //   fileName: 'file',
-        //   filePath: path,
-        //   success: res => {
-        //     my.alert({ title: '上传成功' });
-        //   },
-        //   fail: function(res) {
-        //     my.alert({ title: '上传失败' });
-        //   },
-        // });
+        my.uploadFile({
+          url: app.ajax+'/vueApi/zhiFuBao/upload',
+          fileType: 'image',
+          fileName: 'file',
+          filePath: path,
+          success: res => {
+            my.alert({ title: '上传成功' });
+          },
+          fail: function(res) {
+            my.alert({ title: '上传失败' });
+          },
+        });
       },
     });
   },

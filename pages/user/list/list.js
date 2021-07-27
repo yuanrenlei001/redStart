@@ -5,12 +5,11 @@ Page({
     pageNum:1,
     pageSize:10,
     list:[],
-    img:app.ajaxImg,
     flag:true,
     url:'eventRecruitments'
   },
-  onLoad() {
-    this.commonProsperityLeadersList();
+  onLoad(e) {
+    this.commonProsperityLeadersList(e.url);
   },
   active(e){
     console.log(e.target.targetDataset.type)
@@ -31,10 +30,10 @@ Page({
     }
     this.commonProsperityLeadersList();
   },
-  commonProsperityLeadersList(){
+  commonProsperityLeadersList(url){
   var that =this;
     my.request({
-      url: app.ajax+'/vueApi/'+this.data.url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+      url: app.ajax+url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
       method: 'get',
       data: {
         

@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+  <view class="top"><image mode="scaleToFill" src="/images/hdyybanner.png"/></view>
   <view class="body">
     <view class="sort">
       <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">活动招募</view>
@@ -7,7 +7,7 @@
     </view>
     <view class="list" a:if="{{type==1}}" a:for="{{list}}">
       <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
-        <image class="listLeft" mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/>
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.coverImgInfo[0].filePath}}"/>
         <view class="listRight">
           <view class="listRight01">{{item.eventTitle}}</view>
           <view class="listRight02">{{item.createTime}}</view>

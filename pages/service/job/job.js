@@ -4,14 +4,18 @@ Page({
     type:0,
     pageNum:1,
     pageSize:10,
-    list:''
+    list:[],
+    img:app.ajaxImg,
+    flag:true,
   },
   onLoad() {
     this.policyInfos();
   },
   active(e){
     this.setData({
-      type:e.target.targetDataset.type
+      type:e.target.targetDataset.type,
+      pageNum:1,
+        list:[]
     });
     this.policyInfos();
   },
@@ -27,14 +31,32 @@ Page({
       dataType: 'json',
       success: function(res) {
         let data = res.data.data.result;
+                console.log(data.length)
+        console.log(res.data.data.pageSize)
+            if(data.length>=res.data.data.pageSize){
+           that.setData({
+          pageNum:that.data.pageNum+1,
+          flag:true
+        })
+        }else{
+           that.setData({
+          flag:false
+        })
+        }
         that.setData({
-          list:data
+          list:that.data.list.concat(data)
         })
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+  },
+          onReachBottom() {
+    // 页面被拉到底部
+    if(this.data.flag){
+this.policyInfos()
+    }
   },
   goUrl(){
     my.navigateTo({

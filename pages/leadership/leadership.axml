@@ -10,7 +10,7 @@
         <view class="listRight">
           <view class="listRight01">{{item.name}} <text>{{item.village}}</text></view>
           <view class="listRight04">{{item.workCommitment}}</view>
-          <view class="listRight03">点赞(22)</view>
+          <view class="listRight03">点赞({{item.likesNum==null?'0':item.likesNum}})</view>
           <view class="listRight02">{{item.createTime}}</view>
         </view>
       </navigator>

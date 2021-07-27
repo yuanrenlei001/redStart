@@ -3,16 +3,27 @@ Page({
   data: {
     detail:'',
     img:app.ajaxImg,
-    text:''
+    text:'',
+    flag:false
   },
   onLoad(e) {
     console.log(e)
-    this.notices(e.id,e.url) 
+    if(e.img){
+      console.log(1)
+      this.setData({
+        flag:true,
+        detail:e.id
+      })
+    }else{
+this.notices(e.id,e.url,e.img) 
+    }
+    
   },
   
   // onlineStudy/{id}
     notices(id,url){
-    var that = this;
+      
+ var that = this;
     var text = ''
         my.request({
       url: app.ajax+'/vueApi/'+url+'/'+id,
@@ -35,6 +46,8 @@ Page({
         my.alert({content: 'fail'});
       },
     });
+      
+   
    
   },
   

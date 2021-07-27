@@ -9,8 +9,23 @@ Page({
   data: {
     detail:'',
     img:app.ajaxImg,
-    text:''
-  },
+    text:'',
+       status: "inited",
+    time: "0",
+    video: {
+	src: "",
+	showAllControls: false,
+	showPlayButton: false,
+	showCenterButton: true,
+	showFullScreenButton: true,
+	isLooping: false,
+	muteWhenPlaying: false,
+	initTime: 0,
+	objectFit: "contain",
+	autoPlay: false,
+	directionWhenFullScreen: 90,
+	mobilenetHintType: 2,
+  }},
   onLoad(e) {
     console.log(e)
     this.notices(e.id)

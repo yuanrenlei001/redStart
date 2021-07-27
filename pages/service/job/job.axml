@@ -3,14 +3,14 @@
   <view class="body">
     <view class="sort">
       <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">公益性岗位</view>
-      <view class="{{type==-1?'active':''}}"  onTap="active" data-type="-1">章镇人才岗</view>
+      <view class="{{type==-1?'active':''}}"  onTap="active" data-type="1">章镇人才岗</view>
     </view>
     <view class="list">
-      <navigator url="/pages/detail/detail">
+      <navigator url="/pages/service/job/detail/detail?id={{item.id}}" a:for="{{list}}">
         <view class="listRight">
-          <view class="listRight01">建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖建立章镇镇“身边的好人”推选褒奖</view>
-          <view class="listRight02">2021-01-01</view>
-          <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> 199</view>
+          <view class="listRight01">{{item.title}}</view>
+          <view class="listRight02">{{item.releaseDate}}</view>
+          <view class="listRight03"><image mode="scaleToFill" src="/images/index/see.png"/> {{item.views}}</view>
         </view>
       </navigator>
     </view>

@@ -1,52 +1,45 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="{{img+detail.fileList[0].filePath}}"/></view>
+  <view class="top">
+    <swiper
+                class="demo-swiper"
+                autoplay="true"
+            >
+                <swiper-item key="swiper-item-{{index}}" a:for="{{details.bannerList}}">
+                    <image mode="scaleToFill" src="{{img+item.filePath}}"/>
+                </swiper-item>
+            </swiper>
+  </view>
   <view class="topText">
-    <view class="topText01">和谐果业专业合作社 <image mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" class="video" src="/images/redHome/video.png"/></view>
-    <view class="topText02">区级疗休养基地</view>
-    <view class="topText03">绍兴市上虞区章镇镇新叶村503县道</view>
-    <view class="topText04"><text>联系人：叶志军</text><text>电话：15968559977</text></view>
+    <view class="topText01" >{{details.name}} <image   mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" onTap="videoss" class="video" src="/images/redHome/video.png"/></view>
+    <view class="topText02">{{details.homeCategory}}</view>
+    <view class="topText03">{{details.areaCode}}</view>
+    <view class="topText04"><text>联系人：{{details.contactsUser}}</text><text>电话：{{details.contactsPhone}}</text></view>
   </view>
   <view class="main01">
     <view class="title"><view></view>介绍</view>
     <view class="content">
-      绍兴市上虞区和谐果业专业合作社2010-05-05在浙江省绍兴市上虞区注册成立的农民专业合作经济组织注册地址位于绍兴市上虞区章镇镇新叶村
+      {{details.remark}}
     </view>
   </view>
   <view class="main01">
     <view class="title"><view></view>开票二维码</view>
-    <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="code"/>
+    <image onTap="previewImage" data-src="{{img+item.filePath}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.filePath}}" style="margin-right:15rpx;" class="code"/>
   </view>
   <view class="main01">
     <view class="title"><view></view>检测报告</view>
     <view class="list">
-      <navigator url="/pages/redHome/redImg/redImg" class="detail">
-        <view class="detail01">2021年1月份关于葡萄的检测报告</view>
-        <view class="detail02">2021-01-01</view>
-        <view class="detail03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view>
+      <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.filePath}}&url=redHome&img=true" class="detail" a:for="{{details.fileList}}">
+        <view class="detail01">{{item.fileName}}</view>
+        <view class="detail02">{{item.createTime}}</view>
+        <!-- <view class="detail03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view> -->
       </navigator>
     </view>
   </view>
 </view>
-<!-- <view class="fixed">
+<view class="fixed" a:if="{{show}}" onTap="close">
   <view class="fixedMain">
     <video id="myVideo" 
-    src="{{video.src}}" 
-    controls="{{video.showAllControls}}"
-    loop="{{video.isLooping}}"
-    muted="{{video.muteWhenPlaying}}"
-    show-fullscreen-btn="{{video.showFullScreenButton}}"
-    show-play-btn="{{video.showPlayButton}}"
-    show-center-play-btn="{{video.showCenterButton}}"
-    object-fit="{{video.objectFit}}"
-    autoplay="{{video.autoPlay}}"
-    direction="{{video.directionWhenFullScreen}}"
-    initial-time="{{video.initTime}}"
-    mobilenetHintType="{{video.mobilenetHintType}}"
-    onPlay="onPlay" 
-    onPause="onPause" 
-    onEnded="onEnded"
-    onError="onPlayError"
-    onTimeUpdate="onTimeUpdate"
+    src="{{img+details.videoInfoList[0].filePath}}" 
    />
   </view>
-</view> -->
+</view>

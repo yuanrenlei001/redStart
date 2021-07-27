@@ -6,6 +6,7 @@ Page({
     id:'',
     details:'',
     img:app.ajaxImg,
+    show:false,
     video: {
 	src: "http://36.26.84.183:8094/video/blny.mp4",
 	showAllControls: false,
@@ -22,6 +23,26 @@ Page({
  },},
 onLoad(e) {
     this.detail(e.id);
+  },
+  close(e){
+    this.setData({
+      show:false
+    })
+  },
+   previewImage(e) {
+     console.log(e)
+    my.previewImage({
+      current: 2,
+      urls: [
+        e.target.targetDataset.src
+      ],
+    });
+  },
+  videoss(e){
+    console.log(123123)
+    this.setData({
+      show:true
+    })
   },
   detail(id){
     var that =this;
