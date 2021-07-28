@@ -1,15 +1,17 @@
 {
   "pages": [
-       "pages/index/index",
+        "pages/index/index",
+    "pages/service/loan/loan",
+
+    
+    
     "pages/mark/share/share",
- 
     "pages/redHome/redHome",
     "pages/agriculture/ticket/ticket",
     "pages/leadership/leadership",
     "pages/redHome/redDetail/redDetail",
     "pages/user/user",
     "pages/activity/activity",
-    
     "pages/index/detail/detail",
     "pages/index/indexMore/indexMore",
     "pages/learning/learning",
@@ -22,7 +24,6 @@
     "pages/mark/leaderboard/leaderboard",
     "pages/service/job/job",
     "pages/detail/detail",
-    "pages/service/loan/loan",
     "pages/service/service",
     "pages/agriculture/agriculture",
     "pages/leadership/leadershipDetail/leadershipDetail",
@@ -42,7 +43,10 @@
     "pages/service/job/detail/detail",
     "pages/user/list/list",
     "pages/agriculture/ticket/ticketDetail/ticketDetail",
-    "pages/question/detail/detail"
+    "pages/question/detail/detail",
+    "pages/user/myPositionBookings/myPositionBookings",
+    "pages/user/myCollections/myCollections",
+    "pages/user/myConsultingServices/myConsultingServices"
   ],
   "window": {
     "defaultTitle": "红心共富"

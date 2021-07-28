@@ -34,7 +34,7 @@ onLoad(e) {
 
 }
 my.request({
-      url: app.ajax+'/vueApi/collection/remove?id='+this.data.details.id,
+      url: app.ajax+'/vueApi/collection/remove?id='+this.data.details.id+'&type=HXZJ',
       method: 'get',
       data: {},
       headers:{

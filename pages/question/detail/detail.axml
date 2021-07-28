@@ -1,20 +1,13 @@
 <view class="main">
   <view class="list">
-    <view class="listHeader"><image mode="scaleToFill" src="{{img+detail.userImg}}"/><block>{{item.name}}</block></view>
     <view class="listText">
-      {{detail.introduction}}
+      {{detail.questionDetails}}
     </view>
     <view class="listImg">
       <text a:for="{{detail.imgInfo}}" a:for-item="imgs" onTap="previewImage" data-img ="{{detail.imgInfo}}" data-index={{index}}><image mode="scaleToFill" src="{{img+imgs.filePath}}"/></text>
     </view>
     <view class="listBottom">
-      <view class="listTime">{{detail.releaseDate}}</view>
-      <view class="listpl">
-          <image mode="scaleToFill" src="/images/market/pl.png"/>
-          <block>评论({{detail.commentList.length}})</block>
-          <image mode="scaleToFill"src="/images/index/zans.png"/>
-          <block>点赞({{detail.likesNum}})</block>
-      </view>
+      <view class="listTime">{{detail.createTime}}</view>
     </view>
   </view>
 </view>
@@ -33,8 +26,6 @@
 </view>
 <view class="fixed">
   <view class="inputs" onTap="addCommit">说说你想说的内容</view>
-    <image mode="scaleToFill" onTap="addZan" data-id="{{detail.id}}" a:if="{{detail.likesStatus == false}}" src="/images/index/zan.png"/>
-    <image mode="scaleToFill" onTap="unZan" data-id="{{detail.id}}" a:if="{{detail.likesStatus == true}}" src="/images/index/zans.png"/>
 </view>
 <view class="commit" a:if="{{fixed}}">
   <view class="textarea">

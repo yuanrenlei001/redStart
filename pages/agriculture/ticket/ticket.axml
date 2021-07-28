@@ -1,7 +1,11 @@
 <view class="main">
   <view class="topText" onTap="goUrl" a:for="{{list}}" data-id="{{item.id}}">
-    <view class="topText01">{{item.name}} <image mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" class="video" src="/images/redHome/video.png"/></view>
-    <view class="topText03">绍兴市上虞区章镇镇新叶村503县道</view>
+    <view class="topText01">{{item.name}} 
+      <image mode="scaleToFill" a:if="{{item.collection == false}}" class="collect" src="/images/redHome/collect.png"/> 
+      <image mode="scaleToFill" a:if="{{item.collection == true}}" class="collect" src="/images/redHome/collectActive.png"/> 
+      <image mode="scaleToFill" a:if="{{item.videoInfoList}}" class="video" src="/images/redHome/video.png"/>
+    </view>
+    <view class="topText03">{{item.areaCode}}</view>
     <view class="topText04"><text>联系人：{{item.contactsUser}}</text><text>电话：{{item.contactsPhone}}</text></view>
   </view>
 </view>

@@ -1,0 +1,28 @@
+<view class="main">
+  
+  <view class="body">
+
+    <view class="list"  a:for="{{list}}">
+      <!-- <navigator url="/pages/agriculture/ticket/ticketDetail/ticketDetail?id={{item.id}}" a:if="{{item.type=='PZFW'}}"> -->
+        <!-- <navigator url="/pages/redHome/redDetail/redDetail?id={{item.id}}" a:if="{{item.type=='HXZJ'}}"> -->
+        <navigator url="/pages/index/detail/detail?id={{item.id}}" a:if="{{item.type=='NJJT'}}">
+        <view class="listRight">
+          <view class="listRight01">{{item.collName}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/redHome/redDetail/redDetail?id={{item.id}}" a:if="{{item.type=='HXZJ'}}">
+        <view class="listRight">
+          <view class="listRight01">{{item.collName}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/agriculture/ticket/ticketDetail/ticketDetail?id={{item.id}}" a:if="{{item.type=='PZFW'}}">
+        <view class="listRight">
+          <view class="listRight01">{{item.collName}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

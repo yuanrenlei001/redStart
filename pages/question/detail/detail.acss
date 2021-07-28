@@ -33,8 +33,7 @@ page {background: #fff;}
     border-radius: 20rpx;
     position: relative;
     height: 60rpx;
-    margin-top: 20rpx;
-    margin-left: 20rpx;
+    margin: 20rpx auto 0;
     text-align: center;
     line-height: 60rpx;
 }

@@ -13,7 +13,7 @@ Page({
     var that =this;
     my.request({
       url: app.ajax+'/vueApi/exchanges?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
-      method: 'post',
+      method: 'get',
       data: {
         
       },

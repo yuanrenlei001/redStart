@@ -40,7 +40,8 @@ Page({
        },
     }],
     pageNum:1,
-    pageSize:100
+    pageSize:100,
+    id:''
   },
   
   onReady(e) {
@@ -127,7 +128,7 @@ Page({
     // {id}
     console.log(id)
         my.request({
-  url: app.ajax+'/vueApi/redHome/'+30,
+  url: app.ajax+'/vueApi/redHome/'+id,
   method: 'get',
   data: {
     
@@ -140,6 +141,7 @@ Page({
     // let data = res.data.data.result;
     that.setData({
         detail:res.data.data,
+        id:res.data.data.id,
          showFixed: true
     })
   },

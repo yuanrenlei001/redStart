@@ -1,0 +1,56 @@
+<view class="main">
+  <view class="body">
+    <view class="sort">
+      <view class="{{type=='HDZM'?'active':''}}"  onTap="active" data-type="HDZM">活动招募</view>
+      <view class="{{type=='ZDYY'?'active':''}}"  onTap="active" data-type="ZDYY">阵地预约</view>
+    </view>
+    <view class="list" a:if="{{type=='HDZM'}}" a:for="{{list}}">
+      <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.fileList[0].filePath}}"/>
+        <view class="listRight">
+          <view class="listRight01">{{item.eventTitle}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
+          <view class="listRight03" a:if="{{item.eventStatus == 0}}">正在进行中</view>
+          <view class="listRight03" a:if="{{item.eventStatus == 1}}" style="color:#02a90a;">已完成</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="list2" a:if="{{type=='ZDYY'}}">
+      <view class="listDetail">
+        <view class="listDetailLeft">场所名称：</view>
+        <view class="listDetailRight">{{list[0].applicantUnit}}</view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所负责人：</view>
+        <view class="listDetailRight">
+           {{list[0].applicantUser}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所地址：</view>
+        <view class="listDetailRight">
+          {{list[0].address}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">使用方向</view>
+        <view class="listDetailRight">
+          合作社党建模式宣传展示参观
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所容量：</view>
+        <view class="listDetailRight">
+         {{list[0].participateNum}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">场所简介：</view>
+        <view class="listDetailRight">
+          {{list[0].remark}}
+        </view>
+      </view>
+    </view>
+    <view class="btn" a:if="{{type==2}}" onTap="goUrl">我要报名</view>
+  </view>
+</view>

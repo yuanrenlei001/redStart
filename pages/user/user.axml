@@ -10,7 +10,7 @@
       <text>个人信息</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
-    <navigator url="/pages/user/list/list?url=/vueApi/my/positionBookings/HDZM" class="list">
+    <navigator url="/pages/user/myPositionBookings/myPositionBookings" class="list">
       <image mode="scaleToFill" src="/images/user/icon02.png" class="icon"/>
       <text>我的预约</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
@@ -20,12 +20,12 @@
       <text>我的申报</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
-    <navigator url="" class="list">
+    <navigator url="/pages/user/myCollections/myCollections" class="list">
       <image mode="scaleToFill" src="/images/user/icon04.png" class="icon"/>
       <text>我的收藏</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
-    <navigator url="" class="list">
+    <navigator url="/pages/user/myConsultingServices/myConsultingServices" class="list">
       <image mode="scaleToFill" src="/images/user/icon05.png" class="icon"/>
       <text>我的咨询</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>

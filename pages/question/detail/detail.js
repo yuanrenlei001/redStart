@@ -8,40 +8,45 @@ Page({
     flag:true,
     fixed:false,
      img:app.ajaxImg,
+     questionDetails:''
 
   },
   onLoad(e) {
     this.onlineStudys(e.id);
   },
+    bindTextAreaBlur(e){
+    this.setData({
+      questionDetails:e.detail.value
+    })
+  },
     success(){
     let data = {
-
-"type": "NJJTPL",
-    "content": this.data.plText,
-    "relationId": this.data.id
+      // "type":
+    "replyDetails": this.data.questionDetails,
+    "id": this.data.detail.id
       
     
     }
     
 var that = this;
-    my.request({
-      url: app.ajax+'/vueApi/addComment',
-      method: 'post',
-      data: data,
-      headers:{
-        'content-type':'application/json'  //默认值
-      },
-      dataType: 'json',
-      success: function(res) {
-        that.setData({
-      fixed:false
-    });
-    that.notices(that.data.detail.id);
-      },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
-    });
+    // my.request({
+    //   url: app.ajax+'/vueApi/consultingService/edit',
+    //   method: 'post',
+    //   data: data,
+    //   headers:{
+    //     'content-type':'application/json'  //默认值
+    //   },
+    //   dataType: 'json',
+    //   success: function(res) {
+    //     that.setData({
+    //   fixed:false
+    // });
+    // that.onlineStudys(that.data.detail.id);
+    //   },
+    //   fail: function(res) {
+    //     my.alert({content: 'fail'});
+    //   },
+    // });
     console.log(data)
     
   },
@@ -113,7 +118,7 @@ var that = this;
       onlineStudys(id){
     var that =this;
     my.request({
-      url: app.ajax+'/vueApi/purchase/'+id,
+      url: app.ajax+'/vueApi/consultingService/'+id,
       method: 'get',
       data: {
         

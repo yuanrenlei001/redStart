@@ -4,6 +4,8 @@
     <view class="top02"><text>{{detail.createTime}}</text></view>
   </view>
   <view class="content">
-    <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.noticeContent}]}]}}"></rich-text>
+    <!-- <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.noticeContent}]}]}}"></rich-text> -->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
 </view>
+<import src="/wxParse/wxParse.axml">

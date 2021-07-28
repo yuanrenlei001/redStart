@@ -10,7 +10,10 @@
             </swiper>
   </view>
   <view class="topText">
-    <view class="topText01" >{{details.name}} <image   mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> <image mode="scaleToFill" onTap="videoss" class="video" src="/images/redHome/video.png"/></view>
+    <view class="topText01" >{{details.name}} 
+    <image  onTap="collect" a:if="{{details.collection == false}}"  mode="scaleToFill" class="collect" src="/images/redHome/collect.png"/> 
+    <image  onTap="uncollect" a:if="{{details.collection == true}}"  mode="scaleToFill" class="collect" src="/images/redHome/collectActive.png"/> 
+    <image mode="scaleToFill" onTap="videoss" class="video" src="/images/redHome/video.png"/></view>
     <view class="topText02">{{details.homeCategory}}</view>
     <view class="topText03">{{details.areaCode}}</view>
     <view class="topText04"><text>联系人：{{details.contactsUser}}</text><text>电话：{{details.contactsPhone}}</text></view>
