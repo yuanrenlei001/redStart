@@ -15,7 +15,7 @@
     <view class="fixedTitle">{{detail.name}}</view>
     <view class="fixedText">主营：{{detail.remark}}</view>
     <view class="fixedText">联系人：{{detail.contactsUser}}</view>
-    <view class="fixedText">地址：绍兴市上虞区章镇镇新叶村503县道绍兴市上虞区章镇镇新叶村503县道绍兴市上虞区章镇镇新叶村503县道</view>
+    <view class="fixedText">地址：{{detail.areaCode}}</view>
     <view class="fixedBtn" onTap="goUrl">查看详情</view>
   </view>
 </view>

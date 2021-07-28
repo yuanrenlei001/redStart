@@ -38,7 +38,7 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
-        let data = res.data.data;
+        let data = res.data.data.result;
         //         console.log(data.length)
         // console.log(res.data.data.pageSize)
         //     if(data.length>=res.data.data.pageSize){

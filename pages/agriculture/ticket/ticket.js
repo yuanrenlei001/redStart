@@ -52,9 +52,9 @@ Page({
       },
     });
   },
-  goUrl(){
+  goUrl(e){
     my.navigateTo({
-      url: '/pages/activity/activityYy/activityYy'
+      url: '/pages/agriculture/ticket/ticketDetail/ticketDetail?id='+e.target.targetDataset.id
     });
   },
           onReachBottom() {

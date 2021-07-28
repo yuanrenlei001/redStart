@@ -1,18 +1,18 @@
 <view class="main">
   <image mode="scaleToFill" src="/images/market/add.png" class="add" onTap="goUrl"/>
   <view class="list" a:for="{{list}}">
-    <view class="listHeader"><image mode="scaleToFill" src="/images/market/qcg.png"/><block>{{item.name}}</block></view>
+    <view class="listHeader"><image mode="scaleToFill" src="{{item.userImg}}"/><block>{{item.name}}</block></view>
     <view class="listText">{{item.introduction}}</view>
     <view class="listImg">
       <text a:for="{{item.imgInfo}}" a:for-item="imgs" onTap="previewImage" data-img ="{{item.imgInfo}}" data-index={{index}}><image mode="scaleToFill" src="{{img+imgs.filePath}}"/></text>
     </view>
-    <view class="listBottom">
+    <view class="listBottom" onTap="goUrls" data-id="{{item.id}}">
       <view class="listTime">{{item.releaseDate}}</view>
       <view class="listpl">
         <image mode="scaleToFill" src="/images/market/pl.png"/>
-        <block>评论(3)</block>
+        <block>评论({{item.commentList.length}})</block>
         <image mode="scaleToFill" src="/images/market/zan.png"/>
-        <block>点赞(3)</block>
+        <block>点赞({{item.likesNum}})</block>
       </view>
     </view>
   </view>

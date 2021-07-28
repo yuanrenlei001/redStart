@@ -11,6 +11,11 @@ Page({
   onLoad() {
     this.onlineStudys();
   },
+  goUrls(e){
+    my.navigateTo({
+      url: '/pages/mark/shareDetail/shareDetail?id='+e.target.dataset.id
+    });
+  },
   previewImage(e){
     console.log(e)
     var that =this;

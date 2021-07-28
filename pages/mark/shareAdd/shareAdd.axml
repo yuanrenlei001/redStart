@@ -1,9 +1,9 @@
 <view class="main">
   <view class="textarea">
-    <textarea placeholder="请输入内容"></textarea>
+    <textarea placeholder="请输入内容" onBlur="bindTextAreaBlur"></textarea>
   </view>
-  <view class="imgUp">
+  <view class="imgUp" onTap="uploadFile">
     +
   </view>
-  <view class="btn">发布</view>
+  <view class="btn" onTap="success">发布</view>
 </view>

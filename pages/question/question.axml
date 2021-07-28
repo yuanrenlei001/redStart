@@ -5,7 +5,7 @@
       <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">已收到回复</view>
   </view>
   <view class="list">
-    <navigator url="" class="listSort" a:for="{{list}}">
+    <navigator url="/pages/question/detail/detail?id={{item.id}}" class="listSort" a:for="{{list}}">
       <view class="text">{{item.questionDetails}}</view>
       <view class="time">{{item.createTime}}</view>
     </navigator>

@@ -22,57 +22,8 @@ Page({
 	mobilenetHintType: 2,
  },},
 onLoad(e) {
+  console.log(e)
     this.detail(e.id);
-  },
-    uncollect(e){
-    var that =this;
-    let data = {
- "type": "HXZJ",
- "collId": this.data.details.id,
- "collName": this.data.details.name
-      
-
-}
-my.request({
-      url: app.ajax+'/vueApi/collection/remove?id='+this.data.details.id,
-      method: 'get',
-      data: {},
-      headers:{
-        'content-type':'application/json'  //默认值
-      },
-      dataType: 'json',
-      success: function(res) {
-        that.detail(that.data.details.id);
-      },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
-    });
-  },
-  collect(e){
-    var that =this;
-    let data = {
- "type": "HXZJ",
- "collId": this.data.details.id,
- "collName": this.data.details.name
-      
-
-}
-my.request({
-      url: app.ajax+'/vueApi/collection/add',
-      method: 'post',
-      data: data,
-      headers:{
-        'content-type':'application/json'  //默认值
-      },
-      dataType: 'json',
-      success: function(res) {
-        that.detail(that.data.details.id);
-      },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
-    });
   },
   close(e){
     this.setData({
@@ -97,7 +48,7 @@ my.request({
   detail(id){
     var that =this;
         my.request({
-        url: app.ajax+'/vueApi/redHome/'+id,
+        url: app.ajax+'/vueApi/ticket/'+id,
         method: 'get',
         data: {
           

@@ -1,50 +1,47 @@
 <view class="main">
   <view class="top">
-    <view class="top01">章镇镇猕猴植保课程</view>
+    <view class="top01">{{detail.title}}</view>
   </view>
-  <view class="video">
+  <view class="video" a:if="{{detail.filePathInfo.length>0}}">
     <video id="myVideo" 
-    src="{{video.src}}" 
-    controls="{{video.showAllControls}}"
-    loop="{{video.isLooping}}"
-    muted="{{video.muteWhenPlaying}}"
-    show-fullscreen-btn="{{video.showFullScreenButton}}"
-    show-play-btn="{{video.showPlayButton}}"
-    show-center-play-btn="{{video.showCenterButton}}"
-    object-fit="{{video.objectFit}}"
+    src="{{img+detail.filePathInfo[0].filePath}}" 
     autoplay="{{video.autoPlay}}"
-    direction="{{video.directionWhenFullScreen}}"
-    initial-time="{{video.initTime}}"
-    mobilenet-hint-type="{{video.mobilenetHintType}}"
-    onPlay="onPlay" 
-    onPause="onPause" 
-    onEnded="onEnded"
-    onError="onPlayError"
-    onTimeUpdate="onTimeUpdate"
+
    />
   </view>
   <view class="content">
-    猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种植猕猴桃猕猴桃种植技术-一步步教您如何种
+    {{detail.remark}}
   </view>
   <view class="textBottom">
-    <text><image mode="scaleToFill" src="/images/index/see.png"/> 10</text>
-    <text><image mode="scaleToFill" src="/images/index/zan.png"/> 10</text>
+    <text><image mode="scaleToFill" src="/images/index/see.png"/> {{detail.views}}</text>
+    <text onTap="addZan"  a:if="{{detail.likesStatus == false}}"><image mode="scaleToFill" src="/images/index/zan.png"/> {{detail.likesNum}}</text>
+    <text onTap="unZan" a:if="{{detail.likesStatus == true}}"><image mode="scaleToFill" src="/images/index/zans.png"/> {{detail.likesNum}}</text>
   </view>
 </view>
-<view class="pl">
-  <view class="plTitle">评论（2）</view>
-  <view class="plList">
-    <view class="plListImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+<view class="pl" a:if="{{detail.redStarCommentList.length>0}}">
+  <view class="plTitle">评论（{{detail.redStarCommentList.length}}）</view>
+  <view class="plList" a:for="{{detail.redStarCommentList}}">
+    <view class="plListImg"><image mode="scaleToFill" src="{{item.user.avatar}}"/></view>
     <view class="plTop">
-      <view class="plTopName">张三</view>
-      <view class="plTopTime">2019-07-28  14:30:24</view>
+      <view class="plTopName">{{item.user.userName}}</view>
+      <view class="plTopTime">{{item.createTime}}</view>
     </view>
     <view class="plBottom">
-      为严格规范发展程序，落实党员发展对于培训的要求，进一步加强对入党积极分子和党员发展对象的理论武装
+      {{item.content}}
     </view>
   </view>
 </view>
 <view class="fixed">
-  <view class="inputs">说说你想说的内容</view>
-  <image mode="scaleToFill" src="/images/redHome/collect.png"/>
+  <view class="inputs" onTap="addCommit">说说你想说的内容</view>
+    <image mode="scaleToFill" a:if="{{detail.collection == false}}" onTap="collects" src="/images/redHome/collect.png"/>
+    <image mode="scaleToFill" a:if="{{detail.collection == true}}" onTap="uncollects" src="/images/redHome/collectActive.png"/>
+</view>
+<view class="commit" a:if="{{fixed}}">
+  <view class="textarea">
+    <textarea onBlur="bindTextAreaBlur" placeholder="请输入内容"></textarea>
+    <view class="btns">
+      <text style="background:#3987f8;" onTap="success">发布</text>
+      <text  style="background:#999;" onTap="cancel">取消</text>
+    <view>
+  </view>
 </view>
