@@ -10,7 +10,16 @@ Page({
     url:'commonProsperityLeaders'
   },
   onLoad() {
-    this.commonProsperityLeadersList();
+    // this.commonProsperityLeadersList();
+  },
+  
+  onShow(){
+    this.setData({
+      list:[],
+      pageNum:1,
+    pageSize:10,
+    })
+this.commonProsperityLeadersList();
   },
   active(e){
     console.log(e.target.targetDataset.type)

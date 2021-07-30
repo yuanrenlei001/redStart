@@ -24,6 +24,9 @@ Page({
 onLoad(e) {
     this.detail(e.id);
   },
+  phone(e) {
+    my.makePhoneCall({ number: e.target.targetDataset.phone });
+  },
     uncollect(e){
     var that =this;
     let data = {

@@ -8,9 +8,7 @@ Page({
   },
   onLoad(query) {
     // 页面加载
-    this.notices();
-    this.farmingStudys();
-    this.banners();
+    
   },
   banners(){
     var that = this;
@@ -101,6 +99,9 @@ Page({
   onShow() {
     let title = app.title.index;
     my.setNavigationBar({title});
+    this.notices();
+    this.farmingStudys();
+    this.banners();
     // 页面显示
   },
   onHide() {
