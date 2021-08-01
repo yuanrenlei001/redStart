@@ -3,8 +3,8 @@ App({
     index:'首页',
     user:'我的'
   },
-  ajax:'http://42.194.242.144/redStar',
-  ajaxImg:'http://42.194.242.144/redStar',
+  ajax:'https://hxhzs.zhamengtec.com:8082',
+  ajaxImg:'https://hxhzs.zhamengtec.com:8082',
   onLaunch(options) {
     
   },

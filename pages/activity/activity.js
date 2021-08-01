@@ -73,6 +73,11 @@ Page({
       url:'/pages/activity/activityYy/activityYy'
     });
   },
+  goMap(){
+    my.navigateTo({
+      url:'/pages/web/web?url='+'http://vr.zjytx.net/tour/3a69efdab609198a'
+    });
+  },
         onReachBottom() {
     // 页面被拉到底部
     if(this.data.flag){

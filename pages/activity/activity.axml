@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="/images/hdyybanner.png"/></view>
+  <view class="top" onTap="goMap"><image mode="scaleToFill" src="/images/hdyybanner.png"/></view>
   <view class="body">
     <view class="sort">
       <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">活动招募</view>

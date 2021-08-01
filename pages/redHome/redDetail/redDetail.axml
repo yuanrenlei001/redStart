@@ -16,7 +16,7 @@
     <image mode="scaleToFill" onTap="videoss" class="video" src="/images/redHome/video.png"/>
     </view>
     <view class="topText02">{{details.homeCategory}}</view>
-    <view class="topText03">{{details.areaCode}}</view>
+    <view class="topText03" onTap="openLocation">{{details.areaCode}}</view>
     <view class="topText04"><text>联系人：{{details.contactsUser}}</text><text onTap="phone" data-phone="{{details.contactsPhone}}">电话：{{details.contactsPhone}}</text></view>
   </view>
   <view class="main01">
