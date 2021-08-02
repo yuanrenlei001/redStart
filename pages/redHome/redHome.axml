@@ -9,13 +9,13 @@
   onPanelTap="onPanelTap"
   show-location style="width: 100%; height: 100vh;"
   include-points="{{includePoints}}"></map>
-<view class="fixed" a:if="{{showFixed}}">
+<view class="fixed" a:if="{{showFixed == true}}">
   <view class="main">
     <view   class="close" onTap="defaultTap"><icon type="clear" size="25"/></view>
     <view class="fixedTitle">{{detail.name}}</view>
     <view class="fixedText">主营：{{detail.remark}}</view>
     <view class="fixedText">联系人：{{detail.contactsUser}}</view>
     <view class="fixedText">地址：{{detail.areaCode}}</view>
-    <view class="fixedBtn" onTap="goUrl">查看详情</view>
+    <view class="fixedBtn" onTap="goUrl" data-id="{{detail.id}}">查看详情</view>
   </view>
 </view>

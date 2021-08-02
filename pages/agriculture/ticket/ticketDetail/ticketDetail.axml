@@ -5,7 +5,7 @@
                 autoplay="true"
             >
                 <swiper-item key="swiper-item-{{index}}" a:for="{{details.bannerList}}">
-                    <image mode="scaleToFill" src="{{img+item.filePath}}"/>
+                    <image mode="scaleToFill" src="{{img+item.fileNewName}}"/>
                 </swiper-item>
             </swiper>
   </view>
@@ -26,12 +26,12 @@
   </view>
   <view class="main01">
     <view class="title"><view></view>开票二维码</view>
-    <image onTap="previewImage" data-src="{{img+item.filePath}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.filePath}}" style="margin-right:15rpx;" class="code"/>
+    <image onTap="previewImage" data-src="{{img+item.fileNewName}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.fileNewName}}" style="margin-right:15rpx;" class="code"/>
   </view>
   <view class="main01">
     <view class="title"><view></view>检测报告</view>
     <view class="list">
-      <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.filePath}}&url=redHome&img=true" class="detail" a:for="{{details.fileList}}">
+      <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.fileNewName}}&url=redHome&img=true" class="detail" a:for="{{details.fileList}}">
         <view class="detail01">{{item.fileName}}</view>
         <view class="detail02">{{item.createTime}}</view>
         <!-- <view class="detail03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view> -->
@@ -42,7 +42,7 @@
 <view class="fixed" a:if="{{show}}" onTap="close">
   <view class="fixedMain">
     <video id="myVideo" 
-    src="{{img+details.videoInfoList[0].filePath}}" 
+    src="{{img+details.videoInfoList[0].fileNewName}}" 
    />
   </view>
 </view>

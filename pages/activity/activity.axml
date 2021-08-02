@@ -7,7 +7,7 @@
     </view>
     <view class="list" a:if="{{type==1}}" a:for="{{list}}">
       <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
-        <image class="listLeft" mode="scaleToFill" src="{{img+item.coverImgInfo[0].filePath}}"/>
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.coverImgInfo[0].fileNewName}}"/>
         <view class="listRight">
           <view class="listRight01">{{item.eventTitle}}</view>
           <view class="listRight02">{{item.createTime}}</view>

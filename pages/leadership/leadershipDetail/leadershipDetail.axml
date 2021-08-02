@@ -1,6 +1,6 @@
 <view class="main">
   <view class="top">
-    <image mode="scaleToFill" src="{{img+detail.imgPathInfo[0].filePath}}" class="user"/>
+    <image mode="scaleToFill" src="{{img+detail.imgPathInfo[0].fileNewName}}" class="user"/>
     <view class="topText">
       <view class="topText01">{{detail.name}} <text>{{detail.post}}</text></view>
       <view class="topText02">{{detail.town}}</view>

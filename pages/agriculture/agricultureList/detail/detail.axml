@@ -1,5 +1,5 @@
 <view>
-  <image a:if="{{flag == false}}" mode="scaleToFill" a:for="{{detail.imgPathInfo}}" src="{{img+item.filePath}}"/>
+  <image a:if="{{flag == false}}" mode="scaleToFill" a:for="{{detail.imgPathInfo}}" src="{{img+item.fileNewName}}"/>
   <image a:if="{{flag == true}}" mode="scaleToFill"  src="{{img+detail}}"/>
   <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   

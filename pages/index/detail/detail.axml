@@ -4,7 +4,7 @@
   </view>
   <view class="video" a:if="{{detail.filePathInfo.length>0}}">
     <video id="myVideo" 
-    src="{{img+detail.filePathInfo[0].filePath}}" 
+    src="{{img+detail.filePathInfo[0].fileNewName}}" 
     autoplay="{{video.autoPlay}}"
 
    />

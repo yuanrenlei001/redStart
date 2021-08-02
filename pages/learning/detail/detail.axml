@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="http://42.194.242.144/redStar/profile/upload/2021/07/23/9d104c33-ea67-4886-bbc1-b2eb0edb62dd.png"/></view>
+  <view class="top"><image mode="scaleToFill" src="{{img+detail.coverImgInfo[0].fileNewName}}"/></view>
   <view class="topText">
     <view class="topText01">{{detail.title}}</view>
   </view>
@@ -8,7 +8,7 @@
     <view class="content">
     <view a:if="{{detail.studyVideoInfo.length>0}}">
   <video id="myVideo" 
-    src="{{img+detail.studyVideoInfo[0].filePath}}" 
+    src="{{img+detail.studyVideoInfo[0].fileNewName}}" 
     loop="false"
     autoplay="{{video.autoPlay}}"
     onPlay="onPlay" 

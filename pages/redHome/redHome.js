@@ -6,22 +6,7 @@ Page({
     detail:'',
     longitude: 120.131441,
     latitude: 30.279383,
-     markers: [{
-      iconPath: "/images/redHome/iconRed.png",
-      id: 10,
-      latitude: 30.279383,
-      longitude: 120.131441,
-      width: 50,
-      height: 50
-    },{
-      iconPath: "/images/redHome/iconRed.png",
-      id: 11,
-      latitude: 30.279383,
-      longitude: 120.131441,
-      width: 50,
-      height: 50,
-      
-      }],
+     markers: [],
     panels:[{
     	 id:6,
        // 布局参考 map 高级定制渲染
@@ -98,6 +83,7 @@ Page({
       obj['longitude'] = data[i].lon;
       obj['width'] = 50;
       obj['height'] = 50;
+      obj['children'] =  data[i];
       arr.push(obj)
     }
     console.log(arr)
@@ -122,12 +108,10 @@ Page({
   
 });
   },
-  markertap(e) {
-    var that = this;
-    let id = e.markerId;
-    // {id}
-    console.log(id)
-        my.request({
+  mapAjax(id){
+    // my.alert({title:id})
+    var that =this;
+            my.request({
   url: app.ajax+'/vueApi/redHome/'+id,
   method: 'get',
   data: {
@@ -139,28 +123,50 @@ Page({
   dataType: 'json',
   success: function(res) {
     // let data = res.data.data.result;
-    that.setData({
+    setTimeout(()=>{
+      that.setData({
         detail:res.data.data,
         id:res.data.data.id,
-         showFixed: true
+         showFixed:true
     })
+    },500)
+    
   },
   fail: function(res) {
     my.alert({content: 'fail'});
   },
   
 });
-    // this.setData({
-    //  
-    // });
+  },
+  markertap(e) {
+    var that = this;
+    let id = e.markerId;
+     let data = this.data.markers;
+      for(let i=0;i<data.length;i++){
+        if(data[i].id == e.markerId){
+          // console.log(data[i])
+         that.setData({
+        detail:data[i].children,
+        id:data[i].id,
+         showFixed:true
+    })
+    console.log(that.data.detail)
+        }
+      }
+    // console.log(e)
+
   },
   
   controltap(e) {
     console.log('control tap', e);
   },
-  goUrl(){
+  goUrl(e){
+    let id = e.target.dataset.id;
+    console.log(id.toString())
+    // my.alert({title:e.target.dataset.id})
+    // my.alert({title:'/pages/redHome/redDetail/redDetail?id='+id.toString()})
     my.navigateTo({
-      url: '/pages/redHome/redDetail/redDetail?id='+this.data.detail.id
+      url: '/pages/redHome/redDetail/redDetail?id='+id.toString()
     });
   },
   defaultTap(){

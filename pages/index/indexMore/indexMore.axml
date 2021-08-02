@@ -7,7 +7,7 @@
     </view>
     <view class="list" >
       <navigator url="/pages/index/detail/detail?id={{item.id}}" a:for="{{list}}">
-        <image class="listLeft" mode="scaleToFill" src="{{img+item.imgPathInfo[0].filePath}}"/>
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.imgPathInfo[0].fileNewName}}"/>
         <view class="listRight">
           <view class="listRight01">{{item.title}}</view>
           <view class="listRight02">主讲人：{{item.lecturer}}</view>

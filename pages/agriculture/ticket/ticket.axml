@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="topText" onTap="goUrl" a:for="{{list}}" data-id="{{item.id}}">
+  <navigator url="{{'/pages/agriculture/ticket/ticketDetail/ticketDetail?id='+item.id}}" class="topText" onTap="goUrl" a:for="{{list}}" data-id="{{item.id}}">
     <view class="topText01">{{item.name}} 
       <image mode="scaleToFill" a:if="{{item.collection == false}}" class="collect" src="/images/redHome/collect.png"/> 
       <image mode="scaleToFill" a:if="{{item.collection == true}}" class="collect" src="/images/redHome/collectActive.png"/> 
@@ -7,5 +7,5 @@
     </view>
     <view class="topText03">{{item.areaCode}}</view>
     <view class="topText04"><text>联系人：{{item.contactsUser}}</text><text>电话：{{item.contactsPhone}}</text></view>
-  </view>
+  </navigator>
 </view>

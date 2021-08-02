@@ -64,9 +64,9 @@ Page({
   },
   datePicker() {
     my.datePicker({
-      currentDate: '2016-10-10',
-      startDate: '2016-10-9',
-      endDate: '2017-10-9',
+      currentDate: '2019-10-10',
+      startDate: '2019-10-9',
+      endDate: '2025-10-9',
       success: (res) => {
         console.log(res)
         this.setData({

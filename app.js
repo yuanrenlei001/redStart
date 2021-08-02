@@ -3,8 +3,8 @@ App({
     index:'首页',
     user:'我的'
   },
-  ajax:'http://hxhzs.zhamengtec.com:8081',
-  ajaxImg:'http://hxhzs.zhamengtec.com:8081',
+  ajax:'https://sjyw.zhamengtec.com:8082',
+  ajaxImg:'https://sjyw.zhamengtec.com:8082',
   onLaunch(options) {
     
   },

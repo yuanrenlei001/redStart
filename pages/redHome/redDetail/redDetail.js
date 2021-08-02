@@ -26,6 +26,7 @@ Page({
     address: '学院路77号',
  },},
 onLoad(e) {
+  // my.alert({title:e.id})
     this.detail(e.id);
   },
    openLocation() {
@@ -111,6 +112,7 @@ my.request({
     })
   },
   detail(id){
+    
     var that =this;
         my.request({
         url: app.ajax+'/vueApi/redHome/'+id,
@@ -123,6 +125,7 @@ my.request({
         },
         dataType: 'json',
         success: function(res) {
+          // my.alert({title:JSON.stringify(res.data.data.areaCode)})
           // let data = res.data.data.result;
           that.setData({
               details:res.data.data

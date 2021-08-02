@@ -53,6 +53,7 @@ Page({
     });
   },
   goUrl(e){
+    console.log(e.target.targetDataset.id)
     my.navigateTo({
       url: '/pages/agriculture/ticket/ticketDetail/ticketDetail?id='+e.target.targetDataset.id
     });
