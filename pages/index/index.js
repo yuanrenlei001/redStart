@@ -12,6 +12,7 @@ Page({
   },
   banners(){
     var that = this;
+    console.log(app.ajax+'/vueApi/banners?pageNum=1&pageSize=10')
         my.request({
       url: app.ajax+'/vueApi/banners?pageNum=1&pageSize=10',
       method: 'get',
@@ -28,9 +29,9 @@ Page({
           banner:data
         })
       },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
+      // fail: function(res) {
+      //   my.alert({content: 'fail'});
+      // },
     });
   },
   goUrlNews(){
@@ -56,9 +57,9 @@ Page({
           noticesList:data
         })
       },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
+      // fail: function(res) {
+      //   my.alert({content: 'fail'});
+      // },
     });
   },
   farmingStudys(){
@@ -79,9 +80,9 @@ Page({
           farmingStudysList:data
         })
       },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
+      // fail: function(res) {
+      //   my.alert({content: 'fail'});
+      // },
     });
   },
   getAuthCode(){

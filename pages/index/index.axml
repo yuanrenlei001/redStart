@@ -1,10 +1,11 @@
+<!-- <image mode="scaleToFill" src="https://images.weserv.nl/?url=https://hxhzs.zhamengtec.com:8082/profile/upload/2021/08/01/0a49bd94-1882-49bb-9441-f582a376d5d1.png"/> -->
 <view class="top">
   <swiper
                 class="demo-swiper"
                 autoplay="true"
             >
                 <swiper-item key="swiper-item-{{index}}" a:for="{{banner}}">
-                    <image mode="scaleToFill" src="{{img+item.imgInfoList[0].filePath}}"/>
+                    <image mode="scaleToFill" src="{{img+item.imgInfoList[0].fileNewName}}"/>
                 </swiper-item>
             </swiper>
 </view>

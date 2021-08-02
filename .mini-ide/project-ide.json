@@ -1,3 +1,4 @@
 {
-  "ignoreWebViewDomainCheck": true
+  "ignoreWebViewDomainCheck": true,
+  "ignoreHttpDomainCheck": true
 }
