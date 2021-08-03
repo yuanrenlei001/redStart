@@ -2,8 +2,12 @@ page {background: #fff;}
 .main {padding: 24rpx;}
 .textarea textarea {background: #f5f5f5;height:320rpx;padding: 12rpx;font-size: 26rpx;color: #999;}
 .imgUp {margin-top:30rpx;width:220rpx;height:220rpx;border-radius: 10rpx;background: #f5f5f5;
-  text-align: center;line-height: 220rpx;font-size: 50rpx;color: #999;
+  text-align: center;line-height: 220rpx;font-size: 50rpx;color: #999;margin-right: 15rpx;float:left;
 }
 .btn {height:80rpx;line-height: 80rpx;background: #ee3a39;text-align: center;position: fixed;z-index: 999;
   bottom:24rpx;left:24rpx;width:702rpx;color: #fff;font-size: 36rpx;border-radius: 10rpx;
+}
+.imgUp image {width:220rpx;height:220rpx;}
+.fixed {position: fixed;top:0;left:0;width: 100%;height:100%;z-index: 999;background: rgba(0,0,0,.3);
+  line-height: 500rpx;text-align: center;color: #fff;font-size: 50rpx;
 }

@@ -1,4 +1,7 @@
 .main {padding: 24rpx;position: relative;}
+.sort {height:80rpx;position: relative;}
+.sort view {float:left;width:49%;border: 1px solid #ededed;text-align: center;line-height: 80rpx;font-size: 32rpx;color: #4c4c4c;background: #fff;}
+.sort view.active {border-top:1px solid #ee3a39;color: #ee3a39;background: #fafafa;}
 .detail {border-radius: 20rpx;background: #fff;margin-bottom: 24rpx;overflow: hidden;position: relative;}
 .detailImg {width:100%;height:270rpx;}
 .detailText {position: relative;height:130rpx;padding: 0 24rpx;}
@@ -17,3 +20,4 @@ color: #333;
 .texts {position: absolute;top:20rpx;left:0;font-size: 24rpx;color: #ee3a39;
   background: #fff;padding: 1px 5rpx;
 }
+.list {position: relative;margin-top: 30rpx;}

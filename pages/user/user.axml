@@ -30,16 +30,16 @@
       <text>我的咨询</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
-    <navigator url="" class="list">
+    <navigator url="/pages/user/myAdd/myAdd" class="list">
       <image mode="scaleToFill" src="/images/user/icon06.png" class="icon"/>
       <text>我的发布</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
   </view>
 <!-- <view onTap="logins">1231231231231231231</view> -->
-<button  open-type="getAuthorize" 
+<!-- <button  open-type="getAuthorize" 
 onGetAuthorize="onGetAuthorize" onError="onAuthError" 
 scope='userInfo'>
     会员基础信息授权
-</button>
+</button> -->
 </view>

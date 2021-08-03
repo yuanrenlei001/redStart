@@ -58,6 +58,11 @@ Page({
 this.policyInfos()
     }
   },
+    goMap(){
+    my.navigateTo({
+      url:'/pages/web/web?url='+'https://www.job0575.net/'
+    });
+  },
   goUrl(){
     my.navigateTo({
       url: '/pages/activity/activityYy/activityYy'

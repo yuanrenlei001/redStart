@@ -29,24 +29,24 @@ Page({
     }
     
 var that = this;
-    // my.request({
-    //   url: app.ajax+'/vueApi/consultingService/edit',
-    //   method: 'post',
-    //   data: data,
-    //   headers:{
-    //     'content-type':'application/json'  //默认值
-    //   },
-    //   dataType: 'json',
-    //   success: function(res) {
-    //     that.setData({
-    //   fixed:false
-    // });
-    // that.onlineStudys(that.data.detail.id);
-    //   },
-    //   fail: function(res) {
-    //     my.alert({content: 'fail'});
-    //   },
-    // });
+    my.request({
+      url: app.ajax+'/vueApi/consultingService/edit',
+      method: 'post',
+      data: data,
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        that.setData({
+      fixed:false
+    });
+    that.onlineStudys(that.data.detail.id);
+      },
+      fail: function(res) {
+        my.alert({content: 'fail'});
+      },
+    });
     console.log(data)
     
   },
@@ -106,7 +106,7 @@ var that = this;
     let url = [];
     let imgList = e.target.dataset.img;
     for(let i=0;i<imgList.length;i++){
-      url.push(that.data.img+imgList[i].filePath)
+      url.push(that.data.img+imgList[i].fileNewName)
     }
     console.log(url)
     my.previewImage({

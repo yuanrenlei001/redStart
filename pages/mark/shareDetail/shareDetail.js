@@ -8,17 +8,22 @@ Page({
     flag:true,
     fixed:false,
      img:app.ajaxImg,
-
+plText:''
   },
   onLoad(e) {
     this.onlineStudys(e.id);
   },
+  bindTextAreaBlur(e){
+    this.setData({
+      plText:e.detail.value
+    })
+  },
     success(){
     let data = {
 
-"type": "NJJTPL",
+"type": "QCG",
     "content": this.data.plText,
-    "relationId": this.data.id
+    "relationId": this.data.detail.id
       
     
     }
@@ -36,7 +41,7 @@ var that = this;
         that.setData({
       fixed:false
     });
-    that.notices(that.data.detail.id);
+    that.onlineStudys(that.data.detail.id);
       },
       fail: function(res) {
         my.alert({content: 'fail'});
@@ -101,7 +106,7 @@ var that = this;
     let url = [];
     let imgList = e.target.dataset.img;
     for(let i=0;i<imgList.length;i++){
-      url.push(that.data.img+imgList[i].filePath)
+      url.push(that.data.img+imgList[i].fileNewName)
     }
     console.log(url)
     my.previewImage({

@@ -1,10 +1,10 @@
 {
   "pages": [
-        "pages/index/index",
+    "pages/index/index",
+    "pages/question/questionAdd/questionAdd",
+    "pages/mark/shareAdd/shareAdd",
+    "pages/mark/share/shareAdd/shareAdd",
     "pages/service/loan/loan",
-
-    
-    
     "pages/mark/share/share",
     "pages/redHome/redHome",
     "pages/agriculture/ticket/ticket",
@@ -17,7 +17,6 @@
     "pages/learning/learning",
     "pages/activity/activityYy/activityYy",
     "pages/question/question",
-    "pages/question/questionAdd/questionAdd",
     "pages/redHome/redImg/redImg",
     "pages/user/information/information",
     "pages/agriculture/agricultureList/agricultureList",
@@ -28,7 +27,6 @@
     "pages/agriculture/agriculture",
     "pages/leadership/leadershipDetail/leadershipDetail",
     "pages/activity/activityBm/activityBm",
-    "pages/mark/shareAdd/shareAdd",
     "pages/mark/mark",
     "pages/mark/shareDetail/shareDetail",
     "pages/agriculture/ticketDetail/ticketDetail",
@@ -36,7 +34,6 @@
     "pages/web/web",
     "pages/service/detail/detail",
     "pages/learning/detail/detail",
-    "pages/mark/share/shareAdd/shareAdd",
     "pages/agriculture/agricultureList/detail/detail",
     "pages/notice/notice",
     "pages/notice/detail/detail",
@@ -46,7 +43,8 @@
     "pages/question/detail/detail",
     "pages/user/myPositionBookings/myPositionBookings",
     "pages/user/myCollections/myCollections",
-    "pages/user/myConsultingServices/myConsultingServices"
+    "pages/user/myConsultingServices/myConsultingServices",
+    "pages/user/myAdd/myAdd"
   ],
   "window": {
     "defaultTitle": "红心共富"

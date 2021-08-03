@@ -1,40 +1,39 @@
 const app = getApp();
 Page({
   data: {
+    type:1,
     pageNum:1,
     pageSize:10,
     list:[],
-    type:0,
-    img:app.ajaxImg,
-    flag:true
+    flag:true,
+    url:'eventRecruitments'
   },
-  onLoad() {
-    console.log(app)
-    this.onlineStudys();
+  onLoad(e) {
+    this.commonProsperityLeadersList(e.url);
   },
-   active(e){
+  active(e){
     console.log(e.target.targetDataset.type)
-    if(e.target.targetDataset.type == 0){
+    if(e.target.targetDataset.type == 1){
       this.setData({
         type:e.target.targetDataset.type,
-        url:'commonProsperityLeaders',
+        url:'eventRecruitments',
         pageNum:1,
         list:[]
       })
     }else{
       this.setData({
         type:e.target.targetDataset.type,
-        url:'helpPairs',
+        url:'positionBookings',
         pageNum:1,
         list:[]
       })
     }
-    this.onlineStudys();
+    this.commonProsperityLeadersList();
   },
-  onlineStudys(){
-    var that =this;
+  commonProsperityLeadersList(url){
+  var that =this;
     my.request({
-      url: app.ajax+'/vueApi/onlineStudys?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize+'&studyType='+this.data.type,
+      url: app.ajax+'/vueApi/my/purchases?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
       method: 'get',
       data: {
         
@@ -66,10 +65,17 @@ Page({
       },
     });
   },
-      onReachBottom() {
+  // commonProsperityLeaders  共富带头人
+  // helpPairs 结队帮扶
+  goUrl(){
+    my.navigateTo({
+      url:'/pages/activity/activityYy/activityYy'
+    });
+  },
+        onReachBottom() {
     // 页面被拉到底部
     if(this.data.flag){
-this.onlineStudys()
+this.commonProsperityLeadersList()
     }
   },
 });

@@ -3,10 +3,10 @@
   <view class="body">
 
     <view class="list"  a:for="{{list}}">
-      <navigator url="/pages/question/detail/detail?id={{item.id}}">
+      <navigator url="/pages/mark/shareDetail/shareDetail?id={{item.id}}">
         
         <view class="listRight">
-          <view class="listRight01">{{item.questionDetails}}</view>
+          <view class="listRight01">{{item.introduction}}</view>
           <view class="listRight02">{{item.createTime}}</view>
         </view>
       </navigator>

@@ -1,6 +1,6 @@
 .top {width:750rpx;height:400rpx;}
 .top image {width:750rpx;height:400rpx;}
-.collect {width:37rpx;height:37rpx;margin-left: 26rpx;}
+.collect {width:37rpx;height:37rpx;margin-left: 26rpx;float:right;}
 .video {width:38rpx;height:36rpx;vertical-align: middle;float:right;}
 .topText {padding: 30rpx 24rpx;background: #fff;margin-bottom: 10rpx;}
 .topText01 {font-size: 36rpx;color: #333;position: relative;margin-bottom: 15rpx;}

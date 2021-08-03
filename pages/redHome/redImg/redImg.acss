@@ -3,7 +3,9 @@
 .collect {width:37rpx;height:37rpx;margin-left: 26rpx;}
 .video {width:38rpx;height:36rpx;vertical-align: middle;float:right;}
 .topText {padding: 30rpx 24rpx;background: #fff;margin-bottom: 10rpx;}
-.topText01 {font-size: 36rpx;color: #333;position: relative;margin-bottom: 15rpx;}
+.topText01 {font-size: 36rpx;color: #333;position: relative;margin-bottom: 15rpx;
+   
+}
 .topText02 {font-size: 28rpx;color: #ee3a39;margin-bottom: 30rpx;}
 .topText03 {font-size: 32rpx;color: #666;margin-bottom: 30rpx;
   white-space:nowrap; 
@@ -12,6 +14,15 @@
   overflow: hidden;
 }
 .topText04 {font-size: 32rpx;color: #666;}
+.topText04 text:first-child {
+  display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+ 
 .topText04 text:last-child {float:right;}
 .title {font-size: 30rpx;color: #1a1a1a;line-height: 80rpx;position: relative;padding-left: 25rpx;}
 .title>view {

@@ -1,4 +1,8 @@
 <view class="main">
+<view class="sort">
+      <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">党史学习</view>
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">红心青年讲章镇</view>
+    </view>
   <view class="list">
     <navigator url="/pages/learning/detail/detail?id={{item.id}}" class="detail" a:for="{{list}}">
       <text class="texts">{{item.type=='0'?'图文':'视频'}}</text>

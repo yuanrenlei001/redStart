@@ -36,7 +36,7 @@ line-height: 42rpx;
 .serviceListSortLeft image {width:100rpx;height:100rpx;vertical-align: middle;}
 .serviceListSortRight {margin-left: 150rpx;}
 .serviceListSortRight01 {font-size: 28rpx;color: #4c4c4c;padding-top: 35rpx;}
-.serviceListSortRight02 {margin-top: 12rpx;font-size: 26rpx;color: #666;}
+.serviceListSortRight02 {margin-top: 12rpx;font-size: 22rpx;color: #666;}
 .serviceList {width: 100%;overflow: hidden;position: relative;}
 .serviceListUl {width: 110%;overflow: hidden;position: relative;}
 .serviceListSortLefts {width: 150rpx;text-align: center;height:100%;line-height: 146rpx;float:right;}

@@ -8,7 +8,15 @@ Page({
     flag:true
   },
   onLoad() {
-    this.onlineStudys();
+    
+  },
+  onShow(){
+    this.setData({
+      pageNum:1,
+    pageSize:10,
+    list:[],
+    })
+this.onlineStudys();
   },
     active(e){
    

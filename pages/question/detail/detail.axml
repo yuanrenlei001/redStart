@@ -4,27 +4,27 @@
       {{detail.questionDetails}}
     </view>
     <view class="listImg">
-      <text a:for="{{detail.imgInfo}}" a:for-item="imgs" onTap="previewImage" data-img ="{{detail.imgInfo}}" data-index={{index}}><image mode="scaleToFill" src="{{img+imgs.filePath}}"/></text>
+      <text a:for="{{detail.imgInfo}}" a:for-item="imgs" onTap="previewImage" data-img ="{{detail.imgInfo}}" data-index={{index}}><image mode="scaleToFill" src="{{img+imgs.fileNewName}}"/></text>
     </view>
     <view class="listBottom">
       <view class="listTime">{{detail.createTime}}</view>
     </view>
   </view>
 </view>
-<view class="pl" a:if="{{detail.redStarCommentList.length>0}}">
-  <view class="plTitle">评论（{{detail.redStarCommentList.length}}）</view>
-  <view class="plList" a:for="{{detail.redStarCommentList}}">
-    <view class="plListImg"><image mode="scaleToFill" src="{{item.user.avatar}}"/></view>
+<view class="pl" a:if="{{detail.replyDetails}}">
+  <view class="plTitle">评论（1）</view>
+  <view class="plList">
+    <view class="plListImg"><image mode="scaleToFill" src="{{detail.replyUserAvatar}}"/></view>
     <view class="plTop">
-      <view class="plTopName">{{item.user.userName}}</view>
-      <view class="plTopTime">{{item.createTime}}</view>
+      <view class="plTopName">{{detail.replyUserName}}</view>
+      <view class="plTopTime">{{detail.updateTime}}</view>
     </view>
     <view class="plBottom">
-      {{item.content}}
+      {{detail.replyDetails}}
     </view>
   </view>
 </view>
-<view class="fixed">
+<view class="fixed"  a:if="{{!detail.replyDetails}}">
   <view class="inputs" onTap="addCommit">说说你想说的内容</view>
 </view>
 <view class="commit" a:if="{{fixed}}">

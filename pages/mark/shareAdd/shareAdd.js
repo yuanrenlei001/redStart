@@ -3,7 +3,10 @@ Page({
   data: {
     array: [],
     index:0,
-    questionDetails:''
+    questionDetails:'',
+    img:[],
+    imgId:[],
+    flag:false,
   },
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value);
@@ -47,18 +50,47 @@ Page({
     })
   },
   uploadFile() {
+    var that =this;
+    
     my.chooseImage({
       chooseImage: 1,
       success: res => {
         const path = res.apFilePaths[0];
         console.log(res);
+        that.setData({flag:true})
         my.uploadFile({
-          url: app.ajax+'/vueApi/zhiFuBao/upload',
+          url: 'http://httpbin.org/post',
           fileType: 'image',
           fileName: 'file',
           filePath: path,
           success: res => {
-            my.alert({ title: '上传成功' });
+            
+            if(JSON.parse(res.data).files.file){
+                my.request({
+      url: app.ajax+'/common/base64',
+      method: 'post',
+      data: {
+        "base64String": JSON.parse(res.data).files.file
+      },
+      headers:{
+        'content-type':'application/json',  //默认值
+        'ajaxHeader': 'image',
+      },
+      dataType: 'json',
+      success: function(res) {
+       that.setData({
+         flag:false,
+          img:that.data.img.concat(res.data.url),
+          imgId:that.data.imgId.concat(res.data.fileId),
+        })
+      },
+      fail: function(res) {
+        my.alert({content: 'fail'});
+      },
+    });
+              
+            }
+            // my.alert({ title: '上传成功' });
           },
           fail: function(res) {
             my.alert({ title: '上传失败' });
@@ -70,8 +102,9 @@ Page({
   success(){
     let data = {
         introduction:this.data.questionDetails,
-        imgIds:''
+        imgIds:(this.data.imgId).toString()
     };
+    console.log(data)
        var that =this;
         my.request({
       url: app.ajax+'/vueApi/purchase/add',
@@ -98,6 +131,6 @@ Page({
         my.alert({content: 'fail'});
       },
     });
-    console.log(data)
+    // console.log(data)
   }
 });

@@ -33,7 +33,7 @@ Page({
         that.setData({
           detail:data
         })
-        wxParse.wxParse('article', 'html',data.content, that, 5);
+        wxParse.wxParse('article', 'html',(data.content || data.noticeContent), that, 5);
       },
       fail: function(res) {
         my.alert({content: 'fail'});

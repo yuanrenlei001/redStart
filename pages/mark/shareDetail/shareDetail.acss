@@ -14,9 +14,9 @@ page {background: #fff;}
 .plList {padding: 0 24rpx;border-bottom: 1px solid #e6e6e6;margin-bottom: 25rpx;}
 .plListImg {float:left;}
 .plListImg image {width:74rpx;height:74rpx;border-radius: 50%;}
-.plTop {margin-left: 100rpx;}
+.plTop {margin-left: 100rpx;height:74rpx;position: relative;}
 .plTopName {font-size: 26rpx;color: #4c4c4c;}
-.plTopTime {font-size: 26rpx;color: #808080;}
+.plTopTime {font-size: 26rpx;color: #808080;position: absolute;bottom:0;}
 .plBottom {
   font-size: 26rpx;
   color: #4c4c4c;

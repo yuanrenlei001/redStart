@@ -2,11 +2,11 @@
   <view class="body">
     <view class="sort">
       <view class="{{type=='HDZM'?'active':''}}"  onTap="active" data-type="HDZM">活动招募</view>
-      <view class="{{type=='ZDYY'?'active':''}}"  onTap="active" data-type="ZDYY">阵地预约</view>
+      <view class="{{type=='ZDYY'?'active':''}}"  onTap="active" data-type="ZDYY">预约记录</view>
     </view>
     <view class="list" a:if="{{type=='HDZM'}}" a:for="{{list}}">
       <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
-        <image class="listLeft" mode="scaleToFill" src="{{img+item.fileList[0].filePath}}"/>
+        <image class="listLeft" mode="scaleToFill" src="{{img+item.fileList[0].fileNewName}}"/>
         <view class="listRight">
           <view class="listRight01">{{item.eventTitle}}</view>
           <view class="listRight02">{{item.createTime}}</view>

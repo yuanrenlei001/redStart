@@ -9,6 +9,14 @@ Page({
 
   },
   onLoad() {
+    // this.onlineStudys();
+  },
+  onShow(){
+    this.setData({
+      pageNum:1,
+    pageSize:10,
+    list:[],
+    })
     this.onlineStudys();
   },
   goUrls(e){
@@ -22,7 +30,7 @@ Page({
     let url = [];
     let imgList = e.target.dataset.img;
     for(let i=0;i<imgList.length;i++){
-      url.push(that.data.img+imgList[i].filePath)
+      url.push(that.data.img+imgList[i].fileNewName)
     }
     console.log(url)
     my.previewImage({

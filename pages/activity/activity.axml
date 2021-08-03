@@ -1,5 +1,8 @@
 <view class="main">
-  <view class="top" onTap="goMap"><image mode="scaleToFill" src="/images/hdyybanner.png"/></view>
+  <view class="top" onTap="goMap">
+  <image mode="scaleToFill" src="https://sjyw.zhamengtec.com:8082/profile/upload/2021/08/02/9e2ac0c2b2bc7597318961340e0371b.png"/>
+  <view class="vr">点击大图跳转VR</view>
+  </view>
   <view class="body">
     <view class="sort">
       <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">活动招募</view>
@@ -19,18 +22,18 @@
     <view class="list2" a:if="{{type==2}}">
       <view class="listDetail">
         <view class="listDetailLeft">场所名称：</view>
-        <view class="listDetailRight">{{list[0].applicantUnit}}</view>
+        <view class="listDetailRight">“红心”章镇党群服务中心</view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所负责人：</view>
         <view class="listDetailRight">
-           {{list[0].applicantUser}}
+           葛怡敏
         </view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所地址：</view>
         <view class="listDetailRight">
-          {{list[0].address}}
+         章镇镇章家埠村
         </view>
       </view>
       <view class="listDetail">
@@ -42,13 +45,14 @@
       <view class="listDetail">
         <view class="listDetailLeft">场所容量：</view>
         <view class="listDetailRight">
-         {{list[0].participateNum}}
+        50人
         </view>
       </view>
       <view class="listDetail">
         <view class="listDetailLeft">场所简介：</view>
         <view class="listDetailRight">
-          {{list[0].remark}}
+          <view>章镇镇党群服务中心以红心猕猴桃产业为主体，总建筑面积700平方米，分为上下两层，一层为服务接待区，包括章镇概况、接待中心、果园监测、产品品鉴等；</view>
+          <view>二层为多功能区，包括红心系列展区、党员群众培训教育点、检测中心、电商中心等，是融党群活动、教育培训、形象展示、服务群众于一体的开放式、多功能、专业化、共享性的党建工作服务平台，是章镇镇服务党员群众的温馨家园。</view>       
         </view>
       </view>
     </view>

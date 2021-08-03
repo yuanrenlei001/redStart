@@ -14,13 +14,16 @@ Page({
   },
   onLoad(e) {
     console.log(e)
-    if(e.img){
+    if(e.img == '123'){
       console.log(1)
+      this.notices(e.id,e.url,e.img) 
+    }else if(e.img){
       this.setData({
         flag:true,
         detail:e.id
       })
-    }else{
+    }
+    else{
 this.notices(e.id,e.url,e.img) 
     }
     
@@ -43,11 +46,15 @@ this.notices(e.id,e.url,e.img)
       dataType: 'json',
       success: function(res) {
         let data = res.data.data;
-        text = data.fileContent;
+        if(data.fileContent){
+            text = data.fileContent;
+            wxParse.wxParse('article', 'html',text, that, 5);
+        }
+        
         that.setData({
           detail:data,
         })
-         wxParse.wxParse('article', 'html',text, that, 5);
+         
       },
       fail: function(res) {
         my.alert({content: 'fail'});
