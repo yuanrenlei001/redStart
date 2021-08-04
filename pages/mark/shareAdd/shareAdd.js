@@ -78,6 +78,7 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
+        console.log(res)
        that.setData({
          flag:false,
           img:that.data.img.concat(res.data.url),

@@ -15,7 +15,7 @@
     <image  onTap="uncollect" a:if="{{details.collection == true}}"  mode="scaleToFill" class="collect" src="/images/redHome/collectActive.png"/> 
     <image mode="scaleToFill" onTap="videoss" class="video" src="/images/redHome/video.png"/>
     </view>
-    <view class="topText02">{{details.homeCategory}}</view>
+    <view class="topText02">{{details.homeCategory}}--{{details.stars}}</view>
     <view class="topText03" onTap="openLocation">{{details.areaCode}}</view>
     <view class="topText04"><text>联系人：{{details.contactsUser}}</text><text onTap="phone" data-phone="{{details.contactsPhone}}">电话：{{details.contactsPhone}}</text></view>
   </view>
@@ -27,12 +27,12 @@
   </view>
   <view class="main01">
     <view class="title"><view></view>开票二维码</view>
-    <image onTap="previewImage" data-src="{{img+item.filePath}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.filePath}}" style="margin-right:15rpx;" class="code"/>
+    <image onTap="previewImage" data-src="{{img+item.fileNewName}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.fileNewName}}" style="margin-right:15rpx;" class="code"/>
   </view>
   <view class="main01">
     <view class="title"><view></view>检测报告</view>
     <view class="list">
-      <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.filePath}}&url=redHome&img=true" class="detail" a:for="{{details.fileList}}">
+      <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.fileNewName}}&url=redHome&img=true" class="detail" a:for="{{details.fileList}}">
         <view class="detail01">{{item.fileName}}</view>
         <view class="detail02">{{item.createTime}}</view>
         <!-- <view class="detail03"><image mode="scaleToFill" src="/images/index/see.png"/> 123</view> -->

@@ -3,6 +3,7 @@ Page({
   data: {
     noticesList:[],
     pageNum:1,
+    img:app.ajaxImg,
     flag:true
   },
   onLoad() {

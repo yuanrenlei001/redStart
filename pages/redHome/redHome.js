@@ -74,7 +74,8 @@ Page({
     let data = res.data.data.result;
     let arr = [];
     for(let i=0;i<data.length;i++){
-      let obj = {};
+      if( data[i].lat!=='' &&  data[i].lon !==''){
+        let obj = {};
       if(data[i].homeType === 0){obj['iconPath'] = '/images/redHome/iconRed.png'}
       else if (data[i].homeType === 1){obj['iconPath'] = '/images/redHome/iconBlue.png'}
       else{obj['iconPath'] = '/images/redHome/iconGreen.png'}
@@ -85,6 +86,7 @@ Page({
       obj['height'] = 50;
       obj['children'] =  data[i];
       arr.push(obj)
+      }
     }
     console.log(arr)
     that.setData({

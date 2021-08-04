@@ -5,7 +5,7 @@
       <view class="two">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/two.png" class="twoBg"/>
-          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="twoHeader"/>
+          <image mode="scaleToFill" src="{{img+noticesList[1].avatarInfo[0].fileNewName}}" class="twoHeader"/>
         </view>
         <view class="oneText">
           <view class="oneText01">{{noticesList[1].name}}</view>
@@ -15,7 +15,7 @@
       <view class="one">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/one.png" class="oneBg"/>
-          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="oneHeader"/>
+          <image mode="scaleToFill" src="{{img+noticesList[0].avatarInfo[0].fileNewName}}" class="oneHeader"/>
         </view>
         <view class="oneText">
            <view class="oneText01">{{noticesList[0].name}}</view>
@@ -25,7 +25,7 @@
       <view class="three">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/three.png" class="threeBg"/>
-          <image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png" class="threeHeader"/>
+          <image mode="scaleToFill" src="{{img+noticesList[2].avatarInfo[0].fileNewName}}" class="threeHeader"/>
         </view>
         <view class="oneText">
           <view class="oneText01">{{noticesList[2].name}}</view>

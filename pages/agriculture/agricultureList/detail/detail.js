@@ -28,7 +28,22 @@ this.notices(e.id,e.url,e.img)
     }
     
   },
-  
+  openFile(url){
+    my.downloadFile({
+  // 示例 url，并非真实存在
+      url: url,
+      success({ apFilePath }) {
+        my.hideLoading();
+        my.openDocument({
+          filePath: apFilePath,
+          fileType: 'pdf',
+          success: (res) => {
+            console.log('open document success')
+            }
+          })
+        }
+      })
+  },
   // onlineStudy/{id}
     notices(id,url){
       
@@ -50,11 +65,13 @@ this.notices(e.id,e.url,e.img)
             text = data.fileContent;
             wxParse.wxParse('article', 'html',text, that, 5);
         }
-        
+        // if(data.imgPathInfo){
+        //   that.openFile(data.imgPathInfo[0].filePath);
+        // }
         that.setData({
           detail:data,
         })
-         
+         console.log(data)
       },
       fail: function(res) {
         my.alert({content: 'fail'});
