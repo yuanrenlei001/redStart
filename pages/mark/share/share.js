@@ -20,9 +20,30 @@ Page({
     this.onlineStudys();
   },
   goUrls(e){
-    my.navigateTo({
+          my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+              my.navigateTo({
       url: '/pages/mark/shareDetail/shareDetail?id='+e.target.dataset.id
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
   },
   previewImage(e){
     console.log(e)
@@ -39,8 +60,29 @@ Page({
     });
   },
   goUrl(){
-    my.navigateTo({
+          my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+              my.navigateTo({
       url: '/pages/mark/shareAdd/shareAdd'
+    });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
     });
   },
       onlineStudys(){

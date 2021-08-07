@@ -1,0 +1,9 @@
+<view class="main">
+<view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
+</view>
+<!-- <view class="fixed"></view> -->
+    <button   open-type="getAuthorize" 
+onGetAuthorize="onGetAuthorize" onError="onAuthError" 
+scope='userInfo'>
+    点我授权！
+</button>

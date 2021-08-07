@@ -18,41 +18,24 @@ Page({
     
   },
   onShow(){
-    var that =this;
-         my.request({
-      url: app.ajax+'/common/isLogin',
-      method: 'post',
-      data: {
-        
-      },
-      headers:{
-        'content-type':'application/json'  //默认值
-      },
-      dataType: 'json',
-      success: function(res) {
-        console.log(res)
-          if(res.data.code==0){
-
+    var that = this;
     var key = 'userInfo';
     my.getStorage({
         key,
         success(res) {
-          that.setData({
-                nologin:false,
-                user:res.data
+          console.log(res)
+          if(res.data){
+            that.setData({
+              nologin:false,
+              user:res.data
             })
-        },
-      });
- 
-            
           }else{
-           that.setData({
+            that.setData({
               nologin:true
             })
           }
-      },
-    }); 
-  
+        },
+      });
   },
   getStorage(){
     var that = this;
@@ -181,7 +164,7 @@ logins(){
       dataType: 'json',
       success: function(res) {
         if(res.data.code == 0){
-
+            my.navigateBack()
         }else{
           my.alert({content: res.data.msg});
         }

@@ -45,8 +45,6 @@ Page({
       dataType: 'json',
       success: function(res) {
         let data = res.data.data.result;
-                console.log(data.length)
-        console.log(res.data.data.pageSize)
             if(data.length>=res.data.data.pageSize){
            that.setData({
           pageNum:that.data.pageNum+1,
@@ -60,12 +58,20 @@ Page({
         that.setData({
           list:that.data.list.concat(data)
         })
+        console.log(that.data.list)
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
   },
+  gourlS(e){
+    console.log(e.target.dataset.data)
+     my.navigateTo({
+      url:'/pages/user/myPositionBookings/detail/detail?data='+JSON.stringify(e.target.dataset.data)
+    })
+  },
+  // url="/pages/user/myPositionBookings/detail/detail?data={{item.applicantUser}}"
   // commonProsperityLeaders  共富带头人
   // helpPairs 结队帮扶
   goUrl(){

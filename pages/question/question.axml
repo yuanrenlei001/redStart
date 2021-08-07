@@ -9,5 +9,7 @@
       <view class="text">{{item.questionDetails}}</view>
       <view class="time">{{item.createTime}}</view>
     </navigator>
+    <view a:if="{{list.length == 0}}"><view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view></view>
   </view>
+  
 </view>

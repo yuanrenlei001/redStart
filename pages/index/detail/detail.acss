@@ -24,6 +24,7 @@ page {background: #fff;}
   line-height: 42rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
+  margin-left: 100rpx;
 }
 .pl {padding-bottom: 100rpx;}
 .fixed {position: fixed;bottom:0;left:0;height:100rpx;border-top: 1px solid #eee;background: #fff;width:100%;}

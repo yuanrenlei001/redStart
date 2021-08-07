@@ -59,7 +59,7 @@ Page({
         console.log(res);
         that.setData({flag:true})
         my.uploadFile({
-          url: 'http://httpbin.org/post',
+          url: 'https://httpbin.org/post',
           fileType: 'image',
           fileName: 'file',
           filePath: path,
@@ -78,11 +78,14 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
-       that.setData({
+
+            that.setData({
          flag:false,
           img:that.data.img.concat(res.data.url),
           imgId:that.data.imgId.concat(res.data.fileId),
         })
+        
+      
       },
       fail: function(res) {
         my.alert({content: 'fail'});

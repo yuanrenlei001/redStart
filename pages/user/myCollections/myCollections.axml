@@ -2,10 +2,8 @@
   
   <view class="body">
 
-    <view class="list"  a:for="{{list}}">
-      <!-- <navigator url="/pages/agriculture/ticket/ticketDetail/ticketDetail?id={{item.id}}" a:if="{{item.type=='PZFW'}}"> -->
-        <!-- <navigator url="/pages/redHome/redDetail/redDetail?id={{item.id}}" a:if="{{item.type=='HXZJ'}}"> -->
-        <navigator url="/pages/index/detail/detail?id={{item.id}}" a:if="{{item.type=='NJJT'}}">
+    <view class="list"  a:for="{{list}}" a:if="{{list.length>0}}">
+        <navigator url="/pages/index/detail/detail?id={{item.collId}}" a:if="{{item.type=='NJJT'}}">
         <view class="listRight">
           <view class="listRight01">{{item.collName}}</view>
           <view class="listRight02">{{item.createTime}}</view>
@@ -24,5 +22,6 @@
         </view>
       </navigator>
     </view>
+    <view a:if="{{list.length == 0}}"> <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view></view>
   </view>
 </view>

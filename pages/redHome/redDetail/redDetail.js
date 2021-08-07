@@ -7,6 +7,7 @@ Page({
     details:'',
     img:app.ajaxImg,
     show:false,
+    autoPlay:true,
     video: {
 	src: "http://36.26.84.183:8094/video/blny.mp4",
 	showAllControls: false,
@@ -30,12 +31,20 @@ onLoad(e) {
     this.detail(e.id);
   },
    openLocation() {
-    my.openLocation({
-      longitude: this.data.longitude,
-      latitude: this.data.latitude,
-      name: this.data.name,
-      address: this.data.address,
-    })
+     var that =this;
+     console.log(that.data)
+     my.openLocation({
+       longitude: that.data.details.lon,
+      latitude: that.data.details.lat,
+      name:that.data.details.name,
+      address: that.data.details.areaCode,
+    });
+    // my.openLocation({
+    //   longitude: this.data.longitude,
+    //   latitude: this.data.latitude,
+    //   name: this.data.name,
+    //   address: this.data.address,
+    // })
   },
   phone(e) {
     console.log(e.target.targetDataset.phone)

@@ -76,9 +76,24 @@ var that = this;
     });
   },
     addCommit(){
-    this.setData({
+       var that = this;
+    var key = 'userInfo';
+    my.getStorage({
+        key,
+        success(res) {
+          console.log(res)
+          if(res.data){
+       that.setData({
       fixed:true
     })
+          }else{
+             my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+          }
+        },
+      });
+    
   },
     unZan(e){
     var that = this;

@@ -28,3 +28,4 @@
 .title {padding: 0 24rpx;color: #333;height:110rpx;line-height: 110rpx;background: #fff;}
 .contentText {line-height: 88rpx;color: #1f1f1f;}
 .contentDetail {font-size: 28rpx;color: #666;line-height: 42rpx;text-align: justify;}
+.demo-swiper {height:320rpx;}

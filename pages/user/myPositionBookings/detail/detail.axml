@@ -1,0 +1,15 @@
+<view class="main">
+  <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+  <view class="page-section"><block>申请人</block><input class="input" id="controlled" disabled="true" value="{{detailList.applicantUser}}" /></view>
+  <view class="page-section"><block>联系方式</block><input class="input" disabled="true" value="{{detailList.contactPhone}}" id="controlled"/></view>
+  <view class="page-section"><block>申请单位</block><input class="input" disabled="true" value="{{detailList.applicantUnit}}" id="controlled"  /></view>
+  <view class="page-section"><block>活动室预约</block><input class="input" disabled="true" value="{{detailList.address}}" id="controlled"/></view>
+  <view class="page-section"><block>预约时间</block><input value="{{appointmentTime}}" class="input" id="controlled" disabled="disabled"  placeholder="请选择" /></view>
+  <view class="page-section"><block>借用多媒体</block>
+    <input class="input" disabled="true" value="是" id="controlled" a:if="{{multi == 'Y'}}"/>
+    <input class="input" disabled="true" value="否" id="controlled" a:if="{{multi == 'N'}}"/>
+  </view>
+  <view class="page-section"><block>参与人数</block><input disabled="true" value="{{detailList.participateNum}}" class="input" id="controlled"  /></view>
+  <view class="page-section"><block>备注</block><input disabled="true" value="{{detailList.remark}}" class="input" id="controlled" /></view>
+  <!-- <view class="btn" onTap="add">提交</view> -->
+</view>

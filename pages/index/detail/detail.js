@@ -2,6 +2,7 @@ const app = getApp();
 Page({
   data: {
     id:'',
+    ids:'',
     detail:'',
     status: "inited",
     img:app.ajaxImg,
@@ -20,7 +21,10 @@ Page({
     this.setData({
       id:query.id
     })
-    this.notices(query.id);
+    
+  },
+  onShow(){
+    this.notices(this.data.id);
   },
   bindTextAreaBlur(e){
     this.setData({
@@ -28,9 +32,32 @@ Page({
     })
   },
   addCommit(){
-    this.setData({
+    var that =this;
+            my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+             that.setData({
       fixed:true
     })
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+    
   },
       uncollects(e){
         var that =this;
@@ -42,21 +69,51 @@ Page({
       }
 
 }
-my.request({
-      url: app.ajax+'/vueApi/collection/remove?ids='+this.data.detail.id,
-      method: 'get',
-      data: {},
+     my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
       headers:{
         'content-type':'application/json'  //默认值
       },
       dataType: 'json',
       success: function(res) {
-        that.notices(that.data.detail.id);
+        console.log(res)
+          if(res.data.code==0){
+              my.request({
+      url: app.ajax+'/vueApi/collection/remove?id='+that.data.detail.id+'&type=NJJT',
+      method: 'get',
+      data: {},
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+      },
+      dataType: 'json',
+      success: function(res) {
+         if(res.status == '302'){
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+        }else{
+           that.notices(that.data.detail.id);
+        }
+        
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+
   },
     collects(e){
       var that =this;
@@ -68,21 +125,50 @@ my.request({
       
 
 }
-my.request({
-      url: app.ajax+'/vueApi/collection/add',
+     my.request({
+      url: app.ajax+'/common/isLogin',
       method: 'post',
-      data: data,
+      data: {
+        
+      },
       headers:{
         'content-type':'application/json'  //默认值
       },
       dataType: 'json',
       success: function(res) {
-      that.notices(that.data.detail.id);
+        console.log(res)
+          if(res.data.code==0){
+              my.request({
+      url: app.ajax+'/vueApi/collection/add',
+      method: 'post',
+      data: data,
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+      },
+      dataType: 'json',
+      success: function(res) {
+         if(res.status == '302'){
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+        }else{
+          that.notices(that.data.detail.id);
+        }
+      
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
   },
   success(){
     let data = {
@@ -104,10 +190,17 @@ var that = this;
       },
       dataType: 'json',
       success: function(res) {
-        that.setData({
+        if(res.status == '302'){
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+        }else{
+                  that.setData({
       fixed:false
     });
     that.notices(that.data.detail.id);
+        }
+
       },
       fail: function(res) {
         my.alert({content: 'fail'});
@@ -123,9 +216,9 @@ var that = this;
   },
     addZan(e){
     var that = this;
-    my.request({
-      url: app.ajax+'/vueApi/othLikes/add/?id='+this.data.id+'&type=NJJT',
-      method: 'get',
+              my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
       data: {
         
       },
@@ -134,17 +227,63 @@ var that = this;
       },
       dataType: 'json',
       success: function(res) {
-        that.notices(that.data.id,that.data.url)
+        console.log(res)
+          if(res.data.code==0){
+              my.request({
+      url: app.ajax+'/vueApi/othLikes/add/?id='+that.data.id+'&type=NJJT',
+      method: 'get',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+      },
+      dataType: 'json',
+      success: function(res) {
+        if(res.status == '302'){
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+            console.log(1)
+        }else{
+          console.log(2)
+            that.notices(that.data.id,that.data.url)
+        }
+        
+        
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+    
   },
     unZan(e){
     var that = this;
-    my.request({
-      url: app.ajax+'/vueApi/othLikes/del/?id='+this.data.id+'&type=NJJT',
+        my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+               my.request({
+      url: app.ajax+'/vueApi/othLikes/del/?id='+that.data.id+'&type=NJJT',
       method: 'get',
       data: {
         
@@ -154,12 +293,28 @@ var that = this;
       },
       dataType: 'json',
       success: function(res) {
-        that.notices(that.data.id,that.data.url)
+         if(res.status == '302'){
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+        }else{
+            that.notices(that.data.id,that.data.url)
+        }
+        
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+   
   },
    onPlay(e) {
 	console.log('onPlay');

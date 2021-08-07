@@ -2,13 +2,17 @@ const app = getApp();
 Page({
   data: {
     content:'',
+    banner:[],
+    img:app.ajaxImg,
     id:''
   },
   onLoad(data) {
-    this.detail(data.id)
     this.setData({
       id:data.id
     })
+  },
+  onShow(){
+    this.detail(this.data.id)
   },
   detail(id){
       var that =this;
@@ -24,7 +28,8 @@ Page({
       dataType: 'json',
       success: function(res) {
         that.setData({
-          content:res.data.data
+          content:res.data.data,
+           banner:res.data.data.coverImgInfo
         })
       },
       fail: function(res) {
@@ -34,9 +39,9 @@ Page({
   },
   add(){
     var that =this;
-    my.request({
-      url: app.ajax+'/vueApi/eventRecruitment/signUp/?id='+this.data.id,
-      method: 'get',
+              my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
       data: {
         
       },
@@ -45,18 +50,41 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
-        my.showToast({
+        console.log(res)
+          if(res.data.code==0){
+                my.request({
+      url: app.ajax+'/vueApi/eventRecruitment/signUp/?id='+that.data.id,
+      method: 'get',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+      },
+      dataType: 'json',
+      success: function(res) {
+         
+               my.showToast({
             content: '报名成功！',
             type: 'success',
             duration: 1000
           });
-        // that.setData({
-        //   content:res.data.data
-        // })
+          that.detail(that.data.id)
+
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+
   }
 });

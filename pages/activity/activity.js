@@ -69,9 +69,34 @@ Page({
   // commonProsperityLeaders  共富带头人
   // helpPairs 结队帮扶
   goUrl(){
-    my.navigateTo({
-      url:'/pages/activity/activityYy/activityYy'
+    var that = this;
+    var key = 'userInfo';
+              my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+              my.navigateTo({
+      url: '/pages/activity/activityYy/activityYy'
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+ 
+    
   },
   goMap(){
     my.navigateTo({

@@ -4,7 +4,7 @@
       <view class="{{type=='HDZM'?'active':''}}"  onTap="active" data-type="HDZM">活动招募</view>
       <view class="{{type=='ZDYY'?'active':''}}"  onTap="active" data-type="ZDYY">预约记录</view>
     </view>
-    <view class="list" a:if="{{type=='HDZM'}}" a:for="{{list}}">
+    <view class="list" a:if="{{type=='HDZM' && list.length>0}}" a:for="{{list}}">
       <navigator url="/pages/activity/activityBm/activityBm?id={{item.id}}">
         <image class="listLeft" mode="scaleToFill" src="{{img+item.fileList[0].fileNewName}}"/>
         <view class="listRight">
@@ -15,39 +15,18 @@
         </view>
       </navigator>
     </view>
-    <view class="list2" a:if="{{type=='ZDYY'}}">
-      <view class="listDetail">
-        <view class="listDetailLeft">场所名称：</view>
-        <view class="listDetailRight">{{list[0].applicantUnit}}</view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所负责人：</view>
-        <view class="listDetailRight">
-           {{list[0].applicantUser}}
-        </view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所地址：</view>
-        <view class="listDetailRight">
-          {{list[0].address}}
-        </view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">使用方向</view>
-        <view class="listDetailRight">
-          合作社党建模式宣传展示参观
-        </view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所容量：</view>
-        <view class="listDetailRight">
-         {{list[0].participateNum}}
-        </view>
-      </view>
-      <view class="listDetail">
-        <view class="listDetailLeft">场所简介：</view>
-        <view class="listDetailRight">
-          {{list[0].remark}}
+    <view class="list" a:if="{{type=='HDZM' && list.length==0}}">
+      <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
+    </view>
+    <view class="list" a:if="{{type=='ZDYY' && list.length==0}}">
+      <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
+    </view>
+    <view class="list" a:if="{{type=='ZDYY' && list.length>0}}" a:for="{{list}}">
+      <view  class="urls" onTap="gourlS" data-data="{{item}}">
+        <view class="listRight" style="margin-left:0;">
+          <view class="listRight01">{{item.applicantUnit}}</view>
+          <view class="listRight02">{{item.createTime}}</view>
+          <view class="listRight03">申请人：{{item.applicantUser}}</view>
         </view>
       </view>
     </view>

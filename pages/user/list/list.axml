@@ -2,7 +2,7 @@
   
   <view class="body">
 
-    <view class="list"  a:for="{{list}}">
+    <view class="list"  a:for="{{list}}" a:if="{{list.length>0}}">
       <navigator url="/pages/notice/detail/detail?id={{item.noticeId}}">
         
         <view class="listRight">
@@ -11,5 +11,6 @@
         </view>
       </navigator>
     </view>
+    <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
   </view>
 </view>

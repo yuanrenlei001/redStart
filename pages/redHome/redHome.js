@@ -4,29 +4,50 @@ Page({
     showFixed:false,
     scale: 12,
     detail:'',
-    longitude: 120.131441,
-    latitude: 30.279383,
-     markers: [],
-    panels:[{
-    	 id:6,
-       // 布局参考 map 高级定制渲染
-       layout: {
-   			 	params:{
-      			title:"标题栏",
-      			bgColor:"#DC143C"
-    			},
-   		 		src:"/layout/map_callout.xml"
-  		 },
-       position: {
-         left: 0,
-         bottom: 0,
-         width: 200,
-         height: 84
-       },
-    }],
+    longitude: 120.88936,
+    latitude: 29.75991,
+     markers: [
+//        {
+//   id: 2,
+//   latitude: 29.75991,
+//   longitude: 120.88936,
+//   // width: 19,
+  
+//   // height: 31,
+//   iconAppendStr:'123',
+//   iconAppendStrColor:'red',
+//   style:{
+//     type:2,
+//     text1:'上虞区镇南村竹洞湖果蔬合作社',
+//     icon1:'/images/redHome/iconBlue.png'
+//   },
+//   // iconPath: '/images/redHome/iconBlue.png',
+
+//   markerLevel: 2
+// },
+//        {
+//          title:'3333',
+//   id: 3,
+//   latitude: 29.7967,
+//   longitude: 120.88371,
+//   width: 300,
+//   // height: 50,
+//   style:{
+//     type:2,
+//      text1:'上虞区镇南村竹洞湖果蔬合作社上虞区镇南',
+//     icon1:'/images/redHome/iconRed.png',
+//     gravity:"left/center/right", //默认 center
+//     fontType:"small/standard/large"  //默认standard
+//   },
+//   iconPath: '/images/redHome/iconRed.png',
+
+//   markerLevel: 1
+// }
+
+],
     pageNum:1,
     pageSize:100,
-    id:''
+    id:'',
   },
   
   onReady(e) {
@@ -58,6 +79,7 @@ Page({
     }
   },
   homeList(){
+    
     var that = this;
     console.log(this.data.pageNum)
     my.request({
@@ -73,21 +95,49 @@ Page({
   success: function(res) {
     let data = res.data.data.result;
     let arr = [];
+    let marks = [];
     for(let i=0;i<data.length;i++){
       if( data[i].lat!=='' &&  data[i].lon !==''){
         let obj = {};
-      if(data[i].homeType === 0){obj['iconPath'] = '/images/redHome/iconRed.png'}
-      else if (data[i].homeType === 1){obj['iconPath'] = '/images/redHome/iconBlue.png'}
-      else{obj['iconPath'] = '/images/redHome/iconGreen.png'}
+        let marksObj = {};
+        let img = ''
+      if(data[i].homeType === 0){obj['iconPath'] = '/images/redHome/iconRed.png';img = '/images/redHome/iconRed.png'}
+      else if (data[i].homeType === 1){obj['iconPath'] = '/images/redHome/iconBlue.png';img = '/images/redHome/iconBlue.png'}
+      else{obj['iconPath'] = '/images/redHome/iconGreen.png';img = '/images/redHome/iconGreen.png'}
       obj['id'] = data[i].id;
       obj['latitude'] = data[i].lat;
       obj['longitude'] = data[i].lon;
-      obj['width'] = 50;
+      obj['width'] =50;
       obj['height'] = 50;
       obj['children'] =  data[i];
+      obj['markerLevel'] = 10;
+      obj['iconAppendStr']=data[i].name
+      obj['markerLevel'] = i
+  //      obj['label']={
+  //   content:"Hello Label",
+  //   color:"#00FF00",
+  //   fontSize:14,
+  //   borderRadius:3,
+  //   bgColor:"#ffffff",
+  //   padding:10,
+    
+  // },
+  //     obj['style'] = {
+
+  //     // 
+      
+  //   type:3,
+  //    text1:'1231231231',
+  //   // icon1:img,
+  //   // gravity:"left/center/right", //默认 center
+  //   // fontType:"small/standard/large"  //默认standard
+  // },
       arr.push(obj)
+      // labelMarker.push(marksObj)
+     
       }
     }
+    
     console.log(arr)
     that.setData({
         markers:arr,
@@ -95,6 +145,8 @@ Page({
         latitude: arr[0].latitude,
         
     })
+    // console.log(that.mapCtx)
+
     // {
     //   iconPath: "/images/redHome/iconRed.png",
     //   id: 10,
@@ -155,6 +207,7 @@ Page({
     console.log(that.data.detail)
         }
       }
+     
     // console.log(e)
 
   },
@@ -179,6 +232,7 @@ Page({
   },
   tap() {
     console.log('tap:');
+    
   },
   onPanelTap(e) {
     console.log('paneltap:', e);

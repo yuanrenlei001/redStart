@@ -3,7 +3,7 @@
     <view a:for="{{listLeft}}" data-id="{{item.dictValue}}" onTap="sortActive" class="{{item.dictValue == typeId?'active':''}}">{{item.dictLabel}}</view>
   </view>
   <view class="mainRight">
-    <navigator url="/pages/agriculture/agricultureList/detail/detail?id={{item.id}}&url=testNotice" a:for="{{listRight}}">
+    <navigator url="/pages/agriculture/agricultureList/file/file?id={{item.id}}&url=testNotice" a:for="{{listRight}}">
       <view class="title">{{item.name}}</view>
       <view class="time">{{item.createTime}}</view>
       <view class="see"><image mode="scaleToFill" src="/images/index/see.png"/> {{item.views}}</view>

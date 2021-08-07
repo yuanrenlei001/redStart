@@ -18,9 +18,9 @@ Page({
   },
   addZan(){
     var that = this;
-    my.request({
-      url: app.ajax+'/vueApi/othLikes/add/?id='+this.data.id+'&type='+this.data.type,
-      method: 'get',
+             my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
       data: {
         
       },
@@ -29,18 +29,44 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
-        that.notices(that.data.id,that.data.url)
+        console.log(res)
+          if(res.data.code==0){
+              my.request({
+      url: app.ajax+'/vueApi/othLikes/add/?id='+that.data.id+'&type='+that.data.type,
+      method: 'get',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+        // 'ajaxHeader':'userName'
+      },
+      dataType: 'json',
+      success: function(res) {
+        
+          that.notices(that.data.id,that.data.url)
+                
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+    
   },
     unZan(){
     var that = this;
-    my.request({
-      url: app.ajax+'/vueApi/othLikes/del/?id='+this.data.id+'&type='+this.data.type,
-      method: 'get',
+          my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
       data: {
         
       },
@@ -49,12 +75,37 @@ Page({
       },
       dataType: 'json',
       success: function(res) {
-        that.notices(that.data.id,that.data.url)
+        console.log(res)
+          if(res.data.code==0){
+              my.request({
+      url: app.ajax+'/vueApi/othLikes/del/?id='+that.data.id+'&type='+that.data.type,
+      method: 'get',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json',
+        'ajaxHeader':'ajaxHeader'
+      },
+      dataType: 'json',
+      success: function(res) {
+        
+          that.notices(that.data.id,that.data.url)
+        
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
+    }); 
+    
   },
       notices(id,url){
     var that = this;

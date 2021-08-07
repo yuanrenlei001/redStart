@@ -14,7 +14,13 @@ Page({
     participateNum:'',
     remark:''
   },
-  onLoad() {
+  onLoad(e) {
+    console.log(e)
+    this.setData({
+      detailList:JSON.parse(e.data),
+      appointmentTime:JSON.parse(e.data).appointmentTime,
+      multi:JSON.parse(e.data).multi,
+    })
     // this.add();
   },
   applicantUser(e){this.setData({applicantUser:e.detail.value})},
@@ -63,24 +69,9 @@ Page({
     });
   },
   datePicker() {
-    function getNowFormatDate() {
-      var date = new Date();
-      var seperator1 = "-";
-      var year = date.getFullYear();
-      var month = date.getMonth() + 1;
-      var strDate = date.getDate();
-      if (month >= 1 && month <= 9) {
-        month = "0" + month;
-      }
-      if (strDate >= 0 && strDate <= 9) {
-        strDate = "0" + strDate;
-      }
-      var currentdate = year + seperator1 + month + seperator1 + strDate;
-      return currentdate;
-    }
     my.datePicker({
       currentDate: '2019-10-10',
-      startDate: getNowFormatDate(),
+      startDate: '2019-10-9',
       endDate: '2025-10-9',
       success: (res) => {
         console.log(res)

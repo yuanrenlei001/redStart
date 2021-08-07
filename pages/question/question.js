@@ -11,6 +11,7 @@ Page({
     
   },
   onShow(){
+    app.login()
     this.setData({
       pageNum:1,
     pageSize:10,
@@ -29,8 +30,29 @@ this.onlineStudys();
     this.onlineStudys();
   },
   goUrl(){
-    my.navigateTo({
+      my.request({
+      url: app.ajax+'/common/isLogin',
+      method: 'post',
+      data: {
+        
+      },
+      headers:{
+        'content-type':'application/json'  //默认值
+      },
+      dataType: 'json',
+      success: function(res) {
+        console.log(res)
+          if(res.data.code==0){
+              my.navigateTo({
       url: '/pages/question/questionAdd/questionAdd'
+    });
+          }else{
+            my.navigateTo({
+              url: '/pages/getAuthorize/getAuthorize'
+            });
+         
+          }
+      },
     });
   },
       onlineStudys(){

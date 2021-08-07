@@ -3,6 +3,7 @@
     <image mode="scaleToFill" src="/images/user/userBg.png" class="bg"/>
     <image mode="scaleToFill" src="{{user.avatar}}" class="user"/>
     <text>{{user.nickName}}</text>
+    <text a:if="{{nologin}}">点我授权登录！</text>
   </view>
   <view class="body">
     <navigator url="/pages/user/information/information?data={{textUser}}" class="list">
@@ -37,9 +38,11 @@
     </navigator>
   </view>
 <!-- <view onTap="logins">1231231231231231231</view> -->
-<!-- <button  open-type="getAuthorize" 
-onGetAuthorize="onGetAuthorize" onError="onAuthError" 
+
+</view>
+<!-- <view class="fixed"></view> -->
+    <button a:if="{{nologin}}"  open-type="getAuthorize" 
+onGetAuthorize="onGetAuthorize" onError="onAuthError"  class="nologin"
 scope='userInfo'>
     会员基础信息授权
-</button> -->
-</view>
+</button>

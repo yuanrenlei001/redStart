@@ -25,6 +25,26 @@ onLoad(e) {
   console.log(e)
     this.detail(e.id);
   },
+   openLocation() {
+     var that =this;
+     console.log(that.data)
+     my.openLocation({
+       longitude: that.data.details.lon,
+      latitude: that.data.details.lat,
+      name:that.data.details.name,
+      address: that.data.details.areaCode,
+    });
+    // my.openLocation({
+    //   longitude: this.data.longitude,
+    //   latitude: this.data.latitude,
+    //   name: this.data.name,
+    //   address: this.data.address,
+    // })
+  },
+   phone(e) {
+    console.log(e.target.targetDataset.phone)
+    my.makePhoneCall({ number: e.target.targetDataset.phone });
+  },
       uncollect(e){
     var that =this;
     let data = {

@@ -1,0 +1,8 @@
+<view style="text-align:center;">
+<view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
+  <!-- <image a:if="{{flag == false}}" mode="scaleToFill" a:for="{{detail.imgPathInfo}}" src="{{img+item.fileNewName}}" style="height:800rpx;"/>
+  <image a:if="{{flag == true}}" mode="scaleToFill"  src="{{img+detail}}" style="height:800rpx;"/>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
+  
+</view>
+<!-- <import src="/wxParse/wxParse.axml"> -->

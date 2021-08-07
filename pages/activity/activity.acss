@@ -1,10 +1,10 @@
 page {background: #fff;}
 .top {width:750rpx;height:400rpx;position: relative;}
 .top image {width:750rpx;height:400rpx;}
-.body {padding: 45rpx 24rpx;position: relative;}
+.body {padding: 0 24rpx 45rpx 24rpx;position: relative;}
 .sort {height:80rpx;position: relative;}
-.sort view {float:left;width:49%;border: 1px solid #ededed;text-align: center;line-height: 80rpx;font-size: 32rpx;color: #4c4c4c;}
-.sort view.active {border-top:1px solid #ee3a39;color: #ee3a39;}
+.sort view {float:left;width:49%;border-bottom: 1px solid #ededed;text-align: center;line-height: 80rpx;font-size: 32rpx;color: #4c4c4c;}
+.sort view.active {border-bottom:1px solid #ee3a39;color: #ee3a39;}
 .list navigator {display: block;height:120rpx;position: relative;border-bottom: 1px solid #e5e5e5;padding: 24rpx 0;}
 .listLeft {width:160rpx;height:120rpx;float:left;}
 .listRight {margin-left: 184rpx;height:120rpx;position: relative;}

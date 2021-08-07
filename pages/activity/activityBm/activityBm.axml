@@ -1,5 +1,14 @@
 <view class="main">
-  <view class="top"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+  <view class="top">
+     <swiper
+                class="demo-swiper"
+                autoplay="true"
+            >
+                <swiper-item key="swiper-item-{{index}}" a:for="{{banner}}">
+                    <image mode="scaleToFill" src="{{img+item.fileNewName}}"/>
+                </swiper-item>
+            </swiper>
+  </view>
   <view class="title">{{content.eventTitle}}</view>
   <view class="body">
     <view class="list2">

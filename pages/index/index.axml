@@ -72,7 +72,7 @@
       <navigator url="/pages/service/loan/loan" open-type="navigate" class="serviceListSort">
         <view class="serviceListSortLefts"><image mode="aspectFit" src="/images/index/znd.png"/></view>
         <view class="serviceListSortRights">
-          <view  class="serviceListSortRight01">助农贷</view>
+          <view  class="serviceListSortRight01">为民服务</view>
           <view  class="serviceListSortRight02">帮助农民</view>
         </view>
       </navigator>

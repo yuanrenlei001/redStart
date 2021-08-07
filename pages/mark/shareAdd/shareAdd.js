@@ -59,7 +59,7 @@ Page({
         console.log(res);
         that.setData({flag:true})
         my.uploadFile({
-          url: 'http://httpbin.org/post',
+          url: 'https://httpbin.org/post',
           fileType: 'image',
           fileName: 'file',
           filePath: path,
