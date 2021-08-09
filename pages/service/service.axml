@@ -1,4 +1,6 @@
 <view class="main">
-  <image mode="scaleToFill" src="/images/service/icon01.png" onTap="goUrl" data-url="{{list[0]}}"/>
-  <image mode="scaleToFill" src="/images/service/icon02.png" onTap="goUrl" data-url="{{list[1]}}"/>
+  <!-- <navigator url="/pages/redHome/redImg/redImg?url=insurances"> -->
+    <image mode="scaleToFill" src="/images/service/icon01.png"  />
+  <!-- </navigator> -->
+  <image mode="scaleToFill" src="/images/service/icon02.png"  />
 </view>

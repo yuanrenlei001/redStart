@@ -1,0 +1,25 @@
+<view class="main">
+  <view class="top">
+    <view class="top01">{{detail.noticeTitle || detail.noticeName}}</view>
+    <view class="top02"><text>{{detail.createTime}}</text></view>
+  </view>
+  <view class="content">
+    <!-- <rich-text nodes="{{[{name:'div',children: [{type: 'text',text: detail.noticeContent}]}]}}"></rich-text> -->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <view class="title"><view></view>政策文件</view>
+  <view class="file" a:for="{{detail.imgInfoList}}">
+  <image mode="scaleToFill" src="/images/index/pdf.png"/> 
+  <text>
+    {{item.fileName}}
+  </text>
+  </view>
+  <view class="file" a:for="{{detail.imgInfoList}}">
+  <image mode="scaleToFill" src="/images/index/pdf.png"/> 
+  <text>
+    {{item.fileName}}
+  </text>
+  </view>
+</view>
+<view class="btn">我要申报</view>
+<import src="/wxParse/wxParse.axml">

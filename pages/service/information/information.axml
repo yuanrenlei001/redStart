@@ -12,5 +12,6 @@
         </view>
       </navigator>
     </view>
+    <view a:if="{{list.length == 0}}"><view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view></view>
   </view>
 </view>

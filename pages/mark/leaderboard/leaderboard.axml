@@ -2,7 +2,7 @@
   <view class="top">
     <image mode="scaleToFill" src="/images/market/marketBg.png" class="topBg"/>
     <view class="phb">
-      <view class="two">
+      <view class="two" onTap="goUrl" data-data="{{noticesList[1]}}">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/two.png" class="twoBg"/>
           <image mode="scaleToFill" src="{{img+noticesList[1].avatarInfo[0].fileNewName}}" class="twoHeader"/>
@@ -12,7 +12,7 @@
           <view class="oneText02">{{noticesList[1].tags}}</view>
         </view>
       </view>
-      <view class="one">
+      <view class="one"  onTap="goUrl" data-data="{{noticesList[0]}}">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/one.png" class="oneBg"/>
           <image mode="scaleToFill" src="{{img+noticesList[0].avatarInfo[0].fileNewName}}" class="oneHeader"/>
@@ -22,7 +22,7 @@
           <view class="oneText02">{{noticesList[0].tags}}</view>
         </view>
       </view>
-      <view class="three">
+      <view class="three"  onTap="goUrl" data-data="{{noticesList[2]}}">
         <view class="oneImg">
           <image mode="scaleToFill" src="/images/market/three.png" class="threeBg"/>
           <image mode="scaleToFill" src="{{img+noticesList[2].avatarInfo[0].fileNewName}}" class="threeHeader"/>
@@ -35,9 +35,9 @@
     </view>
   </view>
   <view class="main">
-    <view class="list" a:for="{{noticesList}}" a:if="{{index>2}}">
-      <view class="listNum">{{index}}</view>
-      <view class="listImg"><image mode="scaleToFill" src="http://36.26.84.183:8094/img/bg.png"/></view>
+    <view class="list" a:for="{{noticesList}}" a:if="{{index>2}}" onTap="goUrl" data-data="{{item}}">
+      <view class="listNum">{{index+1}}</view>
+      <view class="listImg"><image mode="scaleToFill" src="{{img+item.avatarInfo[0].fileNewName}}"/></view>
       <view class="listText">
         <view>{{item.name}}</view>
         <view>{{item.tags}}</view>

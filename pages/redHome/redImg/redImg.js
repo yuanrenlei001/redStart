@@ -4,15 +4,19 @@ Page({
     pageNum:1,
     pageSize:10,
     list:[],
-    flag:true
+    flag:true,
+    url:''
   },
-  onLoad() {
-    this.onlineStudys();
+  onLoad(e) {
+    this.setData({
+      url:e.url
+    })
+    this.onlineStudys(e.url);
   },
-    onlineStudys(){
+    onlineStudys(url){
     var that =this;
     my.request({
-      url: app.ajax+'/vueApi/exchanges?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+      url: app.ajax+'/vueApi/'+url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
       method: 'get',
       data: {
         

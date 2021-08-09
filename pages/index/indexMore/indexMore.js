@@ -8,14 +8,29 @@ Page({
     flag:true,
     img:app.ajaxImg,
   },
-  onLoad() {this.commonProsperityLeadersList();},
+  onLoad() {},
+  onShow(){
+    this.setData({
+      type:0,
+      pageNum:1,
+      list:[]
+    })
+      this.commonProsperityLeadersList();
+  },
   active(e){
     this.setData({
       type:e.target.targetDataset.type,
       pageNum:1,
       list:[]
     })
-    this.commonProsperityLeadersList();
+    if(e.target.targetDataset.type == 2){
+        my.navigateTo({
+          url: '/pages/web/web?url=https://sxone.114nz.com'
+        });
+    }else{
+      this.commonProsperityLeadersList();
+    }
+    
   },
     commonProsperityLeadersList(){
   var that =this;

@@ -19,7 +19,7 @@
   <view class="news">
     <view class="newsLeft" onTap="goUrlNews"><image mode="aspectFit" src="/images/index/new.png"/></view>
     <view class="newsRight">
-      <navigator a:for="{{noticesList}}" url="/pages/notice/detail/detail?id={{item.noticeId}}" open-type="navigate" class="newsList">{{item.noticeTitle}}</navigator>
+      <navigator a:for="{{noticesList}}" url="/pages/notice/detail/detail?id={{item.noticeId}}&url=notice" open-type="navigate" class="newsList">{{item.noticeTitle}}</navigator>
     </view>
   </view>
 </view>
@@ -48,7 +48,7 @@
           <view  class="serviceListSortRight02">发票信息</view>
         </view>
       </navigator>
-      <navigator url="/pages/redHome/redImg/redImg" open-type="navigate" class="serviceListSort">
+      <navigator url="/pages/redHome/redImg/redImg?url=exchanges" open-type="navigate" class="serviceListSort">
         <view class="serviceListSortLeft"><image mode="aspectFit" src="/images/index/jbdx.png"/></view>
         <view class="serviceListSortRight">
           <view  class="serviceListSortRight01">奖补兑现</view>
@@ -86,8 +86,8 @@
       <navigator url="/pages/service/job/job" open-type="navigate" class="serviceListSort">
         <view class="serviceListSortLefts"><image mode="aspectFit" src="/images/index/zgfb.png"/></view>
         <view class="serviceListSortRights">
-          <view  class="serviceListSortRight01">招工发布</view>
-          <view  class="serviceListSortRight02">企业招聘</view>
+          <view  class="serviceListSortRight01">前程无忧</view>
+          <view  class="serviceListSortRight02">互帮互助</view>
         </view>
       </navigator>
     </view>

@@ -5,7 +5,7 @@
       <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">农业图书馆</view>
       <view class="{{type==2?'active':''}}"  onTap="active" data-type="2">专家在线</view>
     </view>
-    <view class="list" >
+    <view class="list" a:if="{{type ==0 || type==1}}">
       <navigator url="/pages/index/detail/detail?id={{item.id}}" a:for="{{list}}">
         <image class="listLeft" mode="scaleToFill" src="{{img+item.imgPathInfo[0].fileNewName}}"/>
         <view class="listRight">
@@ -15,5 +15,6 @@
         </view>
       </navigator>
     </view>
+    <view a:if="{{list.length == 0 && (type ==0 || type==1)}}"><view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view></view>
   </view>
 </view>

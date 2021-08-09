@@ -1,0 +1,45 @@
+<view class="main">
+  <!-- <view class="top" onTap="goMap"> -->
+  <view class="top">
+  <image mode="scaleToFill" src="https://sjyw.zhamengtec.com:8082/profile/upload/2021/08/02/9e2ac0c2b2bc7597318961340e0371b.png"/>
+  <!-- <view class="vr">点击大图跳转VR</view> -->
+  </view>
+  <view class="body">
+    <view class="list2">
+      <view class="listDetail">
+        <view class="listDetailLeft">昵称：</view>
+        <view class="listDetailRight">{{data.name}}</view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">个人标签：</view>
+        <view class="listDetailRight">
+           {{data.tags}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">所属平台：</view>
+        <view class="listDetailRight">
+         {{data.platform}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">账号：</view>
+        <view class="listDetailRight">
+          {{data.account}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">当前排行：</view>
+        <view class="listDetailRight">
+        第 {{data.sort}}
+        </view>
+      </view>
+      <view class="listDetail">
+        <view class="listDetailLeft">简介：</view>
+        <view class="listDetailRight">
+          <view>{{data.profile}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

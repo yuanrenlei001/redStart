@@ -8,7 +8,7 @@
 .newsLeft {width:67rpx;height:63rpx;float:left;margin-top: 8rpx;}
 .newsLeft image {width:67rpx;height:63rpx;}
 .newsRight {margin-left: 120rpx;}
-.news {width: 702rpx;height:63rpx;position: relative;margin: auto;top:-80rpx;}
+.news {width: 702rpx;height:100rpx;position: relative;margin: auto;top:-80rpx;overflow: hidden;}
 .newsList {
   width:580rpx;
   font-size: 24rpx;color: #4c4c4c; 

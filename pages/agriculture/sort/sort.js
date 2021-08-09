@@ -12,16 +12,16 @@ Page({
   },
   onLoad(query) {
     console.log(query)
-    this.setData({
-      id:query.id,
-      url:query.url
-    })
+    // this.setData({
+    //   id:query.id,
+    //   url:query.url
+    // })
     this.notices();
   },
     notices(){
     var that = this;
         my.request({
-      url: app.ajax+'/vueApi/'+this.data.url+'/'+this.data.id,
+      url: app.ajax+'/vueApi/exchange/40',
       method: 'get',
       data: {
         
@@ -35,7 +35,7 @@ Page({
         that.setData({
           detail:data
         })
-        wxParse.wxParse('article', 'html',(data.content || data.insuranceIntro || data.noticeContent || data.fileContent), that, 5);
+        wxParse.wxParse('article', 'html',(data.content || data.noticeContent || data.fileContent), that, 5);
       },
       fail: function(res) {
         my.alert({content: 'fail'});

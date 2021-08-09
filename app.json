@@ -1,12 +1,17 @@
 {
   "pages": [
-     
     "pages/index/index",
+    "pages/mark/leaderboard/leaderboard",
+    "pages/mark/leaderboard/detail/detail",
+    
+    
+    
+    "pages/service/service",
+    "pages/agriculture/sortdetail/sortdetail",
+    "pages/agriculture/sort/sort",
     "pages/getAuthorize/getAuthorize",
     "pages/web/web",
-    
     "pages/activity/activity",
-   
     "pages/redHome/redHome",
     "pages/question/questionAdd/questionAdd",
     "pages/mark/shareAdd/shareAdd",
@@ -25,10 +30,8 @@
     "pages/redHome/redImg/redImg",
     "pages/user/information/information",
     "pages/agriculture/agricultureList/agricultureList",
-    "pages/mark/leaderboard/leaderboard",
     "pages/service/job/job",
     "pages/detail/detail",
-    "pages/service/service",
     "pages/agriculture/agriculture",
     "pages/leadership/leadershipDetail/leadershipDetail",
     "pages/activity/activityBm/activityBm",

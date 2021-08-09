@@ -3,4 +3,5 @@ page {background: #fff;}
 .top01 {line-height: 42rpx;font-size: 34rpx;color: #4c4c4c;}
 .top02 {font-size: 26rpx;color: #808080;margin-top:25rpx;}
 .top02 text {margin: 0 15rpx;}
-.content {padding: 40rpx 24rpx;color: #666;font-size: 28rpx;line-height: 40rpx;text-align: justify;}
+.content {color: #666;font-size: 28rpx;line-height: 40rpx;padding: 24rpx;text-align: justify;;}
+.content image {position: relative;display: block;margin-left: -12rpx;}

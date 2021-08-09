@@ -1,7 +1,7 @@
 <view class="main" style="padding-top:15rpx;">
-  <navigator class="topText" url="/pages/agriculture/agricultureList/detail/detail?id={{item.id}}&url=exchange&img=123"  a:for="{{list}}">
-    <view class="topText01">{{item.noticeName}}</view>
-    <view class="topText04"><text>{{item.fileName}}</text></view>
-    <view style="padding-top:15rpx;width100%;text-align:right;">{{item.fileNo}}</view>
+  <navigator class="topText" url="/pages/notice/detail/detail?id={{item.id}}&url={{url=='exchanges'?'exchange':url}}"  a:for="{{list}}">
+    <view class="topText01">{{item.noticeName || item.productName}}</view>
+    <view class="topText04"><text>{{item.fileName || item.productIntro}}</text></view>
+    <view style="padding-top:15rpx;width100%;text-align:right;color:#999;">{{item.createTime }}</view>
   </navigator>
 </view>

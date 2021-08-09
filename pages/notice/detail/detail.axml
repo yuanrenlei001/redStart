@@ -1,6 +1,6 @@
 <view class="main">
   <view class="top">
-    <view class="top01">{{detail.noticeTitle}}</view>
+    <view class="top01">{{detail.noticeTitle || detail.noticeName || detail.productName}}</view>
     <view class="top02"><text>{{detail.createTime}}</text></view>
   </view>
   <view class="content">

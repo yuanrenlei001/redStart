@@ -1,11 +1,12 @@
 <view class="main">
-  <view class="top" onTap="goMap">
-  <view class="vr">点击进入上虞人才就业服务网，欢迎您的加入</view>
+  <!-- <view class="top" onTap="goMap"> -->
+  <view class="top">
+  <!-- <view class="vr">点击进入上虞人才就业服务网，欢迎您的加入</view> -->
   <image mode="scaleToFill" src="https://sjyw.zhamengtec.com:8082/profile/upload/2021/08/02/9e2ac0c2b2bc7597318961340e0371b.png"/></view>
   <view class="body">
     <view class="sort">
-      <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">公益性岗位</view>
-      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">章镇人才岗</view>
+      <view class="{{type==0?'active':''}}"  onTap="active" data-type="0">公益天地</view>
+      <view class="{{type==1?'active':''}}"  onTap="active" data-type="1">章镇推荐</view>
     </view>
     <view class="list">
       <navigator url="/pages/service/job/detail/detail?id={{item.id}}" a:for="{{list}}">

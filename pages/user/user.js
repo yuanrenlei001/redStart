@@ -70,7 +70,7 @@ Page({
   login(){
     var that =this;
     my.getAuthCode({
-  scopes: ['auth_user'],
+   scopes: ['auth_base'],
  // 主动授权：auth_user，静默授权：auth_base或者其它scope。如需同时获取用户多项授权，可在 scopes 中传入多个 scope 值。
   success: (res) => {
     console.log(res)
@@ -80,6 +80,7 @@ Page({
   },
   onGetAuthorize(res) {
     var that = this;
+   
   my.getOpenUserInfo({
     fail: (res) => {
       console.log(res)
@@ -97,7 +98,7 @@ Page({
                   textUser:res.response,
                   nologin:false
                 });
-                that.login();
+                 that.login();
               },
             });
         },
