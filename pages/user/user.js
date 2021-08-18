@@ -79,30 +79,34 @@ Page({
 });
   },
   onGetAuthorize(res) {
-    var that = this;
-   
-  my.getOpenUserInfo({
-    fail: (res) => {
-      console.log(res)
-  },
-    success: (res) => {
-      let userInfo = JSON.parse(res.response).response // 以下方的报文格式解析两层 response
-      console.log(userInfo);
-      my.setStorage({
-              key: 'userInfo',
-              data: userInfo,
-              success() {
-                that.setData({
-                  userInfo: userInfo,
-                  user:userInfo,
-                  textUser:res.response,
-                  nologin:false
-                });
-                 that.login();
-              },
-            });
-        },
+    my.navigateTo({
+      url: '/pages/getAuthorize/getAuthorize'
     });
+    // console.log(res)
+  //   var that = this;
+   
+  // my.getOpenUserInfo({
+  //   fail: (res) => {
+  //     console.log(res)
+  // },
+  //   success: (res) => {
+  //     let userInfo = JSON.parse(res.response).response // 以下方的报文格式解析两层 response
+  //     console.log(userInfo);
+  //     my.setStorage({
+  //             key: 'userInfo',
+  //             data: userInfo,
+  //             success() {
+  //               that.setData({
+  //                 userInfo: userInfo,
+  //                 user:userInfo,
+  //                 textUser:res.response,
+  //                 nologin:false
+  //               });
+  //                that.login();
+  //             },
+  //           });
+  //       },
+  //   });
 },
 // /vueApi/userSaveOrUpdate
 // 支付宝API

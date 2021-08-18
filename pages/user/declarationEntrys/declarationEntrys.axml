@@ -3,14 +3,14 @@
   <view class="body">
 
     <view class="list"  a:for="{{list}}" a:if="{{list.length>0}}">
-      <navigator url="/pages/notice/detail/detail?id={{item.noticeId}}">
+      <view onTap="sp" data-data="{{item}}">
         
         <view class="listRight">
-          <view class="listRight01">{{item.noticeTitle || item.name}}</view>
+          <view class="listRight01">{{item.name}}</view>
           <view class="listRight02">{{item.createTime}}</view>
         </view>
-      </navigator>
+      </view>
     </view>
-    <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
+    <view class="null" a:if="{{list.length==0}}"><image mode="scaleToFill" src="/images/user/null.png"/></view>
   </view>
 </view>

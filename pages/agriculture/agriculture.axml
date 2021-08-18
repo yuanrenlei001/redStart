@@ -1,8 +1,9 @@
 <view class="main">
-  <!-- <view class="icon01" onTap="gourl"> -->
-  <view class="icon01"><image mode="scaleToFill" src="/images/agriculture/icon01.png"/><view>合作社建立</view></view>
+  <view class="icon01" onTap="gourl1">
+  <!-- <view class="icon01"> -->
+  <image mode="scaleToFill" src="/images/agriculture/icon01.png"/><view>合作社建立</view></view>
   <view class="icon02">
-    <view><image mode="scaleToFill" src="/images/agriculture/icon02.png"/><view>星级合作社申报</view></view>
-    <view><image mode="scaleToFill" src="/images/agriculture/icon03.png"/><view>家庭农场升级</view></view>
+    <view onTap="goUrls" data-url="/pages/agriculture/sortdetail/sortdetail?id=1&title=星级合作社申报" ><image mode="scaleToFill" src="/images/agriculture/icon02.png"/><view>星级合作社申报</view></view>
+    <view  onTap="goUrls" data-url="/pages/agriculture/sortdetail/sortdetail?id=2&title=家庭农场升级"><image mode="scaleToFill" src="/images/agriculture/icon03.png"/><view>家庭农场升级</view></view>
   </view>
 </view>

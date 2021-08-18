@@ -6,11 +6,11 @@
     <video id="myVideo" 
     src="{{img+detail.filePathInfo[0].fileNewName}}" 
     autoplay="{{video.autoPlay}}"
-
+onRenderStart=false
    />
   </view>
   <view class="content">
-    {{detail.remark}}
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
   <view class="textBottom">
     <text><image mode="scaleToFill" src="/images/index/see.png"/> {{detail.views}}</text>
@@ -45,3 +45,4 @@
     <view>
   </view>
 </view>
+<import src="/wxParse/wxParse.axml">

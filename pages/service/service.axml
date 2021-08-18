@@ -1,6 +1,9 @@
 <view class="main">
-  <!-- <navigator url="/pages/redHome/redImg/redImg?url=insurances"> -->
+  <navigator url="/pages/redHome/redImg/redImg?url=insurances">
     <image mode="scaleToFill" src="/images/service/icon01.png"  />
-  <!-- </navigator> -->
-  <image mode="scaleToFill" src="/images/service/icon02.png"  />
+  </navigator>
+  <!-- <navigator url="/pages/web/web?url=https://cdn.zj96596.com/mfs/page/share/functionShare/fshlPublic.html?id=7e41a24d-dce2-4c3c-95b7-995733774bf9"> -->
+  <navigator >
+    <image mode="scaleToFill" src="/images/service/icon02.png"  />
+  </navigator>
 </view>

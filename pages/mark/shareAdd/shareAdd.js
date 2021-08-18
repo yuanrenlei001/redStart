@@ -57,7 +57,10 @@ Page({
       success: res => {
         const path = res.apFilePaths[0];
         console.log(res);
-        that.setData({flag:true})
+       my.showLoading({
+      content: '加载中...',
+      delay: 1000,
+    });
         my.uploadFile({
           url: 'https://httpbin.org/post',
           fileType: 'image',
@@ -80,10 +83,11 @@ Page({
       success: function(res) {
         console.log(res)
        that.setData({
-         flag:false,
+        //  flag:false,
           img:that.data.img.concat(res.data.url),
           imgId:that.data.imgId.concat(res.data.fileId),
         })
+         my.hideLoading();
       },
       fail: function(res) {
         my.alert({content: 'fail'});

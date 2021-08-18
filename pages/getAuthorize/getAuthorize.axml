@@ -1,7 +1,33 @@
 <view class="main">
 <view class="null"><image mode="scaleToFill" src="/images/user/null.png"/></view>
 </view>
-<!-- <view class="fixed"></view> -->
+<view class="fixed" a:if="{{show}}">
+  <view class="fixedBody">
+    <view class="fixedBodyTop">红星共富小程序免责声明</view>
+    <view class="fixedTitle">一、红星共富小程序简介及说明</view>
+    <view class="fixedTitle02">（一）小程序简介</view>
+    <view class="fixedText">
+      在数字化改革的大背景下，章镇镇以基层党建为引领，以数字化的模式实现党支部领办合作社，实现集体增收农民致富。通过完善“党建+合作社”新型管理模式，真正把党支部领办合作社办成党员支持、群众拥护、管理规范、发展有力的“满意社”“幸福社”，用小程序线上的模式扩大覆盖、规范发展、提升内涵、指导服务。 破解部分涉及合作社的问题：重点破解政策文件宣传方式单一，政策补贴申报以线下流程为主，农户专业知识薄弱，专家资源信息较少，供需信息缺乏交流平台，农业贷款等惠民服务不清晰等一系列问题。
+    </view>
+    <view class="fixedText">为更清晰地理解并遵守相关协议及规则，用户必须遵守《红星共富小程序平台服务协议》等专项规则，本运营规范基于上述协议及规则进行解释和说明，而非修改或变更上述协议及规则中的任何条款，目的是便于用户能更顺利地使用红星共富小程序平台的服务。</view>
+    <view class="fixedText">红星共富小程序需符合红星共富平台的调性，给用户提供良好的体验。红星共富小程序应提供具有价值的内容，遵守国家相关法律法规，不提供违法或违反相关规则的内容或从事相关行为；不从事营销行为。</view>
+    <view class="fixedTitle">二、红星共富小程序运营规范</view>
+    <view class="fixedText">红星共富小程序平台的良好可持续发展有赖于小程序开发者们的共同努力与支持，以下运营规范的内容有助于用户更清晰地了解红星共富小程序平台的运营审核规则，期望我们一起创建并维护开发者、用户、平台等各方共赢有利的生态体系。</view>
+    <view class="fixedTitle02">（一）红星共富小程序遵守当地法律监管</view>
+    <view class="fixedText">您在使用小程序平台服务的过程中应当遵守当地相关的法律法规，必须遵守当地法律的其他相关隐私要求，并尊重当地的道德和风俗习惯。如果您的行为违反了当地法律法规或道德风俗，您应当为此独立承担责任。 小程序服务提供者应避免因使用本服务而使红星共富卷入政治和公共事件，否则红星共富有权暂停或终止对您的服务，您应当承担相应的法律责任。</view>
+    <view class="fixedTitle02">（二）相关条款说明</view>
+    <view class="fixedText">我们在自身合法权限和能力范围内，根据本规范等相关规则对小程序作出合理、合规的评估与判断，但无法实质审查开发者的实际开发、经营、运营以及推广等行为。为此，本规范下的审查与建议，并不保证小程序项下的应用与服务完全合法合规或完全无风险，您应对小程序的使用行为必须自行承担相应风险。</view>
+    <view class="fixedTitle02">具体免责条款如下：</view>
+    <view class="fixedText">1、小程序提供合作社简介、党员风采展等相关信息展示，不涉及具体营销推广行为。</view>
+    <view class="fixedText">2、小程序提供活动预约、在线学习等服务，不涉及收费，导流等行为。</view>
+    <view class="fixedText">3、小程序提供保险、助农贷、招工、政策帮扶等信息宣传和相关产品接口，不承担具体金融服务，如用户发生金融方面，财产损失等，本平台不承担任何责任或相关附带责任。</view>
+    <view class="fixedText">4、小程序提供农产品供销信息展示，不涉及产品销售、推销服务，用户需自行承担产品购买等风险，由于个人行为造成的任何财产损失，本平台概不负责。</view>
+    <view class="btn">
+      <button type="primary" onTap="success">确定</button>
+      <button type="ghost" onTap="cancel">取消</button>
+  </view>
+  </view>
+</view>
     <button   open-type="getAuthorize" 
 onGetAuthorize="onGetAuthorize" onError="onAuthError" 
 scope='userInfo'>

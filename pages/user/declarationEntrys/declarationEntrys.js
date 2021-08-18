@@ -1,40 +1,46 @@
 const app = getApp();
 Page({
   data: {
-    type:'HDZM',
+    type:1,
     pageNum:1,
     pageSize:10,
     list:[],
-    img:app.ajaxImg,
     flag:true,
-    url:'my/positionBookings'
+    url:'eventRecruitments'
   },
-  onLoad() {
+  onLoad(e) {
     this.commonProsperityLeadersList();
   },
   active(e){
     console.log(e.target.targetDataset.type)
-    if(e.target.targetDataset.type == 'HDZM'){
+    if(e.target.targetDataset.type == 1){
       this.setData({
         type:e.target.targetDataset.type,
-        url:'my/positionBookings',
+        url:'eventRecruitments',
         pageNum:1,
         list:[]
       })
     }else{
       this.setData({
         type:e.target.targetDataset.type,
-        url:'my/positionBookings',
+        url:'positionBookings',
         pageNum:1,
         list:[]
       })
     }
-    this.commonProsperityLeadersList();
+    // this.commonProsperityLeadersList();
   },
-  commonProsperityLeadersList(){
+  sp(e){
+    let data = JSON.stringify(e.target.dataset.data)
+    my.navigateTo({
+      url: '/pages/user/declarationEntrys/detail/detail?data='+data
+    });
+    // url=""
+  },
+  commonProsperityLeadersList(url){
   var that =this;
     my.request({
-      url: app.ajax+'/vueApi/'+this.data.url+'/'+this.data.type+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+      url: app.ajax+'/vueApi/my/declarationEntrys?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
       method: 'get',
       data: {
         
@@ -45,6 +51,8 @@ Page({
       dataType: 'json',
       success: function(res) {
         let data = res.data.data.result;
+                console.log(data.length)
+        console.log(res.data.data.pageSize)
             if(data.length>=res.data.data.pageSize){
            that.setData({
           pageNum:that.data.pageNum+1,
@@ -58,20 +66,12 @@ Page({
         that.setData({
           list:that.data.list.concat(data)
         })
-        console.log(that.data.list)
       },
       fail: function(res) {
-        // my.alert({content: 'fail'});
+        my.alert({content: 'fail'});
       },
     });
   },
-  gourlS(e){
-    console.log(e.target.dataset.data)
-     my.navigateTo({
-      url:'/pages/user/myPositionBookings/detail/detail?data='+JSON.stringify(e.target.dataset.data)
-    })
-  },
-  // url="/pages/user/myPositionBookings/detail/detail?data={{item.applicantUser}}"
   // commonProsperityLeaders  共富带头人
   // helpPairs 结队帮扶
   goUrl(){

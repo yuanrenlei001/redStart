@@ -20,14 +20,18 @@ Page({
     img:[],
     imgId:[],
     name:'',
-    id:''
+    id:'',
+    datas:''
   },
   onLoad(e) {
-    console.log(e)
     this.setData({
-      title:e.title
+      datas:JSON.parse(e.data)
     })
-    this.select();
+   console.log(JSON.parse(e.data))
+    // this.setData({
+    //   title:e.title
+    // })
+    // this.select();
     // this.add();
   },
   bindPickerChange(e) {

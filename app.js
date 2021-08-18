@@ -35,9 +35,6 @@ App({
             that.islogin =false
           }
       },
-      fail: function(res) {
-        my.alert({content: 'fail'});
-      },
     });
   },
 });

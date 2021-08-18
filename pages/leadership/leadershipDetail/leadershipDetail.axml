@@ -1,5 +1,6 @@
-<view class="main">
-  <view class="top">
+<view class="main"  a:if="{{type=='GFDTR'}}">
+  <view>
+      <view class="top">
     <image mode="scaleToFill" src="{{img+detail.imgPathInfo[0].fileNewName}}" class="user"/>
     <view class="topText">
       <view class="topText01">{{detail.name}} <text>{{detail.post}}</text></view>
@@ -22,4 +23,13 @@
   </view>
   <view class="btn" onTap="addZan" data-type='0' a:if="{{detail.likesStatus == null || detail.likesStatus == false}}">点赞</view>
   <view class="btn" onTap="unZan" data-type='1' a:if="{{detail.likesStatus == true}}">取消点赞</view>
+  </view>
+
 </view>
+  <view a:if="{{type=='JDBF'}}">
+
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+     
+
+  </view>
+<import src="/wxParse/wxParse.axml">

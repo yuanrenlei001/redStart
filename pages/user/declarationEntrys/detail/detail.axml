@@ -1,0 +1,11 @@
+<view class="main">
+  <!-- <view class="page-section"><block>申报类型</block><input class="input" id="controlled" disabled="disabled" value="{{title}}" /></view> -->
+  <view class="page-section"><block>合作社名称</block>
+ <input class="input" disabled="disabled" value="{{datas.name}}" style="font-size:24rpx;"/>
+  </view>
+  <view class="page-section"><block>申报人</block><input class="input" disabled="disabled" value="{{datas.declareUser}}" /></view>
+  <view class="page-section" ><block>申报时间</block><input class="input" disabled="disabled" value="{{datas.createTime}}" /></view>
+
+
+
+</view>

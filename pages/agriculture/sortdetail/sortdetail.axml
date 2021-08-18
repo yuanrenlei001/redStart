@@ -1,6 +1,6 @@
 <view class="main">
   <view class="top">
-    <view class="top01">{{detail.noticeTitle || detail.noticeName}}</view>
+    <view class="top01">{{title}}</view>
     <view class="top02"><text>{{detail.createTime}}</text></view>
   </view>
   <view class="content">
@@ -8,18 +8,12 @@
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
   <view class="title"><view></view>政策文件</view>
-  <view class="file" a:for="{{detail.imgInfoList}}">
-  <image mode="scaleToFill" src="/images/index/pdf.png"/> 
-  <text>
-    {{item.fileName}}
-  </text>
-  </view>
-  <view class="file" a:for="{{detail.imgInfoList}}">
+  <view class="file" a:for="{{detail.fileList}}" onTap="showFile" data-url="{{item.filePath}}">
   <image mode="scaleToFill" src="/images/index/pdf.png"/> 
   <text>
     {{item.fileName}}
   </text>
   </view>
 </view>
-<view class="btn">我要申报</view>
+<navigator class="btn" url="/pages/agriculture/sort/sort?id={{ids}}&title={{title}}">我要申报</navigator>
 <import src="/wxParse/wxParse.axml">

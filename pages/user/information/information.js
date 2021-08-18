@@ -4,10 +4,21 @@ Page({
     user:''
   },
   onLoad(e) {
-    let userInfo = JSON.parse(e.data).response;
-    this.setData({
-      user:userInfo
+    var that = this;
+    my.getStorage({
+  key: 'userInfo',
+  success: function(res) {
+     that.setData({
+      user:res.data
     })
-    console.log(userInfo.gender)
+  },
+  
+});
+  
+    // let userInfo = JSON.parse(e.data).response;
+    // this.setData({
+    //   user:userInfo
+    // })
+    console.log(this.data.user)
   },
 });

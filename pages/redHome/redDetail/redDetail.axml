@@ -36,10 +36,10 @@
       {{details.remark}}
     </view>
   </view>
-  <view class="main01">
+  <!-- <view class="main01">
     <view class="title"><view></view>开票二维码</view>
     <image onTap="previewImage" data-src="{{img+item.fileNewName}}" mode="scaleToFill" a:for="{{details.qrCodeList}}" src="{{img+item.fileNewName}}" style="margin-right:15rpx;" class="code"/>
-  </view>
+  </view> -->
   <view class="main01">
     <view class="title"><view></view>检测报告</view>
     <view class="list">
@@ -54,8 +54,10 @@
 <view class="fixed" a:if="{{show}}" onTap="close">
   <view class="fixedMain">
     <video id="myVideo" 
-    src="{{img+details.videoInfoList[0].fileNewName}}" 
+    style="width:100%;"
+    src="{{videoSrc}}" 
     autoplay="{{autoPlay}}"
+    onPlay="onPlay"
    />
   </view>
 </view>

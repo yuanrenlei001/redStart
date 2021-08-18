@@ -8,6 +8,7 @@ Page({
     img:app.ajaxImg,
     show:false,
     autoPlay:true,
+    videoSrc:'',
     video: {
 	src: "http://36.26.84.183:8094/video/blny.mp4",
 	showAllControls: false,
@@ -18,7 +19,7 @@ Page({
 	muteWhenPlaying: false,
 	initTime: 0,
 	objectFit: "contain",
-	autoPlay: false,
+	autoPlay: true,
 	directionWhenFullScreen: 90,
   mobilenetHintType: 2,
   longitude: '120.126293',
@@ -30,6 +31,10 @@ onLoad(e) {
   // my.alert({title:e.id})
     this.detail(e.id);
   },
+
+  onPlay(e) {
+	console.log('onPlay');
+},
    openLocation() {
      var that =this;
      console.log(that.data)
@@ -136,6 +141,15 @@ my.request({
         success: function(res) {
           // my.alert({title:JSON.stringify(res.data.data.areaCode)})
           // let data = res.data.data.result;
+          if(res.data.data.videoUrl){
+            that.setData({
+              videoSrc:res.data.data.videoUrl
+          })
+          }else{
+            that.setData({
+              videoSrc:that.data.img+res.data.data.videoInfoList[0].fileNewName
+          })
+          }
           that.setData({
               details:res.data.data
           })

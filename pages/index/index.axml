@@ -1,4 +1,8 @@
-<!-- <image mode="scaleToFill" src="https://images.weserv.nl/?url=https://hxhzs.zhamengtec.com:8082/profile/upload/2021/08/01/0a49bd94-1882-49bb-9441-f582a376d5d1.png"/> -->
+<!-- <view class="btn-area">
+  <button type="primary" onTap="getAvailableAudioSources">获取当前支持的音频输入源</button>
+</view> -->
+<!-- <view class="operation-item" onTap="pause">暂停</view>
+<view class="operation-item" onTap="stop">停止</view> -->
 <view class="top">
   <swiper
                 class="demo-swiper"
@@ -44,8 +48,8 @@
       <navigator url="/pages/agriculture/ticket/ticket" open-type="navigate" class="serviceListSort">
         <view class="serviceListSortLeft"><image mode="aspectFit" src="/images/index/pzfw.png"/></view>
         <view class="serviceListSortRight">
-          <view  class="serviceListSortRight01">票证服务</view>
-          <view  class="serviceListSortRight02">发票信息</view>
+          <view  class="serviceListSortRight01">合作社在线</view>
+          <view  class="serviceListSortRight02">合作社服务</view>
         </view>
       </navigator>
       <navigator url="/pages/redHome/redImg/redImg?url=exchanges" open-type="navigate" class="serviceListSort">
@@ -65,7 +69,7 @@
       <navigator url="/pages/service/service" open-type="navigate" class="serviceListSort">
         <view class="serviceListSortLefts"><image mode="aspectFit" src="/images/index/bxt.png"/></view>
         <view class="serviceListSortRights">
-          <view  class="serviceListSortRight01">保险通</view>
+          <view  class="serviceListSortRight01">服务通</view>
           <view  class="serviceListSortRight02">保护百姓</view>
         </view>
       </navigator>

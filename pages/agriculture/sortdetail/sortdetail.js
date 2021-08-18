@@ -8,20 +8,22 @@ var article = '';
 Page({
   data: {
     id:'',
-    detail:''
+    detail:'',
+    title:'',
+    ids:''
   },
   onLoad(query) {
     console.log(query)
-    // this.setData({
-    //   id:query.id,
-    //   url:query.url
-    // })
-    this.notices();
+    this.setData({
+      title:query.title,
+      ids:query.id
+    })
+    this.notices(query.id);
   },
-    notices(){
+    notices(id){
     var that = this;
         my.request({
-      url: app.ajax+'/vueApi/exchange/40',
+      url: app.ajax+'/vueApi/declareDesc/'+id,
       method: 'get',
       data: {
         
@@ -35,11 +37,26 @@ Page({
         that.setData({
           detail:data
         })
-        wxParse.wxParse('article', 'html',(data.content || data.noticeContent || data.fileContent), that, 5);
+        wxParse.wxParse('article', 'html',(data.description), that, 5);
       },
       fail: function(res) {
         my.alert({content: 'fail'});
       },
     });
   },
+  showFile(e){
+    my.downloadFile({
+      url: e.target.dataset.url,
+      success({ apFilePath }) {
+        my.hideLoading();
+        my.openDocument({
+          filePath: apFilePath,
+          fileType: 'pdf',
+          success: (res) => {
+            console.log('open document success')
+            }
+          })
+        }
+      })
+  }
 });

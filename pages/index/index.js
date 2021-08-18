@@ -95,8 +95,38 @@ Page({
   },
 
   onReady() {
-    // 页面加载完成
+
   },
+  getAvailableAudioSources() {
+    my.getAvailableAudioSources(
+      {
+        success: function(res) {
+          my.alert({ content: "success" + JSON.stringify(res)});
+          console.log("getAvailableAudioSources success" + JSON.stringify(res));
+        },
+        fail: function(res) {
+          my.alert({content : "fail"});
+          console.log("getAvailableAudioSources fail" + JSON.stringify(res));
+          if (res) {
+            console.log("getAvailableAudioSources fail" + JSON.stringify(res));
+          }
+        },
+        complete: function(res) {
+          my.alert({ content: "complete" });
+          console.log("getAvailableAudioSources complete" + JSON.stringnify(res));
+          if(res) {
+            console.log("getAvailableAudioSources complete" + JSON.stringnify(res));
+          }
+        },
+      }
+    )
+  },
+  audioPlay(){
+    this.backgroundAudioManager.play();
+    console.log("call backgroundAudioManager.play");
+    my.alert({ content: "call backgroundAudioManager.play" });
+  },
+
   onShow() {
     let title = app.title.index;
     my.setNavigationBar({title});

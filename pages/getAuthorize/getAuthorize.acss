@@ -13,4 +13,13 @@
 .icon {width:32rpx;height:32rpx;vertical-align: middle;margin: 0 12rpx;}
 .back {width:16rpx;height:32rpx;position: absolute;top:50%;margin-top: -16rpx;right:34rpx;}
 .nologin {position: fixed;top:0;left:0;width:100%;height:100%;z-index: 999;opacity: 0;}
-.fixed {width: 100%;height:100%;position: fixed;top:260rpx;left:0;background: red;}
+.fixed {width: 100%;height:100%;position: fixed;top:0;left:0;background: #b2b2b2;z-index: 9999;}
+.fixedBody {
+  width:510rpx;height:1000rpx;overflow-y: scroll;background: #fff;position: relative;margin:-500rpx auto 0;top:50%;
+  padding: 0 45rpx;
+}
+.fixedBodyTop {width:100%;text-align: center;color: #e30000;font-size: 32rpx;line-height: 120rpx;}
+.fixedTitle {font-size: 28rpx;color: #4c4c4c;}
+.fixedTitle02 {font-size: 24rpx;color: #666;padding-left: 30rpx;line-height: 80rpx;}
+.fixedText {font-size: 24rpx;color: #666;text-indent: 2em;line-height: 34rpx;text-align: justify;}
+.btn button {width:240rpx;display: inline-block;margin: 40rpx 5rpx;}

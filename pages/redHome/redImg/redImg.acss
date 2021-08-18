@@ -23,7 +23,7 @@
     word-break: break-all;
 }
  
-.topText04 text:last-child {float:right;}
+.topText04 text:last-child {float:left;}
 .title {font-size: 30rpx;color: #1a1a1a;line-height: 80rpx;position: relative;padding-left: 25rpx;}
 .title>view {
   width: 6rpx;height:30rpx;

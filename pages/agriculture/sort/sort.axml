@@ -1,0 +1,27 @@
+<view class="main">
+  <view class="page-section"><block>申报类型</block><input class="input" id="controlled" disabled="disabled" value="{{title}}" /></view>
+  <view class="page-section"><block>合作社名称</block>
+
+    <view style="position: absolute;top:0;right:24rpx;height:100%;">
+      <picker onChange="bindPickerChange" value="{{index}}" range="{{array}}" data-name="{{array[index].name}}" data-id="{{array[index].id}}" range-key="name" class="pickers" >
+      <view class="row">
+        <view class="row-extra" style="font-size:24rpx;">{{array[index].name}}</view>
+      </view>
+    </picker>
+    </view>
+ 
+  </view>
+  <view class="page-section"><block>申报人</block><input class="input" id="controlled" onInput="applicantUnit" placeholder="请填写" /></view>
+  <view class="page-section" onTap="datePicker"><block>申报时间</block><input value="{{appointmentTime}}" class="input" id="controlled" disabled="disabled"  placeholder="请选择" /></view>
+    <view style="padding:24rpx;">
+    <view class="imgUp" a:for="{{img}}"><image mode="scaleToFill" src="{{item}}"/></view>
+  <view class="imgUp" onTap="uploadFile">
+    +
+  </view>
+  </view>
+  <view class="btn" onTap="success">发布</view>
+<view class="fixed" a:if="{{flag}}">
+ 加载中。。。。。
+</view>
+  <view class="btn" onTap="add">提交</view>
+</view>

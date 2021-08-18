@@ -16,7 +16,7 @@
       <text>我的预约</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
     </navigator>
-    <navigator url="/pages/user/list/list?url=/vueApi/my/declarationEntrys" class="list">
+    <navigator url="/pages/user/declarationEntrys/declarationEntrys" class="list">
       <image mode="scaleToFill" src="/images/user/icon03.png" class="icon"/>
       <text>我的申报</text>
       <image mode="scaleToFill" src="/images/user/back.png" class="back"/>
@@ -41,8 +41,12 @@
 
 </view>
 <!-- <view class="fixed"></view> -->
-    <button a:if="{{nologin}}"  open-type="getAuthorize" 
+    <!-- <button a:if="{{nologin}}"  open-type="getAuthorize" 
 onGetAuthorize="onGetAuthorize" onError="onAuthError"  class="nologin"
 scope='userInfo'>
+    会员基础信息授权
+</button> -->
+    <button a:if="{{nologin}}" onTap="onGetAuthorize"  class="nologin"
+>
     会员基础信息授权
 </button>

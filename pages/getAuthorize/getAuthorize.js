@@ -7,7 +7,8 @@ Page({
      text:'333',
      AuthCode:'',
     textUser:'',
-    userContent:''
+    userContent:'',
+    show:true,
   },
   onLoad() {
     var that = this;
@@ -37,6 +38,8 @@ Page({
         },
       });
   },
+  success(){this.setData({show:false})},
+  cancel(){my.navigateBack();},
   getStorage(){
     var that = this;
     var key = this.data.AuthCode;

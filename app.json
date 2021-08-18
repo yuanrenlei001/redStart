@@ -1,15 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
+     "pages/index/index",
+    "pages/getAuthorize/getAuthorize",
+    
+    "pages/agriculture/agriculture",
+    "pages/agriculture/sort/sort",
+    "pages/agriculture/sortdetail/sortdetail",
     "pages/mark/leaderboard/leaderboard",
     "pages/mark/leaderboard/detail/detail",
-    
-    
-    
     "pages/service/service",
-    "pages/agriculture/sortdetail/sortdetail",
-    "pages/agriculture/sort/sort",
-    "pages/getAuthorize/getAuthorize",
     "pages/web/web",
     "pages/activity/activity",
     "pages/redHome/redHome",
@@ -32,7 +31,6 @@
     "pages/agriculture/agricultureList/agricultureList",
     "pages/service/job/job",
     "pages/detail/detail",
-    "pages/agriculture/agriculture",
     "pages/leadership/leadershipDetail/leadershipDetail",
     "pages/activity/activityBm/activityBm",
     "pages/mark/mark",
@@ -51,6 +49,8 @@
     "pages/user/myPositionBookings/myPositionBookings",
     "pages/user/myCollections/myCollections",
     "pages/user/myConsultingServices/myConsultingServices",
+    "pages/user/declarationEntrys/declarationEntrys",
+    "pages/user/declarationEntrys/detail/detail",
     "pages/user/myAdd/myAdd",
     "pages/agriculture/agricultureList/file/file",
     "pages/user/myPositionBookings/detail/detail"

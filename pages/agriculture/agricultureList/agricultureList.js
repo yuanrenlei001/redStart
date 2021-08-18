@@ -4,7 +4,7 @@ Page({
     listLeft:'',
     typeId:'',
     pageNum:1,
-    pageSize:20,
+    pageSize:100,
     list:[],
     flag:true,
     listRight:''

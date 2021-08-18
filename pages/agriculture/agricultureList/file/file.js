@@ -10,7 +10,8 @@ Page({
     detail:'',
     img:app.ajaxImg,
     text:'',
-    flag:false
+    flag:false,
+    imgFlag:false
   },
   onLoad(e) {
     console.log(e)
@@ -54,8 +55,19 @@ Page({
         //     text = data.fileContent;
         //     wxParse.wxParse('article', 'html',text, that, 5);
         // }
-        if(data.imgPathInfo){
+        console.log(data.imgPathInfo[0].fileSuffix == 'png' || data.imgPathInfo[0].fileSuffix == 'jpg')
+        if(data.imgPathInfo[0].fileSuffix == 'png' || data.imgPathInfo[0].fileSuffix == 'jpg'){
+          console.log(1)
+          
+          that.setData({
+            imgFlag:true
+          })
+        }else{
+           console.log(2)
           that.openFile(data.imgPathInfo[0].filePath);
+          that.setData({
+            imgFlag:false
+          })
         }
         that.setData({
           detail:data,

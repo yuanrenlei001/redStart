@@ -12,10 +12,12 @@
   <view class="textarea">
     <textarea onBlur="bindTextAreaBlur" placeholder="请输入内容"></textarea>
   </view>
-  <view class="imgUp" a:for="{{img}}"><image mode="scaleToFill" src="{{item}}"/></view>
+
+    <view class="imgUp" a:for="{{img}}"><image mode="scaleToFill" src="{{item}}"/></view>
   <view class="imgUp" onTap="uploadFile">+</view>
+  </view>
   <view class="btn" onTap="success">发布</view>
-</view>
+
 <view class="fixed" a:if="{{flag}}">
  加载中。。。。。
 </view>
