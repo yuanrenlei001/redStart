@@ -3,6 +3,6 @@
   <!-- <image a:if="{{flag == false}}" mode="scaleToFill" a:for="{{detail.imgPathInfo}}" src="{{img+item.fileNewName}}" style="height:800rpx;"/>
   
   <template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
-  <image a:if="{{imgFlag == true}}" a:for="{{detail.imgPathInfo}}" mode="scaleToFill"  src="{{img+item.fileNewName}}" style="height:800rpx;"/>
+  <image a:if="{{imgFlag == true}}" a:for="{{detail.imgPathInfo}}" mode="scaleToFill"  src="{{img+item.fileNewName}}" style="height:800rpx;width:80%;"/>
 </view>
 <!-- <import src="/wxParse/wxParse.axml"> -->

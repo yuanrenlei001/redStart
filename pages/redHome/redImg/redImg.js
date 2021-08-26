@@ -11,12 +11,23 @@ Page({
     this.setData({
       url:e.url
     })
-    this.onlineStudys(e.url);
+    if(e.insuranceName){
+      this.onlineStudys(e.url,e.insuranceName);
+    }else{
+      this.onlineStudys(e.url);
+    }
+    
   },
-    onlineStudys(url){
+    onlineStudys(url,sort){
     var that =this;
+    var urls = '';
+    if(sort){
+      urls = app.ajax+'/vueApi/'+url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize+'&insuranceName='+sort
+    }else{
+      urls = app.ajax+'/vueApi/'+url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize
+    }
     my.request({
-      url: app.ajax+'/vueApi/'+url+'?pageNum='+this.data.pageNum+'&pageSize='+this.data.pageSize,
+      url: urls,
       method: 'get',
       data: {
         

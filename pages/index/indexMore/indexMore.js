@@ -8,14 +8,16 @@ Page({
     flag:true,
     img:app.ajaxImg,
   },
-  onLoad() {},
-  onShow(){
+  onLoad() {
     this.setData({
       type:0,
       pageNum:1,
       list:[]
     })
       this.commonProsperityLeadersList();
+  },
+  onShow(){
+    
   },
   active(e){
     this.setData({

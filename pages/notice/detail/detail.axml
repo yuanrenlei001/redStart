@@ -8,4 +8,5 @@
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
 </view>
+<view class="btn" onTap="gourl1" a:if="{{flag}}">前往浙里办</view>
 <import src="/wxParse/wxParse.axml">

@@ -15,6 +15,7 @@ Page({
     time: "0",
     plText:'',
     fixed:false,
+    videoShow:false,
     video: {
 	src: "http://36.26.84.183:8094/video/nj2.mp4",
 
@@ -348,6 +349,12 @@ var that = this;
       dataType: 'json',
       success: function(res) {
         let data = res.data.data;
+        if(data.videoIdInfo || data.videoUrl !==''){
+          that.setData({
+          videoShow:true
+        })
+        }
+        // videoShow
         that.setData({
           detail:data
         })

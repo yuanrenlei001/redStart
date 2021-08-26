@@ -15,5 +15,6 @@
   </text>
   </view>
 </view>
-<navigator class="btn" url="/pages/agriculture/sort/sort?id={{ids}}&title={{title}}">我要申报</navigator>
+<navigator class="btn" url="/pages/agriculture/sort/sort?id={{ids}}&title={{title}}" a:if="{{gourlss}}">我要申报</navigator>
+<view class="btn" onTap="gourl1" a:if="{{gourlss == false}}">合作社建立</view>
 <import src="/wxParse/wxParse.axml">

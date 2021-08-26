@@ -5,3 +5,7 @@ page {background: #fff;}
 .top02 text {margin: 0 15rpx;}
 .content {color: #666;font-size: 28rpx;line-height: 40rpx;padding: 24rpx;text-align: justify;;}
 .content image {position: relative;display: block;margin-left: -12rpx;}
+.btn {position: fixed;z-index: 99;bottom:24rpx;left:25rpx;background: red;border-radius: 20rpx;
+  color: #fff;font-size: 36rpx;height:78rpx;line-height: 78rpx;width: 700rpx;
+  text-align: center;
+}

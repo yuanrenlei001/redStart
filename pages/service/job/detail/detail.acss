@@ -4,3 +4,6 @@ page {background: #fff;}
 .top02 {font-size: 26rpx;color: #808080;margin-top:25rpx;}
 .top02 text {margin: 0 15rpx;}
 .content {padding: 40rpx 24rpx;color: #666;font-size: 28rpx;line-height: 40rpx;text-align: justify;}
+.content image {position: relative;
+    display: block;
+    margin-left: -0.12rem;}

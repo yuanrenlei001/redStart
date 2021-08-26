@@ -2,20 +2,21 @@
   <view class="sort">
     <view class="title"><view></view>惠民服务</view>
     <view class="url">
-      <view   a:for="{{datas}}" a:if="{{item.name == '市民贷'}}" data-url="{{item.url}}"><image mode="scaleToFill" src="/images/service/icon03.png"/><text>市民服务</text></view>
-      <view  a:for="{{datas}}" a:if="{{item.name == '商户贷'}}" data-url="{{item.url}}"><image mode="scaleToFill" src="/images/service/icon04.png"/><text>商户服务</text></view>
+      <navigator   a:for="{{list}}" a:if="{{item.productName == '市民服务'}}"   url="/pages/notice/detail/detail?id={{item.id}}&url=farmingLoans"><image mode="scaleToFill" src="/images/service/icon03.png"/><text>{{item.productName}}</text></navigator>
+      <navigator  a:for="{{list}}" a:if="{{item.productName == '商户服务'}}"  url="/pages/notice/detail/detail?id={{item.id}}&url=farmingLoans"><image mode="scaleToFill" src="/images/service/icon04.png"/><text>{{item.productName}}</text></navigator>
     </view>
   </view>
   <view class="sort">
     <view class="title"><view></view>计算器</view>
     <view class="url">
-      <view  a:for="{{datas}}" a:if="{{item.name == '贷款计算器'}}" data-url="{{item.url}}"><image mode="scaleToFill" src="/images/service/icon05.png"/><text>计算器</text></view>
+      <navigator  a:for="{{list}}" a:if="{{item.productName == '计算器'}}"  url="/pages/notice/detail/detail?id={{item.id}}&url=farmingLoans"><image mode="scaleToFill" src="/images/service/icon05.png"/><text>{{item.productName}}</text></navigator>
     </view>
   </view>
    <view class="sort">
     <view class="title"><view></view>产品链接</view>
     <view class="url">
-      <view a:for="{{datas}}" a:if="{{item.name == '浙里贷'}}" data-url="{{item.url}}"><image mode="scaleToFill" src="/images/service/icon06.png"/><text>浙里贷</text></view>
+    <navigator  a:for="{{list}}" a:if="{{item.productName == '浙里办'}}"  url="/pages/notice/detail/detail?id={{item.id}}&url=farmingLoans&type=zld"><image mode="scaleToFill" src="/images/service/icon06.png"/><text>{{item.productName}}</text></navigator>
+      <!-- <view onTap="gourl1"><image mode="scaleToFill" src="/images/service/icon06.png"/><text>浙里贷</text></navigator> -->
     </view>
   </view>
 </view>

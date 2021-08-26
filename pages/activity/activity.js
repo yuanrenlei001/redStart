@@ -100,7 +100,7 @@ Page({
   },
   goMap(){
     my.navigateTo({
-      url:'/pages/web/web?url='+'http://vr.zjytx.net/tour/3a69efdab609198a'
+      url:'/pages/web/web?url='+'https://vr.zjytx.net/tour/3a69efdab609198a'
     });
   },
         onReachBottom() {

@@ -1,7 +1,7 @@
 <view class="main">
   <!-- <view class="top" onTap="goMap"> -->
   <view class="top">
-  <image mode="scaleToFill" src="https://sjyw.zhamengtec.com:8082/profile/upload/2021/08/02/9e2ac0c2b2bc7597318961340e0371b.png"/>
+  <image mode="scaleToFill" src="https://sjyw.zhamengtec.com:8082/profile/upload/2021/08/24/8463486a-0e99-48f5-9e4b-f69fbfb799ed.jpg"/>
   <!-- <view class="vr">点击大图跳转VR</view> -->
   </view>
   <view class="body">

@@ -10,10 +10,16 @@ Page({
     id:'',
     detail:'',
     title:'',
-    ids:''
+    ids:'',
+    gourlss:true
   },
   onLoad(query) {
-    console.log(query)
+    console.log(query.id)
+    if(query.id == 3){
+      this.setData({
+      gourlss:false
+    })
+    }
     this.setData({
       title:query.title,
       ids:query.id
@@ -42,6 +48,24 @@ Page({
       fail: function(res) {
         my.alert({content: 'fail'});
       },
+    });
+  },
+      gourl1(){
+    my.navigateToMiniProgram({
+      appId: '2018090361258298',  // 要跳转的目标小程序 appId。
+      path: 'pages/index/index',  // 打开的页面路径，如果为空则打开首页。 
+      extraData:{// 需要传递给目标小程序的数据，为键值对的格式，数值的类型为字符串。目标小程序可在 App.onLaunch() 、 App.onShow()  中获取到这份数据。
+        "data1":"test"
+      },
+      success: (res) => {
+        console.log(JSON.stringify(res))
+      },
+      fail: (res) => {
+        console.log(JSON.stringify(res))
+      },
+      complete:(res) => {
+           console.log(JSON.stringify(res))
+      }
     });
   },
   showFile(e){

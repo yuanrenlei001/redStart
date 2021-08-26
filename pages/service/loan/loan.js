@@ -8,10 +8,10 @@ Page({
   onLoad() {
     var that = this;
     this.notices();
-    this.type();
-    setTimeout(()=>{
-        that.sort();
-    },1500)
+    // this.type();
+    // setTimeout(()=>{
+    //     that.sort();
+    // },1500)
   },
   gourl1(){
     my.navigateToMiniProgram({

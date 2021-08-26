@@ -146,9 +146,12 @@ my.request({
               videoSrc:res.data.data.videoUrl
           })
           }else{
-            that.setData({
+            if(res.data.data.videoInfoList.length>0){
+that.setData({
               videoSrc:that.data.img+res.data.data.videoInfoList[0].fileNewName
           })
+            }
+            
           }
           that.setData({
               details:res.data.data

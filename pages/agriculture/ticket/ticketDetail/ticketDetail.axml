@@ -16,7 +16,7 @@
     <!-- <image  onTap="uncollect" a:if="{{details.collection == true}}"  mode="scaleToFill" class="collect" src="/images/redHome/collectActive.png"/>  -->
     <image mode="scaleToFill" onTap="videoss" a:if="{{details.videoInfoList.length>0}}" class="video" src="/images/redHome/video.png"/>
     </view>
-    <view a:if="{{details.stars && details.stars!=='无'}}">
+    <view a:if="{{details.stars && details.stars!=='无'}}" style="margin-bottom:12rpx;">
       <text>星级评定：</text>
       <block a:if="{{details.stars == '区A星级'}}"><image   mode="scaleToFill" class="collect" src="/images/redHome/red.png"/></block>
       <block a:if="{{details.stars == '区AA星级'}}"><image   mode="scaleToFill" class="collect" src="/images/redHome/red.png"/><image   mode="scaleToFill" class="collect" src="/images/redHome/red.png"/></block>
@@ -51,9 +51,11 @@
     </view>
   </view>
 </view>
-<view class="fixed" a:if="{{show}}" onTap="close">
+<view class="fixed" a:if="{{show}}">
   <view class="fixedMain">
+  <image mode="scaleToFill" src="/images/close.png" style="position:absolute;width:46rpx;height:46rpx;top:0;right:0;z-index:999;" onTap="close"/>
     <video id="myVideo" 
+    style="width:600rpx;height:400rpx;background:000;"
     src="{{img+details.videoInfoList[0].fileNewName}}" 
     autoplay="{{autoPlay}}"
    />

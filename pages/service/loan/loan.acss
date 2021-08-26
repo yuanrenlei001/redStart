@@ -9,5 +9,6 @@
 }
 page {background: #fff;}
 .sort {width:702rpx;height:242rpx;position: relative;border-radius: 20rpx;border: 1px solid #eee;margin: 12rpx auto;}
+.url>navigator {width:50%;float:left;line-height: 120rpx;text-align: center;font-size: 30rpx;color: #333;}
 .url>view {width:50%;float:left;line-height: 120rpx;text-align: center;font-size: 30rpx;color: #333;}
 .url image {width:120rpx;height:120rpx;vertical-align: middle;margin-right: 12rpx;}
